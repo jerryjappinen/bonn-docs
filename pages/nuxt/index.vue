@@ -2,6 +2,16 @@
   <div>
     <h2>Nuxt</h2>
 
+    <h3>Auto imports</h3>
+
+    <p>
+      You can easily auto-import the components, composables and icons in your Nuxt app:
+    </p>
+
+    <pre><code>defineNuxtConfig(bonn())</code></pre>
+
+
+
     <h3>Config helpers</h3>
 
     <p>
@@ -30,7 +40,7 @@
 export default defineNuxtConfig(mergeConfigs(
   assets({ /*...*/ }),
   scss({
-    global: 'stylehels/global.scss',
+    global: 'styles/global.scss',
     shared: 'styles/shared.scss'
   }),
   svg(),
@@ -40,16 +50,6 @@ export default defineNuxtConfig(mergeConfigs(
     }
   })
 ))</code></pre>
-
-
-
-    <h3>Auto imports</h3>
-
-    <p>
-      You can easily auto-import the components, composables and icons in your Nuxt app:
-    </p>
-
-    <pre><code>defineNuxtConfig(bonn())</code></pre>
 
   </div>
 </template>

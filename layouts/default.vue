@@ -45,6 +45,13 @@ import {
         </h3>
 
         <ul>
+          <li>
+            <NuxtLink :to="'/scss'" class="c-layout-default-sidebar-link">
+              <IconScssColor class="c-layout-default-sidebar-icon" />
+              <code>Overview</code>
+            </NuxtLink>
+          </li>
+
           <li v-for="scssPage in scssPages" :key="scssPage">
             <NuxtLink :to="'/scss/' + scssPage" class="c-layout-default-sidebar-link">
               <IconScssColor class="c-layout-default-sidebar-icon" />
