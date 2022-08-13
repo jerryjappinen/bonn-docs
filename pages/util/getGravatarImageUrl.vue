@@ -1,0 +1,30 @@
+<script setup>
+// import getGravatarImageUrl from 'bonn/util/getGravatarImageUrl'
+import UtilPage from '../../components/UtilPage';
+
+const email = ref('eiskis@gmail.com')
+const size = ref(128)
+
+// const imageUrl = computed(getGravatarImageUrl(email.value, size.value))
+</script>
+
+<template>
+  <UtilPage
+    name="getGravatarImageUrl"
+    :args="['email', 'size', 'fallbackImageUrl']"
+    deps="md5"
+  >
+    <p>
+      <input v-model=" email">
+
+      <input v-model="size" type="number">
+    </p>
+
+    <!-- <pre><code>const imageUrl = getGravatarImageUrl(email, size)
+// {{ imageUrl }}</code></pre> -->
+
+    <!-- <p>
+      <img :src="imageUrl">
+    </p> -->
+  </UtilPage>
+</template>

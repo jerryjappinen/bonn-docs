@@ -1,0 +1,12 @@
+// body {
+//   max-width: $content-width-very-loose;
+// }
+
+pre {
+  @include push-vertical;
+  @include block;
+  @include radius;
+  @include pad;
+  background-color: $very-very-light-grey;
+  border-width: 1px;
+}

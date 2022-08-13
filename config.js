@@ -1,0 +1,103 @@
+// https://github.com/nuxt/framework/issues/6205
+import isDev from 'bonn/util/isDev'
+
+// Meta data
+export const siteAuthor = 'Jerry Jäppinen'
+export const siteTitle = 'Bonn'
+export const siteTagline = 'Develop faster'
+export const siteDescription = 'Utility, style and component library for web development.'
+export const siteMainColor = '#ffffff' // '#21324b'
+export const siteAccentColor = '#0052cd'
+export const twitterUsername = 'jerryjappinen'
+export const longSiteTitle = `${siteTitle} – ${siteTagline}`
+
+// Paths
+export const baseUrl = (process.env ? process.env.BASE_URL : null) || isDev()
+  ? 'http://localhost:3000'
+  : 'https://bonn.vercel.app'
+
+
+
+// Pages
+export const scssPages = [
+  'body',
+  'breakpoints',
+  'devices',
+  'shadow',
+  'webfonts'
+]
+
+export const utilPages = [
+  'csvToJson',
+  'formatDate',
+  'formatDateInterval',
+  'formatFileSize',
+  'formatInitials',
+  'formatMachineReadableDate',
+  'formatMachineReadableDateInterval',
+  'formatMonth',
+  'formatSlug',
+  'getDomain',
+  'getGravatarImageUrl',
+  'getNameFromEmail',
+  'isAbsoluteUrl',
+  'isEmail',
+  'toPlainText',
+  'trimAllWhitespace',
+  'trimNewLines',
+  'trimWhitespace',
+  'tryPromises',
+  'wait'
+]
+
+export const componentPages = [
+  'AppStoreBadge',
+  'Buttons',
+  'ClickButton',
+  'DateInterval',
+  'Dropdown',
+  'Dump',
+  'Ellipsis',
+  'EmailLink',
+  'ExternalLink',
+  'GooglePlayBadge',
+  'LiveDuration',
+  'MobileWebAppBadge',
+  'Slider',
+  'Spinner',
+  'Switch',
+  'Textfield',
+  'Tweet',
+  'WebAppBadge'
+]
+
+export const composablePages = [
+  'useCursor',
+  // 'useGamepad',
+  'useNetwork',
+  'usePersist',
+  'usePlatform',
+  'useTime',
+  'useViewport'
+]
+
+export const nuxtConfigPages = [
+  'assets',
+  'bonn',
+  'compression',
+  'googleFonts',
+  'markdown',
+  'meta',
+  'noComponentDirectoryPrefixes',
+  'pinia',
+  'scripts',
+  'scss',
+  'sitemap',
+  'svg',
+  'transpile',
+  'viewport'
+]
+
+export const storePages = [
+  'device'
+]
