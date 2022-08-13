@@ -81,7 +81,7 @@ import {
 
         <ul>
           <li v-for="componentPage in componentPages" :key="componentPage">
-            <NuxtLink :to="'/components/' + componentPage" class="c-layout-default-sidebar-link">
+            <NuxtLink :to="`/components/${componentPage}-c`" class="c-layout-default-sidebar-link">
               <IconVueColor class="c-layout-default-sidebar-icon" />
               <code>{{ componentPage }}</code>
             </NuxtLink>

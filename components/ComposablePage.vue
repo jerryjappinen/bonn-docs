@@ -50,7 +50,7 @@ const composableMethods = props.methods
     <pre><code>const {{ props.name }} = {{ useName }}()</code></pre>
 
     <p>
-      <ExternalLink :href="`https://github.com/jerryjappinen/bonn/blob/master/composables/${useName}.js`">
+      <ExternalLink :href="`https://github.com/jerryjappinen/bonn/blob/main/composables/${useName}.js`">
         <Icon>
           <IconGithub /> Source
         </Icon>

@@ -5,6 +5,6 @@ export default [
 
   // Define dynamic routes here
   ...componentPages.map((componentName) => {
-    return `components/${componentName}`
+    return `components/${componentName}-c`
   })
 ]

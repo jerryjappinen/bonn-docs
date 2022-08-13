@@ -1,6 +1,6 @@
 <script setup>
 import formatMachineReadableDateTime from 'bonn/util/formatMachineReadableDateTime'
-import UtilPage from '../../components/UtilPage';
+import UtilPage from '../../components/UtilPage'
 </script>
 
 <template>

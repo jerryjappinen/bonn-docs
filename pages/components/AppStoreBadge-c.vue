@@ -1,11 +1,5 @@
-<script setup>
-useHead({
-  title: 'AppStoreBadge'
-})
-</script>
-
 <template>
-  <div>
+  <ComponentPage name="WebAppBadge">
 
     <p>
       <AppStoreBadge />
@@ -15,5 +9,5 @@ useHead({
       <AppStoreBadge :light="true" />
     </p>
 
-  </div>
+  </ComponentPage>
 </template>

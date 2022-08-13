@@ -53,7 +53,7 @@ const configDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props
       <slot />
 
       <p>
-        <ExternalLink :href="`https://github.com/jerryjappinen/bonn/blob/master/nuxt/config/${configName}.js`">
+        <ExternalLink :href="`https://github.com/jerryjappinen/bonn/blob/main/nuxt/config/${configName}.js`">
           <Icon>
             <IconGithub /> Source
           </Icon>
