@@ -17,13 +17,9 @@ ALIAS_BONN = "../bonn"
 
 ## Todo
 
-- [ ] Get code samples from separate files.
+- [ ] Get code samples from separate files
 - [ ] Add syntax highlighting
 - [ ] Add `NuxtPage` component
-- [ ] Add tests
-- [ ] Make test watcher the dev command
-- [ ] Set test command as default in codesandbox
-- [ ] `modelValue` composable
 - [ ] Make `Textfield` support custom content and not just icons
 
 #### `useLazyAsyncData`
