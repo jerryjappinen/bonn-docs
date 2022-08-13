@@ -17,9 +17,9 @@
     "highlight.js": "^11.6.0",
     "bonn": "^0.0.1",
     "lodash-es": "^4.17.21",
-    "pinia": "^2.0.17"
+    "pinia": "^2.0.18"
   },
   "devDependencies": {
-    "nuxt": "^3.0.0-rc.6"
+    "nuxt": "^3.0.0-rc.8"
   }
 }
