@@ -17,16 +17,6 @@ ALIAS_BONN = "../bonn"
 
 ## Todo
 
-- [x] Replace `linna` usage
-- [x] Replace import paths to internal paths
-- [x] Make tests pass
-- [x] Move docs readme to this repo
-- [x] Use readme from this repo in docs
-- [x] Update docs
-- [ ] Make auto publish work with npm
-- [x] `Icon` component
-- [x] Add `persist` composable
-- [x] Add `NuxtApp` component
 - [ ] Get code samples from separate files.
 - [ ] Add syntax highlighting
 - [ ] Add `NuxtPage` component
