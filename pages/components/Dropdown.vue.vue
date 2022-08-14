@@ -27,7 +27,7 @@ const clear = () => {
 </script>
 
 <template>
-  <div>
+  <ComponentPage name="Dropdown">
 
     <p>
       Selected: <code>{{ selected }}</code> (<button @click="clear">clear</button>)
@@ -43,5 +43,5 @@ const clear = () => {
 
     <Dump :data="options" />
 
-  </div>
+  </ComponentPage>
 </template>
