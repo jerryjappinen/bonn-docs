@@ -52,9 +52,9 @@ export const utilPages = [
 
 export const componentPages = [
   'AppStoreBadge',
-  // 'Buttons',
-  // 'ClickButton',
-  // 'DateInterval',
+  'Buttons',
+  'ClickButton',
+  'DateInterval',
   // 'Dropdown',
   // 'Dump',
   // 'Ellipsis',
