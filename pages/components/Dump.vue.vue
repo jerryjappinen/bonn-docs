@@ -6,5 +6,7 @@ const dump = {
 </script>
 
 <template>
-  <Dump :data="dump" />
+  <ComponentPage name="Dump">
+    <Dump :data="dump" />
+  </ComponentPage>
 </template>
