@@ -1,4 +1,4 @@
-<script setup>
+e<script setup>
 import {
   scssPages,
   utilPages,
@@ -11,6 +11,13 @@ import {
 
 <template>
   <div class="c-layout-default">
+
+    <!-- Content area -->
+    <div class="c-layout-default-main">
+      <div class="c-layout-default-main-content">
+        <slot class="c-layout-default-page" />
+      </div>
+    </div>
 
     <!-- Sidebar -->
     <div class="c-layout-default-sidebar">
@@ -81,7 +88,7 @@ import {
 
         <ul>
           <li v-for="componentPage in componentPages" :key="componentPage">
-            <NuxtLink :to="`/components/${componentPage}-c`" class="c-layout-default-sidebar-link">
+            <NuxtLink :to="`/components/${componentPage}.vue`" class="c-layout-default-sidebar-link">
               <IconVueColor class="c-layout-default-sidebar-icon" />
               <code>{{ componentPage }}</code>
             </NuxtLink>
@@ -130,13 +137,6 @@ import {
           </li>
         </ul>
 
-      </div>
-    </div>
-
-    <!-- Content area -->
-    <div class="c-layout-default-main">
-      <div class="c-layout-default-main-content">
-        <slot class="c-layout-default-page" />
       </div>
     </div>
   </div>
