@@ -15,7 +15,7 @@
   "dependencies": {
     "date-fns": "^2.29.1",
     "highlight.js": "^11.6.0",
-    "bonn": "^0.0.2",
+    "bonn": "^0.0.4",
     "lodash-es": "^4.17.21",
     "pinia": "^2.0.18"
   },

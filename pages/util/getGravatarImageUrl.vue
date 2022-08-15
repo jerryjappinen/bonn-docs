@@ -1,6 +1,5 @@
 <script setup>
 // import getGravatarImageUrl from 'bonn/util/getGravatarImageUrl'
-import UtilPage from '../../components/UtilPage';
 
 const email = ref('eiskis@gmail.com')
 const size = ref(128)
