@@ -72,7 +72,7 @@ const config = mergeConfigs(
     icons: true,
     components: true,
     composables: true,
-    dev: true
+    dev: false
   }),
   // compression(), // untested
 

@@ -1,5 +1,5 @@
 <script setup>
-import production from 'bonn/nuxt/config/production'
+import prod from 'bonn/nuxt/config/prod'
 
 const sampleOptions = {
   app: {
@@ -10,7 +10,7 @@ const sampleOptions = {
 
 <template>
   <NuxtConfigPage
-    name="production"
+    name="prod"
     args="nuxtConfigParameters"
     :args-sample="sampleOptions"
   >
@@ -19,6 +19,6 @@ const sampleOptions = {
       Add any Nuxt config you like, but only in dev mode.
     </p>
 
-    <Dump :data="production(sampleOptions)" />
+    <Dump :data="prod(sampleOptions)" />
   </NuxtConfigPage>
 </template>

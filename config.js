@@ -1,5 +1,6 @@
 // https://github.com/nuxt/framework/issues/6205
 import isDev from 'bonn/util/isDev'
+import processEnvExists from 'bonn/util/processEnvExists'
 
 // Meta data
 export const siteAuthor = 'Jerry Jäppinen'
@@ -12,7 +13,7 @@ export const twitterUsername = 'jerryjappinen'
 export const longSiteTitle = `${siteTitle} – ${siteTagline}`
 
 // Paths
-export const baseUrl = (process && process.env ? process.env.BASE_URL : null) || isDev()
+export const baseUrl = (processEnvExists() ? process.env.BASE_URL : null) || isDev()
   ? 'http://localhost:3000'
   : 'https://bonn.vercel.app'
 
