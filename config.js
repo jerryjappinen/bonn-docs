@@ -1,4 +1,3 @@
-// https://github.com/nuxt/framework/issues/6205
 import isDev from 'bonn/util/isDev'
 import processEnvExists from 'bonn/util/processEnvExists'
 
@@ -18,7 +17,6 @@ export const baseUrl = (processEnvExists() ? process.env.BASE_URL : null) || isD
   : 'https://bonn.vercel.app'
 
 // Pages
-
 export const componentPages = [
   'AppStoreBadge',
   'Buttons',
