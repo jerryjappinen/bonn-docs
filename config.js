@@ -17,8 +17,6 @@ export const baseUrl = (processEnvExists() ? process.env.BASE_URL : null) || isD
   ? 'http://localhost:3000'
   : 'https://bonn.vercel.app'
 
-
-
 // Pages
 
 export const componentPages = [
