@@ -33,14 +33,6 @@ import {
 import routes from './routes'
 
 const config = mergeConfigs(
-  transpile(
-    // 'md5-hex',
-    // 'blueimp-md5',
-    // 'gravatar-url',
-    'lodash-es'
-    // 'vite-svg-loader'
-  ),
-
   assets({
     baseUrl,
     longSiteTitle,
@@ -64,7 +56,7 @@ const config = mergeConfigs(
   }),
   pinia(),
   scss({
-    global: ['styles/index.scss'],
+    global: ['styles/global.scss'],
     shared: ['styles/shared.scss']
   }),
   sitemap({
@@ -80,7 +72,7 @@ const config = mergeConfigs(
     icons: true,
     components: true,
     composables: true,
-    dev: false
+    dev: true
   }),
   // compression(), // untested
 
@@ -89,7 +81,15 @@ const config = mergeConfigs(
     typescript: {
       shim: false
     }
-  })
+  }),
+
+  transpile(
+    // 'md5-hex',
+    // 'blueimp-md5',
+    // 'gravatar-url',
+    'lodash-es'
+    // 'vite-svg-loader'
+  )
 )
 
 // console.log(JSON.stringify(config, null, 2))

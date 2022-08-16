@@ -12,43 +12,13 @@ export const twitterUsername = 'jerryjappinen'
 export const longSiteTitle = `${siteTitle} – ${siteTagline}`
 
 // Paths
-export const baseUrl = (process.env ? process.env.BASE_URL : null) || isDev()
+export const baseUrl = (process && process.env ? process.env.BASE_URL : null) || isDev()
   ? 'http://localhost:3000'
   : 'https://bonn.vercel.app'
 
 
 
 // Pages
-export const scssPages = [
-  'body',
-  'breakpoints',
-  'devices',
-  'shadow',
-  'webfonts'
-]
-
-export const utilPages = [
-  'csvToJson',
-  'formatDate',
-  'formatDateInterval',
-  'formatFileSize',
-  'formatInitials',
-  'formatMachineReadableDate',
-  'formatMachineReadableDateInterval',
-  'formatMonth',
-  'formatSlug',
-  'getDomain',
-  'getGravatarImageUrl',
-  'getNameFromEmail',
-  'isAbsoluteUrl',
-  'isEmail',
-  'toPlainText',
-  'trimAllWhitespace',
-  'trimNewLines',
-  'trimWhitespace',
-  'tryPromises',
-  'wait'
-]
 
 export const componentPages = [
   'AppStoreBadge',
@@ -98,6 +68,39 @@ export const nuxtConfigPages = [
   'viewport'
 ]
 
+export const scssPages = [
+  'body',
+  'breakpoints',
+  'devices',
+  'shadow',
+  'webfonts'
+]
+
 export const storePages = [
   'device'
+]
+
+export const utilPages = [
+  'csvToJson',
+  'formatDate',
+  'formatDateInterval',
+  'formatFileSize',
+  'formatInitials',
+  'formatMachineReadableDate',
+  'formatMachineReadableDateInterval',
+  'formatMonth',
+  'formatSlug',
+  'getDomain',
+  'getGravatarImageUrl',
+  'getNameFromEmail',
+  'isAbsoluteUrl',
+  'isDev',
+  'isEmail',
+  'isTest',
+  'toPlainText',
+  'trimAllWhitespace',
+  'trimNewLines',
+  'trimWhitespace',
+  'tryPromises',
+  'wait'
 ]
