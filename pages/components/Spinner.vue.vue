@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <ComponentPage name="Spinner">
 
     <div class="grid">
       <div>
@@ -22,7 +22,7 @@
       </div>
     </div>
 
-  </div>
+  </ComponentPage>
 </template>
 
 <style lang="scss" scoped>

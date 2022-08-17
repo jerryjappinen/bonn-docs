@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <ComponentPage name="GooglePlayBadge">
 
     <p>
       <GooglePlayBadge />
@@ -9,5 +9,5 @@
       <GooglePlayBadge :light="true" />
     </p>
 
-  </div>
+  </ComponentPage>
 </template>

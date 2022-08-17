@@ -3,7 +3,7 @@ const isExpanded = ref(false)
 </script>
 
 <template>
-  <div>
+  <ComponentPage name="Expand">
 
     <p>
       <Toggle v-model="isExpanded">
@@ -18,5 +18,5 @@ const isExpanded = ref(false)
       </Toggle>
     </p>
 
-  </div>
+  </ComponentPage>
 </template>

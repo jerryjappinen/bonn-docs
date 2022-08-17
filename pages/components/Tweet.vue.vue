@@ -4,7 +4,7 @@ const tweetId = 1537444796670701568
 </script>
 
 <template>
-  <div>
+  <ComponentPage name="Tweet">
 
     <div class="tweets">
       <Tweet
@@ -19,7 +19,7 @@ const tweetId = 1537444796670701568
       />
     </div>
 
-  </div>
+  </ComponentPage>
 </template>
 
 <style lang="scss" scoped>

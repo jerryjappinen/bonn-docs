@@ -1,18 +1,16 @@
 <script setup>
-const themes = [
-  'primary',
-  'secondary',
-  'tertiary',
-  'transparent',
-  'link'
-]
-
 defineProps({
   theme: {
     type: String,
-    default: styles[0],
+    default: 'primary',
     validator (theme) {
-      return themes.indexOf(theme) > -1
+      return [
+        'primary',
+        'secondary',
+        'tertiary',
+        'transparent',
+        'link'
+      ].indexOf(theme) > -1
     }
   }
 })
@@ -23,7 +21,7 @@ defineProps({
     class="c-styled-button"
     :class="'c-styled-button-' + theme"
     :theme="theme"
-  />
+  ><slot /></ClickButton>
 </template>
 
 <style lang="scss">

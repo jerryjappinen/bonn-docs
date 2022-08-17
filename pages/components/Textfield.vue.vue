@@ -8,7 +8,7 @@ const monthValue = ref('')
 </script>
 
 <template>
-  <div>
+  <ComponentPage name="Textfield">
 
     <table>
       <tbody>
@@ -185,5 +185,5 @@ const monthValue = ref('')
       </tbody>
     </table>
 
-  </div>
+  </ComponentPage>
 </template>

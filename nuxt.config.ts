@@ -10,6 +10,7 @@ import {
   // compression,
   markdown,
   meta,
+  noComponentDirectoryPrefixes,
   pinia,
   // scripts,
   scss,
@@ -54,6 +55,7 @@ const config = mergeConfigs(
     // facebookAppId,
     twitterUsername
   }),
+  noComponentDirectoryPrefixes(),
   pinia(),
   scss({
     global: ['styles/global.scss'],

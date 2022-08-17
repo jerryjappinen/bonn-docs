@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <ComponentPage name="EmailLink">
 
     <p>
       <EmailLink
@@ -12,5 +12,5 @@
       </EmailLink>
     </p>
 
-  </div>
+  </ComponentPage>
 </template>

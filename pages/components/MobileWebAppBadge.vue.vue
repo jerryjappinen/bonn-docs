@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <ComponentPage name="MobileWebAppBadge">
 
     <p>
       <MobileWebAppBadge />
@@ -9,5 +9,5 @@
       <MobileWebAppBadge :light="true" />
     </p>
 
-  </div>
+  </ComponentPage>
 </template>

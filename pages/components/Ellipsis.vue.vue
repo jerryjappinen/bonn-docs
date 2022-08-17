@@ -3,7 +3,7 @@ const isLoading = ref(true)
 </script>
 
 <template>
-  <div>
+  <ComponentPage name="Ellipsis">
 
     <p>
       <label>
@@ -15,5 +15,5 @@ const isLoading = ref(true)
       <Ellipsis :loading="isLoading" />
     </p>
 
-  </div>
+  </ComponentPage>
 </template>

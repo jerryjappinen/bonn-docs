@@ -24,17 +24,18 @@ export const componentPages = [
   'DateInterval',
   'Dropdown',
   'Dump',
-  // 'Ellipsis',
-  // 'EmailLink',
-  // 'ExternalLink',
-  // 'GooglePlayBadge',
-  // 'LiveDuration',
-  // 'MobileWebAppBadge',
+  'Ellipsis',
+  'EmailLink',
+  'ExternalLink',
+  'GooglePlayBadge',
+  'LiveDuration',
+  'MobileWebAppBadge',
   // 'Slider',
-  // 'Spinner',
-  // 'Switch',
-  // 'Textfield',
-  // 'Tweet',
+  'Spinner',
+  'Switch',
+  'Textfield',
+  'Tweet',
+  'Toggle',
   'WebAppBadge'
 ]
 
@@ -75,6 +76,11 @@ export const scssPages = [
 
 export const storePages = [
   'device'
+]
+
+export const styledComponentPages = [
+  'StyledButton',
+  'StyledTextfield'
 ]
 
 export const utilPages = [

@@ -3,7 +3,7 @@ const value = ref(false)
 </script>
 
 <template>
-  <div>
+  <ComponentPage name="Switch">
 
     <p>
       <Toggle v-model="value">
@@ -11,5 +11,5 @@ const value = ref(false)
       </Toggle>
     </p>
 
-  </div>
+  </ComponentPage>
 </template>
