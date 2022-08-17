@@ -1,5 +1,5 @@
 <script setup>
-import { VueComponent as Todo } from '../Todo.md'
+import { VueComponent as Todo } from '../TODO.md'
 </script>
 
 <template>
