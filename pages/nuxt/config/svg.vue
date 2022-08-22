@@ -2,7 +2,6 @@
 const sampleOptions = {
   currentColor: '#FF00FF',
   removeViewBox: true
-
 }
 </script>
 
@@ -20,6 +19,6 @@ const sampleOptions = {
       See <ExternalLink href="https://github.com/svg/svgo/tree/main/plugins">SVGO documentation</ExternalLink> for all supported options.
     </p>
 
-    <Dump :data="svg(sampleOptions)" />
+    <Dump :data="sampleOptions" />
   </NuxtConfigPage>
 </template>
