@@ -12,6 +12,7 @@
   - [ ] Documentation
   - [ ] Examples (with GQL files and all that)
 - [ ] Contentful Pinia store
+- [ ] Checklists in markdown loader
 
 ### `useLazyAsyncData`
 

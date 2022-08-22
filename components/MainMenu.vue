@@ -12,18 +12,14 @@ import {
 
 <template>
   <div class="c-main-menu">
-    <h3>Bonn</h3>
+    <h3>
+      <NuxtLink to="/">Bonn</NuxtLink>
+    </h3>
 
     <ul>
       <li>
         <NuxtLink to="/" class="c-main-menu-link">
           Readme
-        </NuxtLink>
-      </li>
-
-      <li>
-        <NuxtLink to="/todo" class="c-main-menu-link">
-          Todo
         </NuxtLink>
       </li>
 
@@ -39,6 +35,13 @@ import {
           Nuxt
         </NuxtLink>
       </li>
+
+      <li>
+        <NuxtLink to="/todo" class="c-main-menu-link">
+          Todo
+        </NuxtLink>
+      </li>
+
     </ul>
 
     <!-- Scss -->

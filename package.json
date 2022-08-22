@@ -16,11 +16,11 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
-    "bonn": "^0.0.9",
-    "date-fns": "^2.29.1",
+    "bonn": "^0.0.11",
+    "date-fns": "^2.29.2",
     "highlight.js": "^11.6.0",
     "lodash-es": "^4.17.21",
-    "pinia": "^2.0.18"
+    "pinia": "^2.0.20"
   },
   "devDependencies": {
     "eslint": "^8.22.0",

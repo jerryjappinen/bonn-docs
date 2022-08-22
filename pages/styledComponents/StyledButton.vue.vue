@@ -1,31 +1,37 @@
+<script setup>
+const themes = [
+  'primary',
+  'secondary',
+  'tertiary',
+  'transparent',
+  'link'
+]
+</script>
+
 <template>
   <ComponentPage name="StyledButton">
 
     <table>
       <tbody>
 
-        <tr>
+        <tr
+          v-for="theme in themes"
+          :key="theme"
+        >
           <th>
             <code>primary</code> (default)
           </th>
           <td>
-            <StyledButton theme="primary">
-              Click me
+            <StyledButton :theme="theme">
+              {{ theme }}
             </StyledButton>
           </td>
-        </tr>
-
-        <tr>
-          <th>
-            <code>secondary</code>
-          </th>
           <td>
-            <StyledButton theme="secondary">
-              Click me
+            <StyledButton :theme="theme" :disabled="true">
+              {{ theme }} disabled
             </StyledButton>
           </td>
         </tr>
-
       </tbody>
     </table>
 

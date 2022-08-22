@@ -40,7 +40,7 @@ const utilDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props.d
       <slot />
 
       <p>
-        <ExternalLink :href="`https://github.com/jerryjappinen/bonn/util/blob/main/src/${name}.js`">
+        <ExternalLink :href="`https://github.com/jerryjappinen/bonn/blob/main/util/${name}.js`">
           <Icon>
             <IconGithub /> Source
           </Icon>

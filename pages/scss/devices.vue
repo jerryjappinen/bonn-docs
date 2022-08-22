@@ -80,98 +80,105 @@
 
 // Width
 
-.width .iphone-very-tight {
-  width: $iphone-width-very-tight;
+.width {
+  .iphone-very-tight {
+    width: $iphone-width-very-tight;
 
-  &:after {
-    @include block;
-    content: '#{$iphone-width-very-tight}';
+    &:after {
+      @include block;
+      content: '#{$iphone-width-very-tight}';
+    }
   }
-}
 
-.width .iphone-tight {
-  width: $iphone-width-tight;
+  .iphone-tight {
+    width: $iphone-width-tight;
 
-  &:after {
-    @include block;
-    content: '#{$iphone-width-tight}';
+    &:after {
+      @include block;
+      content: '#{$iphone-width-tight}';
+    }
   }
-}
 
-.width .iphone {
-  width: $iphone-width;
+  .iphone {
+    width: $iphone-width;
 
-  &:after {
-    @include block;
-    content: '#{$iphone-width}';
+    &:after {
+      @include block;
+      content: '#{$iphone-width}';
+    }
   }
-}
 
-.width .iphone-loose {
-  width: $iphone-width-loose;
+  .iphone-loose {
+    width: $iphone-width-loose;
 
-  &:after {
-    @include block;
-    content: '#{$iphone-width-loose}';
+    &:after {
+      @include block;
+      content: '#{$iphone-width-loose}';
+    }
   }
-}
 
-.width .iphone-very-loose {
-  width: $iphone-width-very-loose;
+  .iphone-very-loose {
+    width: $iphone-width-very-loose;
 
-  &:after {
-    @include block;
-    content: '#{$iphone-width-very-loose}';
+    &:after {
+      @include block;
+      content: '#{$iphone-width-very-loose}';
+    }
   }
+
 }
 
 
 
 // Height
 
-.height .iphone-very-tight {
-  height: $iphone-height-very-tight;
+.height {
 
-  &:after {
-    @include block;
-    content: '#{$iphone-height-very-tight}';
+  .iphone-very-tight {
+    height: $iphone-height-very-tight;
+
+    &:after {
+      @include block;
+      content: '#{$iphone-height-very-tight}';
+    }
   }
-}
 
-.height .iphone-tight {
-  height: $iphone-height-tight;
+  .iphone-tight {
+    height: $iphone-height-tight;
 
-  &:after {
-    @include block;
-    content: '#{$iphone-height-tight}';
+    &:after {
+      @include block;
+      content: '#{$iphone-height-tight}';
+    }
   }
-}
 
-.height .iphone {
-  height: $iphone-height;
+  .iphone {
+    height: $iphone-height;
 
-  &:after {
-    @include block;
-    content: '#{$iphone-height}';
+    &:after {
+      @include block;
+      content: '#{$iphone-height}';
+    }
   }
-}
 
-.height .iphone-loose {
-  height: $iphone-height-loose;
+  .iphone-loose {
+    height: $iphone-height-loose;
 
-  &:after {
-    @include block;
-    content: '#{$iphone-height-loose}';
+    &:after {
+      @include block;
+      content: '#{$iphone-height-loose}';
+    }
   }
-}
 
-.height .iphone-very-loose {
-  height: $iphone-height-very-loose;
+  .iphone-very-loose {
+    height: $iphone-height-very-loose;
 
-  &:after {
-    @include block;
-    content: '#{$iphone-height-very-loose}';
+    &:after {
+      @include block;
+      content: '#{$iphone-height-very-loose}';
+    }
   }
+
 }
 
 </style>

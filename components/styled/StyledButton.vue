@@ -1,17 +1,12 @@
 <script setup>
 defineProps({
+  disabled: {
+    required: false
+  },
+
   theme: {
     type: String,
-    default: 'primary',
-    validator (theme) {
-      return [
-        'primary',
-        'secondary',
-        'tertiary',
-        'transparent',
-        'link'
-      ].indexOf(theme) > -1
-    }
+    default: 'primary'
   }
 })
 </script>
@@ -19,7 +14,12 @@ defineProps({
 <template>
   <ClickButton
     class="c-styled-button"
-    :class="'c-styled-button-' + theme"
+    :class="{
+      ['c-styled-button-' + theme]: true,
+      ['c-styled-button-' + theme + '-disabled']: disabled,
+      ['c-styled-button-' + theme + '-enabled']: !disabled
+    }"
+    :disabled="disabled"
     :theme="theme"
   ><slot /></ClickButton>
 </template>
@@ -32,31 +32,46 @@ defineProps({
 .c-styled-button-transparent {
   @include pad-tight;
   @include radius;
+  @include semibold;
 }
 
 .c-styled-button-primary,
 .c-styled-button-secondary,
 .c-styled-button-tertiary {
-  border-width: 1px;
+  border-width: 1.5px;
 }
 
-.c-styled-button-link-primary-enabled {
-  color: $white;
+
+
+// Primary
+
+.c-styled-button-primary {
   background-color: $very-dark;
   border-color: $very-dark;
 }
 
-.c-styled-button-link-primary-disabled {
-  border-color: $dark-grey;
-  background-color: $dark-grey;
+.c-styled-button-primary-enabled {
+  color: $white;
 }
 
-.c-styled-button-link-secondary {
+.c-styled-button-primary-disabled {
+  color: $dark-grey;
+}
+
+// Secondary
+
+.c-styled-button-secondary-disabled,
+.c-styled-button-tertiary-disabled,
+.c-styled-button-transparent-disabled {
+  color: $discreet-text-color;
+}
+
+.c-styled-button-secondary {
   border-color: currentColor;
 }
 
-.c-styled-button-link-tertiary {
-  border-color: currentColor;
+.c-styled-button-tertiary {
+  border-color: $discreet-text-color;
 }
 
 .c-styled-button-link-enabled {

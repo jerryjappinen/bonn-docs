@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <h2><code>bonn/icons/</code></h2>
+    <h2>Icons</h2>
 
     <Bodytext>
 
