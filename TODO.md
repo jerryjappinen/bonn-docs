@@ -1,8 +1,10 @@
 # Todo
 
-- [ ] Get code samples from separate files
-- [ ] Add syntax highlighting
+- [x] Default plugings for markdown loader
+- [x] Add `NuxtApp` component
 - [ ] Add `NuxtPage` component
+- [ ] Add syntax highlighting to docs
+- [ ] Load code samples from separate files
 - [ ] Make `Textfield` support custom content and not just icons
 - [ ] GraphQL language file support in `nuxt.config`
 - [ ] Hygraph
@@ -12,7 +14,6 @@
   - [ ] Documentation
   - [ ] Examples (with GQL files and all that)
 - [ ] Contentful Pinia store
-- [ ] Checklists in markdown loader
 
 ### `useLazyAsyncData`
 
