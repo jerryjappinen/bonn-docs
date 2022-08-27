@@ -33,6 +33,13 @@ defineProps({
   @include pad-tight;
   @include radius;
   @include semibold;
+
+  @include transition-medium;
+
+  &:hover,
+  &:focus {
+    @include transition-fast;
+  }
 }
 
 .c-styled-button-primary,

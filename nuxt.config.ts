@@ -8,6 +8,7 @@ import {
   assets,
   bonn,
   // compression,
+  graphql,
   markdown,
   meta,
   noComponentDirectoryPrefixes,
@@ -46,6 +47,7 @@ const config = mergeConfigs(
     // maskIconColor: '#000',
     manifest: true
   }),
+  graphql(),
   markdown(),
   meta({
     siteAuthor,

@@ -54,6 +54,7 @@ export const nuxtConfigPages = [
   'bonn',
   'compression',
   'googleFonts',
+  'graphql',
   'markdown',
   'meta',
   'noComponentDirectoryPrefixes',
