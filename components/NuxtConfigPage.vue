@@ -34,9 +34,9 @@ const configDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props
 
     <h2><code>{{ configName }}({{ configArgs.join(', ') }})</code></h2>
 
-    <pre v-if="configDeps.length"><code>npm i -D {{ configDeps.join(' ') }}</code></pre>
+    <HighlightedPre v-if="configDeps.length">npm i -D {{ configDeps.join(' ') }}</HighlightedPre>
 
-    <pre><code>import { {{ configName }} } from 'bonn/nuxt/config'</code></pre>
+    <HighlightedPre>import { {{ configName }} } from 'bonn/nuxt/config'</HighlightedPre>
 
     <template v-if="configArgSamples.length">
       <Dump
@@ -46,7 +46,7 @@ const configDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props
       />
     </template>
 
-    <pre><code>defineNuxtConfig({{ configName }}({{ configArgs.join(', ') }}))</code></pre>
+    <HighlightedPre>defineNuxtConfig({{ configName }}({{ configArgs.join(', ') }}))</HighlightedPre>
 
     <Bodytext>
 

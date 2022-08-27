@@ -43,11 +43,11 @@ const composableMethods = props.methods
 
     <h2><code>{{ useName }}({{ composableArgs.join(', ') }})</code></h2>
 
-    <pre v-if="composableDeps.length"><code>npm i {{ composableDeps.join(' ') }}</code></pre>
+    <HighlightedPre v-if="composableDeps.length">npm i {{ composableDeps.join(' ') }}</HighlightedPre>
 
-    <pre><code>import { {{ useName }} } from 'bonn/composables'</code></pre>
+    <HighlightedPre>import { {{ useName }} } from 'bonn/composables'</HighlightedPre>
 
-    <pre><code>const {{ props.name }} = {{ useName }}()</code></pre>
+    <HighlightedPre>const {{ props.name }} = {{ useName }}()</HighlightedPre>
 
     <p>
       <ExternalLink :href="`https://github.com/jerryjappinen/bonn/blob/main/composables/${useName}.js`">
@@ -68,8 +68,8 @@ const composableMethods = props.methods
           v-for="(value, key) in composableProps"
           :key="key"
         >
-          <th><code>{{ name }}.{{ key }}</code></th>
-          <td><code>{{ value }}</code></td>
+          <th><HighlightedCode>{{ name }}.{{ key }}</HighlightedCode></th>
+          <td><HighlightedPre>{{ value }}</HighlightedPre></td>
         </tr>
       </table>
 
@@ -86,7 +86,7 @@ const composableMethods = props.methods
           v-for="(method, key) in composableMethods"
           :key="key"
         >
-          <th><code>{{ name }}.{{ key }}</code></th>
+          <th><HighlightedCode>{{ name }}.{{ key }}</HighlightedCode></th>
           <td><button @click="method">{{ key }}</button></td>
         </tr>
       </table>

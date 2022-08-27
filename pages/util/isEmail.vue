@@ -10,7 +10,10 @@ const demo = ref('foo@bar.io')
     args="string"
   >
     <p>
-      <input v-model="demo">
+      <input
+        type="email"
+        v-model="demo"
+      />
       {{ isEmail(demo.value) }}
     </p>
   </UtilPage>

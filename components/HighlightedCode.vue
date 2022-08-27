@@ -1,41 +1,82 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { computed, ref, unref } from 'vue'
 
-import hljs from 'highlight.js'
+import flattenDeep from 'lodash-es/flattenDeep'
+
+import highlightCode from '../../bonn/util/highlightCode'
+
+
+
+// Props
 
 const props = defineProps({
-  lang: {
-    type: String,
+  code: [Array, String],
+  lang: String,
+  trim: {
+    type: Boolean,
     default: null
   }
 })
 
 
 
-const nativeContent = ref(null)
+// Highlighting
 
-const html = computed(() => {
-  const el = nativeContent.value
+const slotContent = ref(null)
 
-  if (el) {
-    return hljs.highlightBlock(el, {
-      language: props.lang
-    }).value
+const shouldTrim = computed(() => {
+  const trim = unref(props.trim)
+  return !!(trim === undefined || trim === null || trim)
+})
+
+const trimMeMaybe = (content) => {
+  return shouldTrim.value ? content.trim() : content
+}
+
+const content = computed(() => {
+  const prop = unref(props.code)
+
+  if (prop) {
+    return flattenDeep([prop].map((str) => {
+      return trimMeMaybe(str)
+    }))
   }
 
-  return null
+  const el = slotContent.value
+
+  return el ? trimMeMaybe(el.textContent) : null
 })
+
+const html = computed(() => {
+  return content.value ? highlightCode(content.value) : null
+})
+
 </script>
 
 <template>
-  <pre class="c-highlighted-code"><code
-    :data-language="lang"
-    class="c-highlighted-code-content"
+  <code
+    :class="{
+      'c-highlighted-code-highlighted': !!html
+    }"
+    class="c-highlighted-code"
   ><span
     v-if="html"
+    :data-language="lang"
+    class="c-highlighted-code-content c-highlighted-code-content-highlighted"
     v-html="html"
   /><span
-    v-else
-    ref="nativeContent"
-  ><slot /></span></code></pre>
+    :data-language="lang"
+    class="c-highlighted-code-content c-highlighted-code-content-default"
+    ref="slotContent"
+  ><slot /></span></code>
 </template>
+
+<style lang="scss">
+
+.c-highlighted-code-highlighted {
+  .c-highlighted-code-content-default {
+    @include hide;
+  }
+}
+
+</style>

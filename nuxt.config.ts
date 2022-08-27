@@ -16,7 +16,7 @@ import {
   scss,
   sitemap,
   svg,
-  transpile,
+  // transpile,
   viewport
 } from 'bonn/nuxt/config'
 
@@ -85,13 +85,14 @@ const config = mergeConfigs(
     }
   }),
 
-  transpile(
-    // 'md5-hex',
-    // 'blueimp-md5',
-    // 'gravatar-url',
-    'lodash-es'
-    // 'vite-svg-loader'
-  )
+  // transpile(
+  //   'md5-hex',
+  //   'blueimp-md5',
+  //   'gravatar-url',
+  //   'vite-svg-loader'
+  // )
+
+  {}
 )
 
 // console.log(JSON.stringify(config, null, 2))

@@ -2,11 +2,14 @@
 
 - [x] Default plugings for markdown loader
 - [x] Add `NuxtApp` component
+- [x] Add syntax highlighting to docs
+- [x] Add `pwa` and `manifest` support to Nuxt: https://github.com/kevinmarrec/nuxt-pwa-module
+- [ ] Vue and Nuxt 3 support for eslint
 - [ ] Add `NuxtPage` component
-- [ ] Add syntax highlighting to docs
 - [ ] Load code samples from separate files
 - [ ] Make `Textfield` support custom content and not just icons
 - [ ] GraphQL language file support in `nuxt.config`
+- [ ] Move to proper CSS variables
 - [ ] Hygraph
   - [ ] Utilities
   - [ ] Rich text renderer component

@@ -52,13 +52,23 @@ defineProps({
 
 .c-styled-button-primary-enabled {
   color: $white;
+
+  @include transparent-solid-shadow($very-dark);
+
+  &:hover,
+  &:focus {
+    @include solid-shadow($very-dark);
+  }
+
 }
 
 .c-styled-button-primary-disabled {
   color: $dark-grey;
 }
 
-// Secondary
+
+
+// Secondary, tertiary, transparent
 
 .c-styled-button-secondary-disabled,
 .c-styled-button-tertiary-disabled,
@@ -70,9 +80,24 @@ defineProps({
   border-color: currentColor;
 }
 
+.c-styled-button-secondary-enabled {
+
+  @include transparent-solid-shadow($text-color);
+
+  &:hover,
+  &:focus {
+    @include solid-shadow($text-color);
+  }
+
+}
+
 .c-styled-button-tertiary {
   border-color: $discreet-text-color;
 }
+
+
+
+// Link
 
 .c-styled-button-link-enabled {
   @include link;

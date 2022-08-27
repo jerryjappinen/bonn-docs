@@ -58,6 +58,7 @@ export const nuxtConfigPages = [
   'meta',
   'noComponentDirectoryPrefixes',
   'pinia',
+  'pwa',
   'scripts',
   'scss',
   'sitemap',

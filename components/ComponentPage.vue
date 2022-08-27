@@ -14,7 +14,7 @@ const importString = `import ${props.name} from 'bonn/components/${props.name}'`
 
     <h2><code>{{ name }}</code></h2>
 
-    <pre><code>{{ importString }}</code></pre>
+    <HighlightedPre>{{ importString }}</HighlightedPre>
 
     <p>
       <ExternalLink :href="`https://github.com/jerryjappinen/bonn/blob/main/components/${name}.js`">
