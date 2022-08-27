@@ -8,14 +8,14 @@ const props = defineProps({
 </script>
 
 <template>
-  <pre class="c-highlighted-pre"><HighlightedCode
+  <pre class="c-highlighted-pre"><div
+    v-if="file"
+    class="c-highlighted-pre-file"
+  >{{ file }}</div><HighlightedCode
     :code="code"
     :lang="lang"
     :trim="trim"
-  ><span
-    v-if="file"
-    class="c-highlighted-pre-file"
-  >{{ file }}</span><slot /></HighlightedCode></pre>
+  ><slot /></HighlightedCode></pre>
 </template>
 
 <style lang="scss">
@@ -26,6 +26,7 @@ const props = defineProps({
 
 .c-highlighted-pre-file {
   @include discreet;
+  @include small-font;
 }
 
 </style>

@@ -23,7 +23,12 @@ import {
         </NuxtLink>
       </li>
 
-      <!-- Icons -->
+      <li>
+        <NuxtLink to="/linting" class="c-main-menu-link">
+          Linting
+        </NuxtLink>
+      </li>
+
       <li>
         <NuxtLink to="/icons" class="c-main-menu-link">
           Icons
