@@ -1,5 +1,8 @@
 <template>
-  <ComponentPage name="Spinner">
+  <ComponentPage
+    name="Spinner"
+    css-vars="circle-size"
+  >
 
     <div class="grid">
       <div>

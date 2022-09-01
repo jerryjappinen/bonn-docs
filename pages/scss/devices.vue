@@ -82,47 +82,47 @@
 
 .width {
   .iphone-very-tight {
-    width: $iphone-width-very-tight;
+    width: $iphone-very-tight;
 
     &:after {
       @include block;
-      content: '#{$iphone-width-very-tight}';
+      content: '#{$iphone-very-tight}';
     }
   }
 
   .iphone-tight {
-    width: $iphone-width-tight;
+    width: $iphone-tight;
 
     &:after {
       @include block;
-      content: '#{$iphone-width-tight}';
+      content: '#{$iphone-tight}';
     }
   }
 
   .iphone {
-    width: $iphone-width;
+    width: $iphone;
 
     &:after {
       @include block;
-      content: '#{$iphone-width}';
+      content: '#{$iphone}';
     }
   }
 
   .iphone-loose {
-    width: $iphone-width-loose;
+    width: $iphone-loose;
 
     &:after {
       @include block;
-      content: '#{$iphone-width-loose}';
+      content: '#{$iphone-loose}';
     }
   }
 
   .iphone-very-loose {
-    width: $iphone-width-very-loose;
+    width: $iphone-very-loose;
 
     &:after {
       @include block;
-      content: '#{$iphone-width-very-loose}';
+      content: '#{$iphone-very-loose}';
     }
   }
 

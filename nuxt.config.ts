@@ -23,7 +23,6 @@ import {
 
 import {
   baseUrl,
-  // facebookAppId,
   siteAuthor,
   siteTitle,
   siteDescription,
@@ -42,7 +41,7 @@ const config = mergeConfigs(
     coverImage: true,
     favicon: true,
     faviconIco: false,
-    appleTouchIcon: false,
+    appleTouchIcon: true,
     maskIcon: true,
     // maskIconColor: '#000',
     manifest: true
@@ -54,7 +53,6 @@ const config = mergeConfigs(
     siteTitle,
     longSiteTitle,
     siteDescription,
-    // facebookAppId,
     twitterUsername
   }),
   noComponentDirectoryPrefixes(),
@@ -64,7 +62,7 @@ const config = mergeConfigs(
     shared: ['styles/shared.scss']
   }),
   sitemap({
-    // baseUrl, // breaks on RC6
+    // baseUrl, // breaks
     routes
   }),
   svg(),
@@ -73,10 +71,10 @@ const config = mergeConfigs(
   }),
 
   bonn({
+    // dev: true,
     icons: true,
     components: true,
-    composables: true,
-    dev: false
+    composables: true
   }),
   // compression(), // untested
 

@@ -3,7 +3,13 @@ const isLoading = ref(true)
 </script>
 
 <template>
-  <ComponentPage name="Ellipsis">
+  <ComponentPage
+    name="Ellipsis"
+    :css-vars="[
+      'duration',
+      'delay'
+    ]"
+  >
 
     <p>
       <label>

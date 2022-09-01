@@ -20,6 +20,7 @@ export const baseUrl = (processEnvExists() ? process.env.BASE_URL : null) || isD
 export const componentPages = [
   'AppStoreBadge',
   'Buttons',
+  'Checkbox',
   'ClickButton',
   'DateInterval',
   'Dropdown',

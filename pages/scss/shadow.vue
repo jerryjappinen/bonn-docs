@@ -45,7 +45,7 @@
     @include pad-loose;
     @include push-loose-vertical-even;
 
-    border-radius: $radius $radius-very-loose $radius-very-loose $radius;
+    border-radius: var(--radius) var(--radius-very-loose) var(--radius-very-loose) var(--radius);
   }
 }
 

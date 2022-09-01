@@ -1,12 +1,14 @@
-// body {
-//   max-width: $content-width-very-loose;
-// }
+// Override default variables here
+:root {
+  --semibold: 500;
+  --link-weight: var(--semibold);
+}
 
 pre {
   @include push-vertical;
   @include block;
   @include radius;
   @include pad;
-  background-color: $very-very-light-grey;
+  background-color: var(--very-very-light-grey);
   border-width: 1px;
 }

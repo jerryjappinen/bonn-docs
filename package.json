@@ -16,7 +16,7 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
-    "bonn": "^0.0.19",
+    "bonn": "^0.0.29",
     "date-fns": "^2.29.2",
     "lodash-es": "^4.17.21",
     "pinia": "^2.0.21"

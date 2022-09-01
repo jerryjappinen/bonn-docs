@@ -182,7 +182,7 @@ import {
   }
 
   &:not(.router-link-active):not(:hover):not(:focus) {
-    color: $dark-grey;
+    color: var(--dark-grey);
   }
 
 }

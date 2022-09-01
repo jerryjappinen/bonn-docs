@@ -8,7 +8,13 @@ const monthValue = ref('')
 </script>
 
 <template>
-  <ComponentPage name="Textfield">
+  <ComponentPage
+    name="Textfield"
+    :css-vars="[
+      'button-color',
+      'button-background-color'
+    ]"
+  >
 
     <table>
       <tbody>

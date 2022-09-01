@@ -53,24 +53,24 @@ defineProps({
 // Primary
 
 .c-styled-button-primary {
-  background-color: $very-dark;
-  border-color: $very-dark;
+  background-color: var(--very-dark);
+  border-color: var(--very-dark);
 }
 
 .c-styled-button-primary-enabled {
-  color: $white;
+  color: var(--white);
 
-  @include transparent-solid-shadow($very-dark);
+  @include transparent-solid-shadow;
 
   &:hover,
   &:focus {
-    @include solid-shadow($very-dark);
+    @include solid-shadow;
   }
 
 }
 
 .c-styled-button-primary-disabled {
-  color: $dark-grey;
+  color: var(--dark-grey);
 }
 
 
@@ -80,7 +80,7 @@ defineProps({
 .c-styled-button-secondary-disabled,
 .c-styled-button-tertiary-disabled,
 .c-styled-button-transparent-disabled {
-  color: $discreet-text-color;
+  color: var(--discreet-text-color);
 }
 
 .c-styled-button-secondary {
@@ -89,17 +89,17 @@ defineProps({
 
 .c-styled-button-secondary-enabled {
 
-  @include transparent-solid-shadow($text-color);
+  @include transparent-solid-shadow;
 
   &:hover,
   &:focus {
-    @include solid-shadow($text-color);
+    @include solid-shadow;
   }
 
 }
 
 .c-styled-button-tertiary {
-  border-color: $discreet-text-color;
+  border-color: var(--discreet-text-color);
 }
 
 
