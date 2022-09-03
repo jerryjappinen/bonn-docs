@@ -13,23 +13,24 @@
 - [x] `pinia` persistance plugin
 - [x] Add Nuxt plugins
 - [x] Add color variable reference to docs
-- [ ] Add `startsWith` and `endsWith`
-
-### Later
-
-- [ ] Make `bonn` dev alias work
+- [x] Add `suffixWith` and `prefixWith`
 - [ ] Replace `.substr` with `.substring`
   - [x] suffix/prefix utils
   - [x] `getDomain`
   - [ ] `composeClassnames`
   - [ ] `getUserAgentStringValue`
 - [ ] Make `Textfield` support custom content and not just icons
+
+### Later
+
+- [ ] Fix `HighlightedPre` whitespace
+  - This problem is created by Vue.js slots trimming whitespace
 - [ ] Add `eslint` configurations and plugins for Vue and Nuxt 3 support
 - [ ] Load `pinia` persistance plugin by default
+- [ ] Make `bonn` dev alias work
+- [ ] Load code samples from separate files
 - [ ] Add a customised `NuxtAppPage` component
   - Might be tricky with `definePageMeta` being a macro
-- [ ] Load code samples from separate files
-- [ ] Fix `HighlightedPre` whitespace
 - [ ] Hygraph
   - [ ] Utilities
   - [ ] Rich text renderer component
