@@ -9,12 +9,14 @@
 - [x] Support overridable CSS vars in components
 - [x] Document CSS vars in components
 - [x] Improve SCSS tests
+- [x] Add dark mode support using CSS variables
+- [x] `pinia` persistance plugin
+- [x] Add Nuxt plugins
 - [ ] Make `Textfield` support custom content and not just icons
-- [ ] Vue and Nuxt 3 support for `eslint`
-- [x] `pinia` persistance
+- [ ] Add `eslint` configurations and plugins for Vue and Nuxt 3 support
 - [ ] Load `pinia` persistance plugin by default
-- [ ] Add `NuxtPage` component
-  - [ ] Might be tricky with `definePageMeta` being a macro
+- [ ] Add a customised `NuxtAppPage` component
+  - Might be tricky with `definePageMeta` being a macro
 - [ ] Load code samples from separate files
 - [ ] Fix `HighlightedPre` whitespace
 - [ ] Hygraph
