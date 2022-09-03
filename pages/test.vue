@@ -23,7 +23,7 @@ Term 2 with *inline markup*
 </script>
 
 <template>
-  <div>
+  <div class="page-test">
     <h2>Sandbox page</h2>
 
     <HighlightedCode lang="markdown">
@@ -35,3 +35,11 @@ Term 2 with *inline markup*
     <!-- <ParentTestComponent /> -->
   </div>
 </template>
+
+<style lang="scss">
+
+.page-test {
+  color: v(red);
+}
+
+</style>
