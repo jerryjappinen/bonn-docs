@@ -1,5 +1,5 @@
 <script setup>
-import getMarkdownIt from '../../bonn/util/getMarkdownIt'
+import getMarkdownIt from 'bonn/util/getMarkdownIt'
 
 const markdownIt = getMarkdownIt()
 

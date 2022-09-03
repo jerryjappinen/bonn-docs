@@ -3,7 +3,7 @@ import { computed, ref, unref } from 'vue'
 
 import flattenDeep from 'lodash-es/flattenDeep'
 
-import highlightCode from '../../bonn/util/highlightCode'
+import highlightCode from 'bonn/util/highlightCode'
 
 
 
