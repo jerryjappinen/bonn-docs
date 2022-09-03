@@ -27,6 +27,11 @@
 .c-layout-default-sidebar,
 .c-layout-default-main {
   height: 100%;
+
+  @include dark {
+    @include light-scrollbars;
+  }
+
 }
 
 .c-layout-default-sidebar {

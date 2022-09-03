@@ -12,6 +12,17 @@
 - [x] Add dark mode support using CSS variables
 - [x] `pinia` persistance plugin
 - [x] Add Nuxt plugins
+- [x] Add color variable reference to docs
+- [ ] Add `startsWith` and `endsWith`
+
+### Later
+
+- [ ] Make `bonn` dev alias work
+- [ ] Replace `.substr` with `.substring`
+  - [x] suffix/prefix utils
+  - [x] `getDomain`
+  - [ ] `composeClassnames`
+  - [ ] `getUserAgentStringValue`
 - [ ] Make `Textfield` support custom content and not just icons
 - [ ] Add `eslint` configurations and plugins for Vue and Nuxt 3 support
 - [ ] Load `pinia` persistance plugin by default
@@ -26,6 +37,7 @@
   - [ ] Documentation
   - [ ] Examples (with GQL files and all that)
 - [ ] Contentful Pinia store
+- [ ] Register `bonn` on https://modules.nuxtjs.org/?version=3.x
 
 ### `useLazyAsyncData`
 

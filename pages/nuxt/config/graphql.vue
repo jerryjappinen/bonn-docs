@@ -1,7 +1,5 @@
 <script setup>
 import MyQuery from '@/code/MyQuery.gql'
-
-console.log(MyQuery)
 </script>
 
 <template>

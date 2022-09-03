@@ -1,8 +1,11 @@
 // Override default variables here
 @include dark {
 
+  body {
+    @include light-scrollbars;
+  }
+
   :root {
-    // @include light-scrollbars;
     --grey: #8e8e8e;
     --dark-grey: #464646;
     --dark: #202020;

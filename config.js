@@ -79,6 +79,7 @@ export const scssPages = [
   'breakpoints',
   'devices',
   'shadow',
+  'variables',
   'webfonts'
 ]
 
@@ -109,6 +110,12 @@ export const utilPages = [
   'isEmail',
   'isTest',
   'toPlainText',
+
+  // 'isPrefixed',
+  'isSuffixed',
+  'removeSuffix',
+  'suffixWith',
+
   'trimAllWhitespace',
   'trimNewLines',
   'trimWhitespace',

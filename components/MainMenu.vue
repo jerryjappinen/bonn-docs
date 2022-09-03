@@ -199,7 +199,11 @@ import {
 
   // Link color
   &:not(.router-link-active):not(:hover):not(:focus) {
-    color: var(--discreet-text-color);
+    color: inherit;
+
+    @include dark {
+      color: var(--discreet-text-color);
+    }
   }
 
 }
