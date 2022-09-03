@@ -11,7 +11,7 @@
     <h4>eslint</h4>
 
     <p>
-      Includes <code>eslint</code>
+      <code>eslint</code> and plugins are already included as dependencies.
     </p>
 
     <HighlightedPre file=".eslintrc.js">
@@ -29,6 +29,10 @@
 
 
     <h4>Prettier</h4>
+
+    <p>
+      <code>prettier</code> is already included as dependency.
+    </p>
 
     <HighlightedPre file="prettier.config.js">
       module.exports = require('bonn/prettier')

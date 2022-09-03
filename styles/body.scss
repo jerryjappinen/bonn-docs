@@ -1,7 +1,29 @@
 // Override default variables here
-:root {
-  --semibold: 500;
-  --link-weight: var(--semibold);
+@include dark {
+
+  :root {
+    // @include light-scrollbars;
+    --grey: #8e8e8e;
+    --dark-grey: #464646;
+    --dark: #202020;
+    --shadow-color: rgba(80, 80, 80, 0.2);
+
+    --text-color: var(--white);
+    --discreet-text-color: var(--grey);
+    --border-color: var(--dark-grey);
+    --background-color: var(--very-dark);
+    --offset-background-color: var(--dark);
+
+    --semibold: 500;
+    --link-weight: var(--semibold);
+  }
+
+}
+
+code {
+  [style="color:#000000"] {
+    color: var(--text-color) !important;
+  }
 }
 
 pre {
@@ -9,6 +31,6 @@ pre {
   @include block;
   @include radius;
   @include pad;
-  background-color: var(--very-very-light-grey);
   border-width: 1px;
+  background-color: var(--offset-background-color);
 }

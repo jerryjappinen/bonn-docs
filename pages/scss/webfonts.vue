@@ -7,17 +7,31 @@
 
       <h4>Google Fonts</h4>
 
+      <h5>nuxt.config</h5>
+
       <p>
         The easiest way to implement Google Fonts is using the <code>nuxt.config</code> helper <NuxtLink to="/nuxt/config/googleFonts">googleFonts()</NuxtLink>.
       </p>
+
+      <HighlightedPre file="nuxt.config.ts">
+        googleFonts('Poppins', 'Dosis')
+      </HighlightedPre>
+
+      <h5>In SCSS</h5>
 
       <p>
         Or add the `import` code in your global style sheets:
       </p>
 
-      <pre><code>@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');</code></pre>
+      <HighlightedPre file="my-styles.scss">
+        @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+      </HighlightedPre>
 
       <h4>Custom web fonts</h4>
+
+      <h5>nuxt.config</h5>
+
+      <h5>In SCSS</h5>
 
       <p>
         If you're using the <code>scss</code> default styles, any web fonts added to the <code>$webfonts</code> variable will be loaded.

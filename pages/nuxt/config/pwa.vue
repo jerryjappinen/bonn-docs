@@ -1,6 +1,5 @@
 <script setup>
-// import helper from 'bonn/nuxt/config/pwa'
-import helper from '../../../../bonn/nuxt/config/pwa'
+import helper from 'bonn/nuxt/config/pwa'
 
 const sampleOptions = {
     icon: true,

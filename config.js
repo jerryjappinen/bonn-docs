@@ -66,7 +66,12 @@ export const nuxtConfigPages = [
   'sitemap',
   'svg',
   'transpile',
-  'viewport'
+  'viewport',
+  'webfonts'
+]
+
+export const nuxtPluginPages = [
+  'piniaPersist'
 ]
 
 export const scssPages = [

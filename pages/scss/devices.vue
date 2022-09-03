@@ -61,11 +61,14 @@
 .width div,
 .height div {
   @include mono;
+  @include radius;
+  @include pad-even;
   border-width: 1px;
+  @include background(var(--offset-background-color))
 }
 
 .width div {
-  @include push-pad-vertical;
+  @include push-pad-vertical-even;
 }
 
 .height {
@@ -133,7 +136,6 @@
 // Height
 
 .height {
-
   .iphone-very-tight {
     height: $iphone-height-very-tight;
 

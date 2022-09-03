@@ -1,20 +1,21 @@
 <script setup>
 import {
-  scssPages,
-  utilPages,
   componentPages,
   composablePages,
   nuxtConfigPages,
+  nuxtPluginPages,
+  scssPages,
   storePages,
-  styledComponentPages
+  styledComponentPages,
+  utilPages
 } from '@/config'
 </script>
 
 <template>
   <div class="c-main-menu">
-    <h3>
+    <h4>
       <NuxtLink to="/">Bonn</NuxtLink>
-    </h3>
+    </h4>
 
     <ul>
       <li>
@@ -50,9 +51,9 @@ import {
     </ul>
 
     <!-- Scss -->
-    <h3 class="c-main-menu-lib">
-      <code>scss</code>
-    </h3>
+    <h4 class="c-main-menu-lib">
+      SCSS
+    </h4>
 
     <ul>
       <li>
@@ -70,24 +71,10 @@ import {
       </li>
     </ul>
 
-    <!-- Utilities -->
-    <h3 class="c-main-menu-lib">
-      <code>util</code>
-    </h3>
-
-    <ul>
-      <li v-for="utilPage in utilPages" :key="utilPage">
-        <NuxtLink :to="'/util/' + utilPage" class="c-main-menu-link">
-          <IconJavascriptColor class="c-main-menu-icon" />
-          <code>{{ utilPage }}</code>
-        </NuxtLink>
-      </li>
-    </ul>
-
     <!-- Components -->
-    <h3 class="c-main-menu-lib">
-      <code>components</code>
-    </h3>
+    <h4 class="c-main-menu-lib">
+      Components
+    </h4>
 
     <ul>
       <li v-for="componentPage in componentPages" :key="componentPage">
@@ -99,9 +86,9 @@ import {
     </ul>
 
     <!-- Styled components -->
-    <h3 class="c-main-menu-lib">
-      <code>styled components</code>
-    </h3>
+    <h4 class="c-main-menu-lib">
+      Styled components
+    </h4>
 
     <ul>
       <li v-for="componentPage in styledComponentPages" :key="componentPage">
@@ -113,9 +100,9 @@ import {
     </ul>
 
     <!-- Composables -->
-    <h3 class="c-main-menu-lib">
-      <code>composables</code>
-    </h3>
+    <h4 class="c-main-menu-lib">
+      Composables
+    </h4>
 
     <ul>
       <li v-for="composablePage in composablePages" :key="composablePage">
@@ -127,9 +114,9 @@ import {
     </ul>
 
     <!-- nuxt.config -->
-    <h3 class="c-main-menu-lib">
-      <code>nuxt.config</code>
-    </h3>
+    <h4 class="c-main-menu-lib">
+      nuxt.config
+    </h4>
 
     <ul>
       <li v-for="nuxtConfigPage in nuxtConfigPages" :key="nuxtConfigPage">
@@ -140,10 +127,24 @@ import {
       </li>
     </ul>
 
+    <!-- Nuxt plugins -->
+    <h4 class="c-main-menu-lib">
+      Nuxt plugins
+    </h4>
+
+    <ul>
+      <li v-for="nuxtPluginPage in nuxtPluginPages" :key="nuxtPluginPage">
+        <NuxtLink :to="'/nuxt/plugins/' + nuxtPluginPage" class="c-main-menu-link">
+          <IconNuxt class="c-main-menu-icon" />
+          <code>{{ nuxtPluginPage }}</code>
+        </NuxtLink>
+      </li>
+    </ul>
+
     <!-- Pinia stores -->
-    <h3 class="c-main-menu-lib">
-      <code>stores</code>
-    </h3>
+    <h4 class="c-main-menu-lib">
+      Stores
+    </h4>
 
     <ul>
       <li v-for="storePage in storePages" :key="storePage">
@@ -153,6 +154,21 @@ import {
         </NuxtLink>
       </li>
     </ul>
+
+    <!-- Utilities -->
+    <h4 class="c-main-menu-lib">
+      Utilities
+    </h4>
+
+    <ul>
+      <li v-for="utilPage in utilPages" :key="utilPage">
+        <NuxtLink :to="'/util/' + utilPage" class="c-main-menu-link">
+          <IconJavascriptColor class="c-main-menu-icon" />
+          <code>{{ utilPage }}</code>
+        </NuxtLink>
+      </li>
+    </ul>
+
   </div>
 </template>
 
@@ -165,9 +181,9 @@ import {
 }
 
 .c-main-menu-lib {
-  @include discreet;
-  @include no-push-bottom;
-  font-size: 1em;
+  // @include discreet;
+  @include push-tight-bottom(0.5);
+  @include small-font;
 
   + ul {
     @include no-push-top;
@@ -181,8 +197,9 @@ import {
     @include bold;
   }
 
+  // Link color
   &:not(.router-link-active):not(:hover):not(:focus) {
-    color: var(--dark-grey);
+    color: var(--discreet-text-color);
   }
 
 }

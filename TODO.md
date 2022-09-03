@@ -8,14 +8,15 @@
 - [x] Move to proper CSS variables
 - [x] Support overridable CSS vars in components
 - [x] Document CSS vars in components
-- [ ] Improve SCSS tests
+- [x] Improve SCSS tests
+- [ ] Make `Textfield` support custom content and not just icons
 - [ ] Vue and Nuxt 3 support for `eslint`
-- [ ] `pinia` persistance
+- [x] `pinia` persistance
+- [ ] Load `pinia` persistance plugin by default
 - [ ] Add `NuxtPage` component
   - [ ] Might be tricky with `definePageMeta` being a macro
 - [ ] Load code samples from separate files
 - [ ] Fix `HighlightedPre` whitespace
-- [ ] Make `Textfield` support custom content and not just icons
 - [ ] Hygraph
   - [ ] Utilities
   - [ ] Rich text renderer component

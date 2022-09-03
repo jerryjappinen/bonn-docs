@@ -26,12 +26,12 @@
 
 .c-layout-default-sidebar,
 .c-layout-default-main {
-  @include scroll-vertical;
   height: 100%;
 }
 
 .c-layout-default-sidebar {
   @include flex-fixed;
+  @include scroll-vertical;
   border-right-width: 1px;
   width: 18em;
   max-width: 35%;
@@ -39,6 +39,7 @@
 
 .c-layout-default-main {
   @include flex-fluid;
+  @include scroll;
 }
 
 .c-layout-default-main-content {
