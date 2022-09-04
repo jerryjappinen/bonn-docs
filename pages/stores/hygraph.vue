@@ -1,5 +1,9 @@
 <script setup>
-// import GetPeople from '@/queries/GetPeople.gql'
+import GetPeople from '@/queries/GetPeople.gql'
+
+// import useHygraph from '@/stores/useHygraph'
+// import { hygraph } from 'bonn/stores/setup'
+import hygraph from '../../../bonn/stores/setup/hygraph'
 
 const sampleOptions = {
   projectId: 'abc123...',
@@ -14,32 +18,44 @@ const sampleOptions = {
   }
 }
 
-// import useHygraph from '@/stores/useHygraph'
-
 // const hygraph = useHygraph()
 
-// const fetch = () => {
-//   return hygraph.fetch(GetPeople)
-// }
+// const dump = computed(() => {
+//   return {
+//     // apiUrl: hygraph.apiUrl,
+//     // projectId: hygraph.projectId,
+//     // entriesById: hygraph.entriesById,
+
+//     // request: typeof request,
+//     // unwrap: typeof unwrap
+//   }
+// })
+
+const fetchPeople = () => {
+  // return hygraph.fetch(GetPeople)
+}
 </script>
 
 <template>
   <PiniaStorePage
     name="hygraph"
     args="options"
+    :arg-samples="sampleOptions"
   >
 
-    <!-- <p>
-      <StyledButton @click="fetch">
+    <Dump :data="hygraph({
+      projectId: 'b4858899559a47279f1caba58a9c1a30'
+    })" />
+
+    <h4>Sample query</h4>
+
+    <p>
+      <StyledButton @click="fetchPeople">
         GetPeople
       </StyledButton>
-    </p> -->
+    </p>
 
-    <!-- <Dump :data="{
-      apiUrl: hygraph.apiUrl,
-      projectId: hygraph.projectId,
-      entriesById: hygraph.entriesById
-    }" /> -->
+    <Dump :data="GetPeople" />
 
   </PiniaStorePage>
 </template>

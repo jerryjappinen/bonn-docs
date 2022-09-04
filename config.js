@@ -110,6 +110,7 @@ export const utilPages = [
   'isDev',
   'isEmail',
   'isTest',
+  'toJson',
   'toPlainText',
 
   // 'isPrefixed',

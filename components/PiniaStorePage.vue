@@ -63,9 +63,9 @@ export default defineStore('{{ storeName }}', {{ storeName }}({{ storeArgs.join(
       />
     </template>
 
-    <Bodytext>
+    <slot />
 
-      <slot />
+    <Bodytext>
 
       <p>
         <ExternalLink :href="`https://github.com/jerryjappinen/bonn/blob/main/stores/setup/${storeName}.js`">
