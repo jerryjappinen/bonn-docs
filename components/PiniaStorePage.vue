@@ -44,14 +44,14 @@ npm i -D {{ storeDeps.join(' ') }}
       Use directly in your app:
     </p>
 
-    <HighlightedPre file="pages/MyPage.vue">import { {{ storeName }} } from 'bonn/stores'</HighlightedPre>
+    <HighlightedPre file="pages/MyPage.vue">import {{ storeName }} from 'bonn/stores/{{ storeName }}'</HighlightedPre>
 
     <p>
       Or make a customised store:
     </p>
 
     <HighlightedPre file="stores/myHygraphStore.js">import { defineStore } from 'pinia'
-import { {{ storeName }} } from 'bonn/stores/setup'
+import {{ storeName }}Setup from 'bonn/stores/setup/{{ storeName }}'
 
 export default defineStore('{{ storeName }}', {{ storeName }}({{ storeArgs.join(', ') }}))</HighlightedPre>
 
