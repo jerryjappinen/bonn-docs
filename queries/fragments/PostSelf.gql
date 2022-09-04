@@ -1,0 +1,11 @@
+fragment PostSelf on Post {
+  __typename
+  id
+  createdAt
+  publishedAt
+  updatedAt
+
+  title
+  slug
+  body
+}

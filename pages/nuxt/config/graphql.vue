@@ -1,5 +1,5 @@
 <script setup>
-import MyQuery from '@/code/MyQuery.gql'
+import GetPeople from '@/queries/GetPeople.gql'
 </script>
 
 <template>
@@ -12,13 +12,13 @@ import MyQuery from '@/code/MyQuery.gql'
     </p>
 
     <HighlightedPre>
-      import MyQuery from '@/queries/MyQuery.gql'
-      import graph from '@/util/graph'
+      import GetPeople from '@/queries/GetPeople.gql'
+      import { request } from 'graphql-request'
 
-      const data = await graph(MyQuery)
+      const data = await request(GetPeople)
     </HighlightedPre>
 
-    <Dump :data="MyQuery" />
+    <Dump :data="GetPeople" />
 
     <p>
       Uses <ExternalLink href="https://www.npmjs.com/package/@rollup/plugin-graphql">@rollup/plugin-graphql</ExternalLink> under the hood and supports the same options.

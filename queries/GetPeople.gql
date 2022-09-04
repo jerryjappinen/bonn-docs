@@ -1,0 +1,5 @@
+#import "./fragments/PersonSelf.gql"
+
+query GetPeople {
+  ...PersonSelf # PersonFull
+}

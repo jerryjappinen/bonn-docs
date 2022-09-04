@@ -16,8 +16,9 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
-    "bonn": "^0.0.40",
+    "bonn": "^0.0.48",
     "date-fns": "^2.29.2",
+    "graphql-request": "^5.0.0",
     "lodash-es": "^4.17.21",
     "pinia": "^2.0.21"
   },

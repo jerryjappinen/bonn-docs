@@ -84,7 +84,8 @@ export const scssPages = [
 ]
 
 export const storePages = [
-  'device'
+  'device',
+  'hygraph'
 ]
 
 export const styledComponentPages = [

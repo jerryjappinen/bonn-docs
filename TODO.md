@@ -32,9 +32,10 @@
 - [ ] Add a customised `NuxtAppPage` component
   - Might be tricky with `definePageMeta` being a macro
 - [ ] Hygraph
+  - [x] Demo space
+  - [ ] Pinia store
   - [ ] Utilities
   - [ ] Rich text renderer component
-  - [ ] Pinia store
   - [ ] Documentation
   - [ ] Examples (with GQL files and all that)
 - [ ] Contentful Pinia store

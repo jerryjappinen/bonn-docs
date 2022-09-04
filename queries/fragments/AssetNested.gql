@@ -1,0 +1,17 @@
+#import "./AssetSelf.gql"
+
+#.. #import "./PersonSelf.gql"
+#.. #import "./PostSelf.gql"
+
+fragment AssetNested on Asset {
+  ...AssetSelf
+
+  # coverImagePost {
+  #   ...PostSelf
+  # }
+
+  # photoPerson {
+  #   ...PersonSelf
+  # }
+
+}

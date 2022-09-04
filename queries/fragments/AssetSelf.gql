@@ -1,0 +1,16 @@
+fragment AssetSelf on Asset {
+  __typename
+  id
+  createdAt
+  publishedAt
+  updatedAt
+
+  fileName
+  handle
+  mimeType
+  size
+  url
+
+  height
+  width
+}

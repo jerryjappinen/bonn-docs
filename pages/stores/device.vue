@@ -5,12 +5,7 @@ const device = useDevice()
 </script>
 
 <template>
-  <div>
-    <h3>Pinia store: <code>device</code></h3>
-
-    <pre><code>import { useDevice } from 'bonn/stores/device'
-
-const device = useDevice()</code></pre>
+  <PiniaStorePage name="device">
 
     <Dump :data="{
       cursor: device.cursor,
@@ -20,5 +15,5 @@ const device = useDevice()</code></pre>
       viewport: device.viewport
     }" />
 
-  </div>
+  </PiniaStorePage>
 </template>

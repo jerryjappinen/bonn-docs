@@ -1,0 +1,10 @@
+fragment PersonSelf on Person {
+  __typename
+  id
+  createdAt
+  publishedAt
+  updatedAt
+
+  name
+  slug
+}
