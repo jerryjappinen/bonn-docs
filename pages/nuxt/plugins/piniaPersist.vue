@@ -26,7 +26,7 @@ import { defineStore } from 'pinia'
 export default defineStore('myStore', {
   persist: true,
 
-  state: () => {
+  state () {
     return {
       someState: 'hello pinia'
     }

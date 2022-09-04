@@ -1,9 +1,9 @@
 <script setup>
 import GetPeople from '@/queries/GetPeople.gql'
 
-// import useHygraph from '@/stores/useHygraph'
-// import { hygraph } from 'bonn/stores/setup'
-import hygraph from '../../../bonn/stores/setup/hygraph'
+import useHygraph from '@/stores/useHygraph'
+
+// import setup from '../../../bonn/stores/setup/hygraph'
 
 const sampleOptions = {
   projectId: 'abc123...',
@@ -18,21 +18,10 @@ const sampleOptions = {
   }
 }
 
-// const hygraph = useHygraph()
-
-// const dump = computed(() => {
-//   return {
-//     // apiUrl: hygraph.apiUrl,
-//     // projectId: hygraph.projectId,
-//     // entriesById: hygraph.entriesById,
-
-//     // request: typeof request,
-//     // unwrap: typeof unwrap
-//   }
-// })
+const hygraph = useHygraph()
 
 const fetchPeople = () => {
-  // return hygraph.fetch(GetPeople)
+  return hygraph.fetch(GetPeople)
 }
 </script>
 
@@ -43,9 +32,33 @@ const fetchPeople = () => {
     :arg-samples="sampleOptions"
   >
 
-    <Dump :data="hygraph({
-      projectId: 'b4858899559a47279f1caba58a9c1a30'
-    })" />
+
+    <!-- <h4>Setup</h4>
+
+    <Dump
+      :raw="true"
+      :data="setup(sampleOptions)"
+    /> -->
+
+    <h4>Store</h4>
+
+    <p>
+      {{ typeof hygraph }}
+    </p>
+
+    <Dump
+      :raw="true"
+      :data="{
+        apiUrl: hygraph.apiUrl,
+        projectId: hygraph.projectId,
+        environment: hygraph.environment,
+        entriesOrderedBy: hygraph.entriesOrderedBy,
+        entriesKeyedBy: hygraph.entriesKeyedBy,
+
+        // Entry data
+        entriesById: hygraph.entriesById
+      }"
+    />
 
     <h4>Sample query</h4>
 

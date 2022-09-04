@@ -38,13 +38,15 @@
   @include flex-fixed;
   @include scroll-vertical;
   border-right-width: 1px;
-  width: 18em;
-  max-width: 35%;
+  width: 16em;
+  max-width: 30%;
+  order: 1;
 }
 
 .c-layout-default-main {
   @include flex-fluid;
   @include scroll;
+  order: 2;
 }
 
 .c-layout-default-main-content {

@@ -36,9 +36,7 @@ const storeDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props.
       <code>Pinia {{ storeName }} store</code>
     </h2>
 
-    <HighlightedPre v-if="storeDeps.length">
-npm i -D {{ storeDeps.join(' ') }}
-    </HighlightedPre>
+    <HighlightedPre v-if="storeDeps.length">npm i -D {{ storeDeps.join(' ') }}</HighlightedPre>
 
     <p>
       Use directly in your app:

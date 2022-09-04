@@ -7,7 +7,7 @@ export default defineStore('myStore', {
     ]
   },
 
-  state: () => {
+  state () {
     return {
       someValue: 'Hello'
     }

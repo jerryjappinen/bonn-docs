@@ -16,6 +16,9 @@ export const baseUrl = (processEnvExists() ? process.env.BASE_URL : null) || isD
   ? 'http://localhost:3000'
   : 'https://bonn.vercel.app'
 
+// Demo space on Hygraph
+export const hygraphProjectId = 'b4858899559a47279f1caba58a9c1a30'
+
 // Pages
 export const componentPages = [
   'AppStoreBadge',
