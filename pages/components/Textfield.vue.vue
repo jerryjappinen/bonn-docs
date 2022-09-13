@@ -14,24 +14,31 @@ const monthValue = ref('')
       'button-color',
       'button-background-color'
     ]"
+    class="page-components-textfield"
   >
 
     <table>
       <tbody>
 
         <tr>
-          <td>
-            <code>Textfield</code>
-          </td>
+          <td>Default</td>
           <td colspan="2">
             <Textfield v-model="value" />
           </td>
         </tr>
 
         <tr>
-          <td>
-            With placeholder
+          <td>Disabled</td>
+          <td colspan="2">
+            <Textfield
+              v-model="value"
+              :disabled="true"
+            />
           </td>
+        </tr>
+
+        <tr>
+          <td>With placeholder</td>
           <td colspan="2">
             <Textfield
               v-model="emptyValue"
@@ -41,9 +48,7 @@ const monthValue = ref('')
         </tr>
 
         <tr>
-          <td>
-            Clear button
-          </td>
+          <td>Clear button</td>
           <td colspan="2">
             <Textfield
               v-model="value"
@@ -53,9 +58,7 @@ const monthValue = ref('')
         </tr>
 
         <tr>
-          <td>
-            Undo button
-          </td>
+          <td>Undo button</td>
           <td>
             <Textfield
               v-model="value"
@@ -71,10 +74,18 @@ const monthValue = ref('')
         </tr>
 
         <tr>
+          <td>With an icon</td>
           <td>
-            With an icon
+            <Textfield
+              :clear="true"
+              placeholder="Fill value"
+            >
+              <Icon>
+                <IconSearch />
+              </Icon>
+            </Textfield>
           </td>
-          <td colspan="2">
+          <td>
             <Textfield
               v-model="value"
               :clear="true"
@@ -87,9 +98,27 @@ const monthValue = ref('')
         </tr>
 
         <tr>
+          <td>With an inline label</td>
           <td>
-            Min and max values
+            <Textfield
+              :clear="true"
+              placeholder="Fill value"
+            >
+              Inline label
+            </Textfield>
           </td>
+          <td>
+            <Textfield
+              v-model="value"
+              :clear="true"
+            >
+              Inline label
+            </Textfield>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Min and max values</td>
           <td>
             <Textfield
               v-model="value"
@@ -108,9 +137,7 @@ const monthValue = ref('')
         </tr>
 
         <tr>
-          <td>
-            Render a <code>textarea</code>
-          </td>
+          <td>Render a <code>textarea</code></td>
           <td colspan="2">
             <Textfield
               v-model="multilineValue"
@@ -193,3 +220,23 @@ const monthValue = ref('')
 
   </ComponentPage>
 </template>
+
+<style lang="scss">
+
+.page-components-textfield {
+
+  .c-textfield {
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+
+  .c-textfield-input {
+    background-color: rgba(0, 255, 0, 0.1);
+  }
+
+  .c-textfield-label {
+    background-color: rgba(0, 0, 255, 0.1);
+  }
+
+}
+
+</style>

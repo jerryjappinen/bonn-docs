@@ -1,0 +1,30 @@
+#import "./Post.gql"
+
+#import "./Asset.gql"
+#import "./Person.gql"
+
+fragment PostNested on Post {
+  ...Post
+
+  body {
+    raw
+
+    # FIXME: is this supported by graphql-unwrap?
+    # raw {
+    #   references {
+    #     ... on Person {
+    #       ...Person
+    #     }
+    #   }
+    # }
+  }
+
+  authors {
+    ...Person
+  }
+
+  coverImage {
+    ...Asset
+  }
+
+}

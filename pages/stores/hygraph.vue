@@ -3,8 +3,6 @@ import GetPeople from '@/queries/GetPeople.gql'
 
 import useHygraph from '@/stores/useHygraph'
 
-// import setup from '../../../bonn/stores/setup/hygraph'
-
 const sampleOptions = {
   projectId: 'abc123...',
   persist: false,
@@ -15,6 +13,9 @@ const sampleOptions = {
   keyBy: {
     Person: 'slug',
     Post: 'slug'
+  },
+  groupBy: {
+    Person: 'country'
   }
 }
 
@@ -30,6 +31,7 @@ const fetchPeople = () => {
     name="hygraph"
     args="options"
     :arg-samples="sampleOptions"
+    deps="graphql-request"
   >
 
 
@@ -40,11 +42,28 @@ const fetchPeople = () => {
       :data="setup(sampleOptions)"
     /> -->
 
-    <h4>Store</h4>
+    <h2>Sample</h2>
+
+    <h4>Store entries</h4>
 
     <p>
-      {{ typeof hygraph }}
+      <StyledButton @click="fetchPeople">
+        GetPeople
+      </StyledButton>
     </p>
+
+    <Dump
+      :raw="true"
+      :data="{
+        entryTypes: hygraph.entryTypes,
+        entriesById: hygraph.entriesById,
+        entriesByType: hygraph.entriesByType,
+        keyedEntries: hygraph.keyedEntries,
+        groupedEntries: hygraph.groupedEntries
+      }"
+    />
+
+    <h4>Store config values</h4>
 
     <Dump
       :raw="true"
@@ -53,20 +72,11 @@ const fetchPeople = () => {
         projectId: hygraph.projectId,
         environment: hygraph.environment,
         entriesOrderedBy: hygraph.entriesOrderedBy,
-        entriesKeyedBy: hygraph.entriesKeyedBy,
-
-        // Entry data
-        entriesById: hygraph.entriesById
+        entriesKeyedBy: hygraph.entriesKeyedBy
       }"
     />
 
     <h4>Sample query</h4>
-
-    <p>
-      <StyledButton @click="fetchPeople">
-        GetPeople
-      </StyledButton>
-    </p>
 
     <Dump :data="GetPeople" />
 

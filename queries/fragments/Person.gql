@@ -1,4 +1,4 @@
-fragment PersonSelf on Person {
+fragment Person on Person {
   __typename
   id
   createdAt
@@ -7,4 +7,5 @@ fragment PersonSelf on Person {
 
   name
   slug
+  country
 }

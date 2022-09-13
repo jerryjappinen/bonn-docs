@@ -26,6 +26,12 @@ defineProps({
 
 <style lang="scss">
 
+:root {
+  --c-styled-button-primary-text-color: var(--background-color);
+  --c-styled-button-primary-background-color: var(--text-color);
+  --c-styled-button-primary-border-color: var(--border-color);
+}
+
 .c-styled-button-primary,
 .c-styled-button-secondary,
 .c-styled-button-tertiary,
@@ -53,18 +59,18 @@ defineProps({
 // Primary
 
 .c-styled-button-primary {
-  background-color: var(--very-dark);
-  border-color: var(--very-dark);
+  background-color: var(--c-styled-button-primary-background-color);
+  border-color: var(--c-styled-button-primary-background-color);
 }
 
 .c-styled-button-primary-enabled {
-  color: var(--white);
+  color: var(--c-styled-button-primary-text-color);
 
   @include transparent-solid-shadow;
 
   &:hover,
   &:focus {
-    @include solid-shadow;
+    @include solid-shadow(var(--c-styled-button-primary-border-color));
   }
 
 }

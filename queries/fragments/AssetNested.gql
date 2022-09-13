@@ -1,17 +1,17 @@
-#import "./AssetSelf.gql"
+#import "./Asset.gql"
 
-#.. #import "./PersonSelf.gql"
-#.. #import "./PostSelf.gql"
+#import "./Person.gql"
+#import "./Post.gql"
 
 fragment AssetNested on Asset {
-  ...AssetSelf
+  ...Asset
 
-  # coverImagePost {
-  #   ...PostSelf
-  # }
+  coverImagePost {
+    ...Post
+  }
 
-  # photoPerson {
-  #   ...PersonSelf
-  # }
+  photoPerson {
+    ...Person
+  }
 
 }

@@ -33,7 +33,7 @@ const storeDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props.
   <div>
 
     <h2>
-      <code>Pinia {{ storeName }} store</code>
+      <code>stores/{{ storeName }}</code>
     </h2>
 
     <HighlightedPre v-if="storeDeps.length">npm i -D {{ storeDeps.join(' ') }}</HighlightedPre>

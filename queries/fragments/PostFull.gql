@@ -1,0 +1,30 @@
+#import "./Post.gql"
+
+fragment PostFull on Post {
+  ...Post
+
+  body {
+    raw
+
+    # FIXME: is this supported by graphql-unwrap?
+    # raw {
+    #   references {
+    #     ... on Person {
+    #       __typename
+    #       id
+    #     }
+    #   }
+    # }
+  }
+
+  authors {
+    __typename
+    id
+  }
+
+  coverImage {
+    __typename
+    id
+  }
+
+}

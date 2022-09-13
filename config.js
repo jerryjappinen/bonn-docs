@@ -17,7 +17,7 @@ export const baseUrl = (processEnvExists() ? process.env.BASE_URL : null) || isD
   : 'https://bonn.vercel.app'
 
 // Demo space on Hygraph
-export const hygraphProjectId = 'b4858899559a47279f1caba58a9c1a30'
+export const hygraphApiUrl = 'https://api-eu-west-2.hygraph.com/v2/cl7n4zm4t28ec01uh0oum04sc/master'
 
 // Pages
 export const componentPages = [

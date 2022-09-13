@@ -1,14 +1,5 @@
 <script setup>
-import {
-  componentPages,
-  composablePages,
-  nuxtConfigPages,
-  nuxtPluginPages,
-  scssPages,
-  storePages,
-  styledComponentPages,
-  utilPages
-} from '@/config'
+import { astToHtmlString } from '@graphcms/rich-text-html-renderer'
 </script>
 
 <template>

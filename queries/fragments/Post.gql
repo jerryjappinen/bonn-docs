@@ -1,4 +1,4 @@
-fragment PostSelf on Post {
+fragment Post on Post {
   __typename
   id
   createdAt
@@ -7,5 +7,4 @@ fragment PostSelf on Post {
 
   title
   slug
-  body
 }

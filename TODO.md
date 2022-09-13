@@ -19,7 +19,8 @@
   - [x] `getDomain`
   - [ ] `composeClassnames`
   - [ ] `getUserAgentStringValue`
-- [ ] Make `Textfield` support custom content and not just icons
+- [x] Make `Textfield` support custom content and not just icons
+- [ ] Make `isDev` work in Nuxt 3 runtime
 
 ### Later
 
@@ -33,8 +34,8 @@
   - Might be tricky with `definePageMeta` being a macro
 - [ ] Hygraph
   - [x] Demo space
-  - [ ] Pinia store
-  - [ ] Utilities
+  - [x] Pinia store
+  - [x] Utilities
   - [ ] Rich text renderer component
   - [ ] Documentation
   - [ ] Examples (with GQL files and all that)

@@ -1,5 +1,7 @@
-#import "./fragments/PersonSelf.gql"
+#import "./fragments/Person.gql"
 
 query GetPeople {
-  ...PersonSelf # PersonFull
+  people {
+    ...Person # Should be PersonFull
+  }
 }

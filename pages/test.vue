@@ -1,5 +1,15 @@
 <script setup>
-// import Expand from 'bonn/experimentalComponents/Expand'
+import hygraphRequest from '@/util/hygraphRequest'
+
+import GetPosts from '@/queries/GetPosts.gql'
+
+const posts = ref([])
+
+const onFetch = async () => {
+  const data = await hygraphRequest(GetPosts)
+
+  posts.value = data
+}
 
 const isExpanded = ref(false)
 </script>
@@ -8,31 +18,21 @@ const isExpanded = ref(false)
   <div class="page-test">
     <h2>Sandbox page</h2>
 
-    <Bodytext>
-      <p>Here's some body text.</p>
-    </Bodytext>
+    <h4>Rich text</h4>
 
     <p>
-      <Toggle v-model="isExpanded">
-        <!-- <Expand>
-          <div v-if="isExpanded" key="expanded">
-            Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded. Expanded.
-          </div>
-          <div v-else key="collapsed">
-            Collapsed
-          </div>
-        </Expand> -->
-        Foo
-      </Toggle>
+      <StyledButton @click="onFetch">Fetch posts</StyledButton>
     </p>
+
+    <Dump :data="posts" />
 
   </div>
 </template>
 
 <style lang="scss">
 
-.page-test {
-  color: v(red);
-}
+// .page-test {
+//   color: v(red);
+// }
 
 </style>

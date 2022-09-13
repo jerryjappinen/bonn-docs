@@ -1,4 +1,4 @@
-fragment AssetSelf on Asset {
+fragment Asset on Asset {
   __typename
   id
   createdAt

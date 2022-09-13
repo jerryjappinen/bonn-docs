@@ -1,5 +1,5 @@
 <script setup>
-import isSuffixed from '../../../bonn/util/isSuffixed'
+import isSuffixed from 'bonn/util/isSuffixed'
 
 const string = ref('string')
 const suffix = ref('/')

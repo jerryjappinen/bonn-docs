@@ -1,5 +1,5 @@
 <script setup>
-import removeSuffix from '../../../bonn/util/removeSuffix'
+import removeSuffix from 'bonn/util/removeSuffix'
 
 const string = ref('string')
 const suffix = ref('/')
