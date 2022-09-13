@@ -34,6 +34,7 @@ export const componentPages = [
   'GooglePlayBadge',
   'LiveDuration',
   'MobileWebAppBadge',
+  'RichText',
   // 'Slider',
   'Spinner',
   'Switch',

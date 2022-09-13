@@ -7,4 +7,19 @@ fragment Post on Post {
 
   title
   slug
+
+  body {
+    raw
+
+    # FIXME: is this supported by graphql-unwrap?
+    # raw {
+    #   references {
+    #     ... on Person {
+    #       __typename
+    #       id
+    #     }
+    #   }
+    # }
+  }
+
 }

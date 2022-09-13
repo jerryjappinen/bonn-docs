@@ -1,7 +1,7 @@
-#import "./fragments/PostFull.gql"
+#import "./fragments/PostNested.gql"
 
 query GetPosts {
   posts {
-    ...PostFull
+    ...PostNested
   }
 }
