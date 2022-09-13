@@ -36,9 +36,9 @@
   - [x] Demo space
   - [x] Pinia store
   - [x] Utilities
-  - [ ] Rich text renderer component
-  - [ ] Documentation
-  - [ ] Examples (with GQL files and all that)
+  - [x] Documentation
+  - [x] Examples (with GQL files and all that)
+- [ ] `RichText` component for Hygraph
 - [ ] Contentful Pinia store
 - [ ] Register `bonn` on https://modules.nuxtjs.org/?version=3.x
 
