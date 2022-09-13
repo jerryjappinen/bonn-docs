@@ -1,0 +1,16 @@
+#import "./Person.gql"
+
+fragment PersonFull on Person {
+  ...Person
+
+  photo {
+    __typename
+    id
+  }
+
+  posts {
+    __typename
+    id
+  }
+
+}

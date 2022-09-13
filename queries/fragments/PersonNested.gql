@@ -1,0 +1,17 @@
+#import "./Person.gql"
+
+#import "./Asset.gql"
+#import "./Post.gql"
+
+fragment PersonNested on Person {
+  ...Person
+
+  photo {
+    ...Asset
+  }
+
+  posts {
+    ...Post
+  }
+
+}
