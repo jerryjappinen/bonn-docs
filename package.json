@@ -25,6 +25,6 @@
     "prism-es6": "^1.2.0"
   },
   "devDependencies": {
-    "nuxt": "^3.0.0-rc.9"
+    "nuxt": "^3.0.0-rc.10"
   }
 }
