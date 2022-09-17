@@ -40,7 +40,6 @@ const config = mergeConfigs(
 
     coverImage: true,
     favicon: true,
-    faviconIco: false,
     appleTouchIcon: true,
     maskIcon: true,
     // maskIconColor: '#000',

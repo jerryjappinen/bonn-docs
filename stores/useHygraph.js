@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 import { hygraphApiUrl } from '@/config'
 
 import hygraph from 'bonn/stores/setup/hygraph'
+// import hygraph from '../../bonn/stores/setup/hygraph'
 
 export default defineStore('hygraph', hygraph({
   // persist: true,

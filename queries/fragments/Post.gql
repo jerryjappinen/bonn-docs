@@ -1,3 +1,6 @@
+#import "./AssetFull.gql"
+#import "./PersonFull.gql"
+
 fragment Post on Post {
   __typename
   id
@@ -11,15 +14,16 @@ fragment Post on Post {
   body {
     raw
 
-    # FIXME: is this supported by graphql-unwrap?
-    # raw {
-    #   references {
-    #     ... on Person {
-    #       __typename
-    #       id
-    #     }
-    #   }
-    # }
+    # Not supported by graphql-unwrap
+    references {
+      ... on Asset {
+        ...AssetFull
+      }
+
+      ... on Person {
+        ...PersonFull
+      }
+    }
   }
 
 }

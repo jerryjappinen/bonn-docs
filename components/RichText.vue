@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, unref } from 'vue'
 
 import { astToHtmlString } from '@graphcms/rich-text-html-renderer'
 
@@ -12,6 +12,11 @@ const props = defineProps({
   references: {
     type: Object,
     default: null
+  },
+
+  renderers: {
+    type: Object,
+    default: null
   }
 })
 
@@ -20,20 +25,13 @@ const html = computed(() => {
     content: props.content,
     references: props.references,
 
+    // https://www.npmjs.com/package/@graphcms/rich-text-react-renderer
     renderers: {
-
       bold (props) {
         return `<strong>${props.children}</strong>`
       },
 
-      Asset: {
-        application () {
-          return `<div><p>Asset</p></div>`
-        },
-        text () {
-          return `<div><p>Asset text plain</p></div>`
-        }
-      }
+      ...(unref(props.renderers) || {})
     }
   })
 })

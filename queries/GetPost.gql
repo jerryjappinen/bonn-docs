@@ -1,0 +1,9 @@
+#import "./fragments/PostNested.gql"
+
+query GetPost ($postSlug: String) {
+  post(where: {
+    slug: $postSlug
+  }) {
+    ...PostNested
+  }
+}

@@ -1,4 +1,5 @@
 <script setup>
+  import compact from 'lodash-es/compact'
 import flattenDeep from 'lodash-es/flattenDeep'
 import kebabCase from 'lodash-es/kebabCase'
 
@@ -19,12 +20,12 @@ const props = defineProps({
 const importString = `import ${props.name} from 'bonn/components/${props.name}'`
 
 const cssVars = computed(() => {
-  return flattenDeep([unref(props.cssVars)])
+  return compact(flattenDeep([unref(props.cssVars)]))
 })
 
 const css = computed(() => {
   if (cssVars.value.length) {
-    return `/*CSS variables available*/
+    return `/*CSS variables*/
 :root {${cssVars.value.map((cssVar) => {
   return '\n' + `  --c-${kebabCase(unref(props.name))}-${kebabCase(cssVar)}: ...;`
 })}
@@ -42,13 +43,15 @@ const css = computed(() => {
 
     <HighlightedPre>{{ importString }}</HighlightedPre>
 
-    <p>
-      <ExternalLink :href="`https://github.com/jerryjappinen/bonn/blob/main/components/${name}.js`">
-        <Icon>
-          <IconGithub /> Source
-        </Icon>
-      </ExternalLink>
-    </p>
+    <Bodytext>
+      <p>
+        <ExternalLink :href="`https://github.com/jerryjappinen/bonn/blob/main/components/${name}.js`">
+          <Icon>
+            <IconGithub /> Source
+          </Icon>
+        </ExternalLink>
+      </p>
+    </Bodytext>
 
     <Dump
       v-if="css"

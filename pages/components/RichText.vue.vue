@@ -1,16 +1,18 @@
 <script setup>
-import GetPosts from '@/queries/GetPosts.gql'
+import GetPost from '@/queries/GetPost.gql'
 
 import useHygraph from '@/stores/useHygraph'
 
 const hygraph = useHygraph()
 
 const { pending } = await useLazyAsyncData(() => {
-  hygraph.fetch(GetPosts)
+  return hygraph.fetch(GetPost, {
+    postSlug: 'how-i-became-an-action-hero'
+  })
 })
 
 const posts = computed(() => {
-  return hygraph.entriesByType.Post && hygraph.entriesByType.Post.length ? hygraph.entriesByType.Post : []
+  return hygraph.entriesByType.Post || []
 })
 </script>
 
@@ -18,7 +20,7 @@ const posts = computed(() => {
   <ComponentPage name="RichText">
 
     <h2>
-      Sample data
+      All loaded posts
       <Ellipsis v-if="pending" />
     </h2>
 
@@ -26,22 +28,39 @@ const posts = computed(() => {
       <div
         v-for="post in posts"
         :key="post.id"
-        class="post"
+        class="page-components-rich-text-post"
       >
-        {{ post.title }}
+
+        <h3 class="post-title">{{ post.title }}</h3>
+
+        <template v-if="post.body && post.body.raw">
+          <RichText
+            :content="post.body.raw"
+            :references="post.body.references"
+            class="page-components-rich-text-post-body"
+          />
+          <!-- <Dump :data="post.body.raw" /> -->
+        </template>
+
       </div>
     </div>
-
-    <Dump :data="posts" />
 
   </ComponentPage>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
-.post {
-  @include pad;
-  border-top-width: 1px;
+.page-components-rich-text-post {
+  @include pad-vertical;
+  @include pad-loose-horizontal;
+  @include radius;
+  border-width: 1px;
+}
+
+// .post-title {}
+
+.page-components-rich-text-post-body img {
+  @include radius;
 }
 
 </style>
