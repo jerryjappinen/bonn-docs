@@ -77,8 +77,9 @@ const monthValue = ref('')
           <td>With an icon</td>
           <td>
             <Textfield
+              v-model="emptyValue"
               :clear="true"
-              placeholder="Fill value"
+              placeholder="Fill in value..."
             >
               <Icon>
                 <IconSearch />
@@ -101,6 +102,7 @@ const monthValue = ref('')
           <td>With an inline label</td>
           <td>
             <Textfield
+              v-model="emptyValue"
               :clear="true"
               placeholder="Fill value"
             >
