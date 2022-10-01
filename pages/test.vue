@@ -1,38 +1,43 @@
 <script setup>
-import hygraphRequest from '@/util/hygraphRequest'
+const isToggled = ref(false)
 
-import GetPosts from '@/queries/GetPosts.gql'
-
-const posts = ref([])
-
-const onFetch = async () => {
-  const data = await hygraphRequest(GetPosts)
-
-  posts.value = data
+const toggle = () => {
+  isToggled.value = !isToggled.value
 }
-
-const isExpanded = ref(false)
 </script>
 
 <template>
   <div class="page-test">
-    <h2>Sandbox page</h2>
-
-    <h4>Rich text</h4>
+    <h2>Transition tests</h2>
 
     <p>
-      <StyledButton @click="onFetch">Fetch posts</StyledButton>
+      <StyledButton @click="toggle">Toggle</StyledButton>
     </p>
 
-    <Dump :data="posts" />
+    <div class="page-test-transition-test">
+      <Fade>
+        <div v-if="isToggled" key="is">Is toggled</div>
+        <div v-else key="not">Is not toggled</div>
+      </Fade>
+    </div>
 
   </div>
 </template>
 
 <style lang="scss">
 
-// .page-test {
-//   color: v(red);
-// }
+.page-test {
+  --c-fade-duration: 2000ms;
+}
+
+.page-test-transition-test {
+
+  div {
+    @include pad;
+    @include radius;
+    border-width: 5px;
+  }
+
+}
 
 </style>

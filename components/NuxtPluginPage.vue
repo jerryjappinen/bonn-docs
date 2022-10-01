@@ -15,9 +15,12 @@ const pluginArgs = props.args ? (Array.isArray(props.args) ? props.args : [props
 
     <h2><code>{{ pluginName }}</code></h2>
 
-    <HighlightedPre :file="`plugins/${pluginName}.js`">import { {{ pluginName }} } from 'bonn/nuxt/plugins'
+    <HighlightedPre
+      :file="`plugins/${pluginName}.js`"
+      :code="`import ${pluginName} from 'bonn/nuxt/plugins/${pluginName}'
 
-export default defineNuxtPlugin({{ pluginName }}({{ pluginArgs.join(', ') }}))</HighlightedPre>
+export default defineNuxtPlugin(${pluginName}(${pluginArgs.join(', ')}))`"
+    />
 
     <Bodytext>
 

@@ -31,6 +31,7 @@ export const componentPages = [
   'Ellipsis',
   'EmailLink',
   'ExternalLink',
+  'Fade',
   'GooglePlayBadge',
   'LiveDuration',
   'MobileWebAppBadge',

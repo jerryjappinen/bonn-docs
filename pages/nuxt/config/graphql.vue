@@ -11,12 +11,10 @@ import GetPeople from '@/queries/GetPeople.gql'
       Adds support for importing <code>.gql</code> files.
     </p>
 
-    <HighlightedPre>
-      import GetPeople from '@/queries/GetPeople.gql'
-      import { request } from 'graphql-request'
+    <HighlightedPre code="import GetPeople from '@/queries/GetPeople.gql'
+import { request } from 'graphql-request'
 
-      const data = await request(GetPeople)
-    </HighlightedPre>
+const data = await request(GetPeople)" />
 
     <Dump :data="GetPeople" />
 

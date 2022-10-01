@@ -20,8 +20,7 @@ const store = useMyStore()
       <ExternalLink href="https://github.com/prazdevs/pinia-plugin-persistedstate"><code>pinia-plugin-persistedstate</code></ExternalLink> is included out of the box. Enable it in your store like this:
     </p>
 
-    <HighlightedPre>
-import { defineStore } from 'pinia'
+    <HighlightedPre code="import { defineStore } from 'pinia'
 
 export default defineStore('myStore', {
   persist: true,
@@ -31,8 +30,7 @@ export default defineStore('myStore', {
       someState: 'hello pinia'
     }
   }
-})
-    </HighlightedPre>
+})" />
 
   </NuxtPluginPage>
 </template>

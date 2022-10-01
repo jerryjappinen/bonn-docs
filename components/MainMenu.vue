@@ -48,6 +48,12 @@ import {
         </NuxtLink>
       </li>
 
+      <li>
+        <NuxtLink to="/test" class="c-main-menu-link">
+          Test
+        </NuxtLink>
+      </li>
+
     </ul>
 
     <!-- Scss -->
@@ -198,7 +204,11 @@ import {
   }
 
   // Link color
-  color: var(--discreet-text-color);
+  color: var(--dark-grey);
+
+  @include dark {
+    color: var(--discreet-text-color);
+  }
 
   &.router-link-active,
   &:hover,

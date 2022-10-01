@@ -13,9 +13,10 @@
         The easiest way to implement Google Fonts is using the <code>nuxt.config</code> helper <NuxtLink to="/nuxt/config/googleFonts">googleFonts()</NuxtLink>.
       </p>
 
-      <HighlightedPre file="nuxt.config.ts">
-        googleFonts('Poppins', 'Dosis')
-      </HighlightedPre>
+      <HighlightedPre
+        file="nuxt.config.ts"
+        code="googleFonts('Poppins', 'Dosis')"
+      />
 
       <h5>In SCSS</h5>
 
@@ -23,9 +24,10 @@
         Or add the `import` code in your global style sheets:
       </p>
 
-      <HighlightedPre file="my-styles.scss">
-        @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
-      </HighlightedPre>
+      <HighlightedPre
+        file="my-styles.scss"
+        code="@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');"
+      />
 
       <h4>Custom web fonts</h4>
 

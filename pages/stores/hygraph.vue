@@ -4,6 +4,10 @@ import GetPeople from '@/queries/GetPeople.gql'
 import useHygraph from '@/stores/useHygraph'
 
 const sampleOptions = {
+  request (baseUrl, query, variables) {
+    // ...
+  },
+
   projectId: 'abc123...',
   persist: false,
   orderBy: {
@@ -34,6 +38,13 @@ const fetchPeople = () => {
     deps="graphql-request"
   >
 
+    <p>
+      You must pass a request method that accepts 3 arguments. You can use <code>graphql-request</code>.
+    </p>
+
+    <HighlightedPre code="import { request } from 'graphql-request'
+
+useHygraph({ request })" />
 
     <!-- <h4>Setup</h4>
 

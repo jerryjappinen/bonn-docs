@@ -21,6 +21,10 @@
   - [ ] `getUserAgentStringValue`
 - [x] Make `Textfield` support custom content and not just icons
 - [ ] Make `isDev` work in Nuxt 3 runtime
+- [ ] Popover
+- [ ] `RichText` component for Hygraph
+- [x] Fade with directions
+  - [ ] Make overriding transition durations work
 
 ### Later
 
@@ -38,8 +42,9 @@
   - [x] Utilities
   - [x] Documentation
   - [x] Examples (with GQL files and all that)
-- [ ] `RichText` component for Hygraph
 - [ ] Contentful Pinia store
+- [ ] Notifications service with Pinia
+- [ ] Toast component
 - [ ] Register `bonn` on https://modules.nuxtjs.org/?version=3.x
 
 ### `useLazyAsyncData`

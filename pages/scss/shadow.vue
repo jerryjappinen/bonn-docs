@@ -44,6 +44,7 @@
     @include mono;
     @include pad-loose;
     @include push-loose-vertical-even;
+    background-color: var(--offset-background-color);
 
     border-radius: var(--radius) var(--radius-very-loose) var(--radius-very-loose) var(--radius);
   }

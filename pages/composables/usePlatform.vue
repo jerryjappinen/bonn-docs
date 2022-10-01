@@ -4,7 +4,7 @@ const platform = usePlatform()
 
 <template>
   <ComposablePage
-    name="time"
+    name="platform"
     :props="platform"
   />
 </template>

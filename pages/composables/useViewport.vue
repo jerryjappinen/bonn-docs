@@ -1,9 +1,5 @@
 <script setup>
 const viewport = useViewport()
-
-const methods = {
-  setBreakpoints: viewport.setBreakpoints
-}
 </script>
 
 <template>
@@ -30,7 +26,6 @@ const methods = {
       exactBreakpoint: viewport.exactBreakpoint,
       nextBreakpoint: viewport.nextBreakpoint
     }"
-    :methods="methods"
   >
     <p>Automatically initialised on mount.</p>
   </ComposablePage>

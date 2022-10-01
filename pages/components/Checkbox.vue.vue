@@ -1,6 +1,5 @@
 <script setup>
-const value1 = ref(true)
-const value2 = ref(false)
+const val = ref(true)
 </script>
 
 <template>
@@ -19,36 +18,32 @@ const value2 = ref(false)
   >
 
     <p>
-      <Toggle v-model="value1">
-        <Checkbox :value="value1" />
+      <Toggle v-model="val">
+        <Checkbox v-model="val" />
       </Toggle>
-    </p>
 
-    <p>
-      <Toggle v-model="value2">
-        <Checkbox :value="value2" />
-      </Toggle>
-    </p>
-
-    <p>
       <Toggle
-        v-model="value1"
+        v-model="val"
         :disabled="true"
       >
         <Checkbox
-          v-model="value1"
+          v-model="val"
           :disabled="true"
         />
       </Toggle>
     </p>
 
     <p>
+      <Toggle v-model="val">
+        <Checkbox :model-value="!val" />
+      </Toggle>
+
       <Toggle
-        v-model="value2"
+        v-model="val"
         :disabled="true"
       >
         <Checkbox
-          v-model="value2"
+          :model-value="!val"
           :disabled="true"
         />
       </Toggle>

@@ -1,3 +1,11 @@
+<script setup>
+const packageJsonCode = `{
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore \"**/*.{js,ts}\""
+  }
+}`
+</script>
+
 <template>
   <Bodytext>
     <h2>Preconfigured setup for <code>eslint</code> and <code>Prettier</code>.</h2>
@@ -14,17 +22,15 @@
       <code>eslint</code> and plugins are already included as dependencies.
     </p>
 
-    <HighlightedPre file=".eslintrc.js">
-      module.exports = require('bonn/eslint/es6.cjs')
-    </HighlightedPre>
+    <HighlightedPre
+      file=".eslintrc.js"
+      code="module.exports = require('bonn/eslint/es6.cjs')"
+    />
 
-    <HighlightedPre file="package.json">
-      {
-        "scripts": {
-          "lint": "eslint \"**/*.{js,ts}\""
-        }
-      }
-    </HighlightedPre>
+    <HighlightedPre
+      file="package.json"
+      :code="packageJsonCode"
+    />
 
 
 
@@ -34,9 +40,10 @@
       <code>prettier</code> is already included as dependency.
     </p>
 
-    <HighlightedPre file="prettier.config.js">
-      module.exports = require('bonn/prettier')
-    </HighlightedPre>
+    <HighlightedPre
+      file="prettier.config.js"
+      code="module.exports = require('bonn/prettier')"
+    />
 
   </Bodytext>
 </template>

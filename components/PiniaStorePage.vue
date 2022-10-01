@@ -36,22 +36,31 @@ const storeDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props.
       <code>stores/{{ storeName }}</code>
     </h2>
 
-    <HighlightedPre v-if="storeDeps.length">npm i -D {{ storeDeps.join(' ') }}</HighlightedPre>
+    <HighlightedPre
+      v-if="storeDeps.length"
+      :code="`npm i -D ${storeDeps.join(' ')}`"
+    />
 
     <p>
       Use directly in your app:
     </p>
 
-    <HighlightedPre file="pages/MyPage.vue">import {{ storeName }} from 'bonn/stores/{{ storeName }}'</HighlightedPre>
+    <HighlightedPre
+      file="pages/MyPage.vue"
+      :code="`import ${storeName} from 'bonn/stores/${storeName}'`"
+    />
 
     <p>
       Or make a customised store:
     </p>
 
-    <HighlightedPre file="stores/myHygraphStore.js">import { defineStore } from 'pinia'
-import {{ storeName }}Setup from 'bonn/stores/setup/{{ storeName }}'
+    <HighlightedPre
+      file="stores/myHygraphStore.js"
+      :code="`import { defineStore } from 'pinia'
+import ${storeName}Setup from 'bonn/stores/setup/${storeName}'
 
-export default defineStore('{{ storeName }}', {{ storeName }}({{ storeArgs.join(', ') }}))</HighlightedPre>
+export default defineStore('${storeName}', ${storeName}Setup(${storeArgs.join(', ')}))`"
+    />
 
     <template v-if="storeArgSamples.length">
       <Dump

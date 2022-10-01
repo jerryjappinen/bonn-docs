@@ -41,7 +41,14 @@ const css = computed(() => {
 
     <h2><code>{{ name }}</code></h2>
 
-    <HighlightedPre>{{ importString }}</HighlightedPre>
+    <HighlightedPre :code="importString" />
+
+    <slot />
+
+    <Dump
+      v-if="css"
+      :data="css"
+    />
 
     <Bodytext>
       <p>
@@ -52,13 +59,6 @@ const css = computed(() => {
         </ExternalLink>
       </p>
     </Bodytext>
-
-    <Dump
-      v-if="css"
-      :data="css"
-    />
-
-    <slot />
 
   </div>
 </template>

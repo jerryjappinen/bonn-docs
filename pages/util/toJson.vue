@@ -22,11 +22,11 @@ const demoData = {
     name="toJson"
     :args="['data', 'trim']"
   >
-    <HighlightedPre>toJson(demoData)</HighlightedPre>
+    <HighlightedPre code="toJson(demoData)" />
 
     <pre>{{ toJson(demoData) }}</pre>
 
-    <HighlightedPre>toJson(demoData, true)</HighlightedPre>
+    <HighlightedPre code="toJson(demoData, true)" />
 
     <pre>{{ toJson(demoData, true) }}</pre>
   </UtilPage>

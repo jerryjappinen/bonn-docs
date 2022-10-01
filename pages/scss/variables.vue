@@ -2,15 +2,33 @@
 // bonn/scss/variables/colors.scss
 const colorUsage = [
   'text-color',
+  'border-color',
   'background-color',
   'offset-background-color',
-  'border-color',
+  'discreet-color-very-light',
   'discreet-color-light',
   'discreet-color',
-  'discreet-color-dark',
   'discreet-text-color',
   'link-color',
-  'link-active-color'
+  'link-active-color',
+
+  'inverted-text-color',
+  'inverted-border-color',
+  'inverted-background-color',
+  'inverted-offset-background-color',
+  'inverted-discreet-color-very-light',
+  'inverted-discreet-color-light',
+  'inverted-discreet-color',
+  'inverted-discreet-text-color',
+  'inverted-link-color',
+  'inverted-link-active-color'
+]
+
+const textUsage = [
+  'default-font',
+  'default-font-size',
+  'default-line-height',
+  'link-weight'
 ]
 
 const colorValues = [
@@ -49,6 +67,23 @@ const colorValues = [
 
 <template>
   <div>
+
+
+    <h2>Text usage</h2>
+
+    <table>
+      <tbody>
+        <tr
+          v-for="varName in textUsage"
+          :key="varName"
+        >
+          <td><code>{{ varName }}</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
     <h2>Color usage</h2>
 
     <table>
@@ -56,7 +91,6 @@ const colorValues = [
         <tr
           v-for="color in colorUsage"
           :key="color"
-          :class="`color-${color}`"
         >
           <td><code>{{ color }}</code></td>
 
@@ -89,7 +123,6 @@ const colorValues = [
         <tr
           v-for="color in colorValues"
           :key="color"
-          :class="`color-${color}`"
         >
           <td><code>{{ color }}</code></td>
 

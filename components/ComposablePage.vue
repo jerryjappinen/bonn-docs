@@ -43,11 +43,14 @@ const composableMethods = props.methods
 
     <h2><code>{{ useName }}({{ composableArgs.join(', ') }})</code></h2>
 
-    <HighlightedPre v-if="composableDeps.length">npm i {{ composableDeps.join(' ') }}</HighlightedPre>
+    <HighlightedPre
+      v-if="composableDeps.length"
+      :code="'npm i ' + composableDeps.join(' ')"
+    />
 
-    <HighlightedPre>import { {{ useName }} } from 'bonn/composables'</HighlightedPre>
+    <HighlightedPre :code="`import { ${useName} } from 'bonn/composables'`" />
 
-    <HighlightedPre>const {{ props.name }} = {{ useName }}()</HighlightedPre>
+    <HighlightedPre :code="`const ${props.name} = ${useName}()`" />
 
     <p>
       <ExternalLink :href="`https://github.com/jerryjappinen/bonn/blob/main/composables/${useName}.js`">
@@ -63,15 +66,19 @@ const composableMethods = props.methods
 
       <h3>Properties</h3>
 
-      <table>
-        <tr
-          v-for="(value, key) in composableProps"
-          :key="key"
-        >
-          <th><HighlightedCode>{{ name }}.{{ key }}</HighlightedCode></th>
-          <td><HighlightedPre>{{ value }}</HighlightedPre></td>
-        </tr>
-      </table>
+      <ClientOnly>
+        <table>
+          <tbody>
+            <tr
+              v-for="(value, key) in composableProps"
+              :key="key"
+            >
+              <th><HighlightedCode :code="`${name}.${key}`" /></th>
+              <td><HighlightedPre :code="value" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </ClientOnly>
 
     </template>
 
@@ -82,13 +89,15 @@ const composableMethods = props.methods
       <h3>Methods</h3>
 
       <table>
-        <tr
-          v-for="(method, key) in composableMethods"
-          :key="key"
-        >
-          <th><HighlightedCode>{{ name }}.{{ key }}</HighlightedCode></th>
-          <td><button @click="method">{{ key }}</button></td>
-        </tr>
+        <tbody>
+          <tr
+            v-for="(method, key) in composableMethods"
+            :key="key"
+          >
+            <th><HighlightedCode :code="`${name}.${key}`" /></th>
+            <td><button @click="method">{{ key }}</button></td>
+          </tr>
+        </tbody>
       </table>
 
     </template>

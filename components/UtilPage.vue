@@ -32,9 +32,12 @@ const utilDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props.d
 
     <h2><code>{{ async ? 'async ' : '' }}{{ props.name }}({{ utilArgs.join(', ') }})</code></h2>
 
-    <HighlightedPre v-if="utilDeps.length">npm i {{ utilDeps.join(' ') }}</HighlightedPre>
+    <HighlightedPre
+      v-if="utilDeps.length"
+      :code="`npm i ${utilDeps.join(' ')}`"
+    />
 
-    <HighlightedPre>import {{ props.name }} from 'bonn/util/{{ props.name }}'</HighlightedPre>
+    <HighlightedPre :code="`import ${props.name} from 'bonn/util/${props.name}'`" />
 
     <Bodytext>
       <slot />

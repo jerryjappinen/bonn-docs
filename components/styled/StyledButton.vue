@@ -27,9 +27,13 @@ defineProps({
 <style lang="scss">
 
 :root {
-  --c-styled-button-primary-text-color: var(--background-color);
-  --c-styled-button-primary-background-color: var(--text-color);
-  --c-styled-button-primary-border-color: var(--border-color);
+  --c-styled-button-primary-text-color: var(--inverted-text-color);
+  --c-styled-button-primary-background-color: var(--inverted-background-color);
+  --c-styled-button-primary-outline-color: rgba(0, 0, 0, 0.1);
+
+  --c-styled-button-primary-disabled-text-color: var(--inverted-discreet-text-color);
+
+  --c-styled-button-secondary-outline-color: var(--c-styled-button-primary-outline-color);
 }
 
 .c-styled-button-primary,
@@ -59,8 +63,8 @@ defineProps({
 // Primary
 
 .c-styled-button-primary {
-  background-color: var(--c-styled-button-primary-background-color);
   border-color: var(--c-styled-button-primary-background-color);
+  background-color: var(--c-styled-button-primary-background-color);
 }
 
 .c-styled-button-primary-enabled {
@@ -70,13 +74,13 @@ defineProps({
 
   &:hover,
   &:focus {
-    @include solid-shadow(var(--c-styled-button-primary-border-color));
+    @include solid-shadow(var(--c-styled-button-primary-outline-color));
   }
 
 }
 
 .c-styled-button-primary-disabled {
-  color: var(--dark-grey);
+  color: var(--c-styled-button-primary-disabled-text-color);
 }
 
 
@@ -94,18 +98,16 @@ defineProps({
 }
 
 .c-styled-button-secondary-enabled {
-
   @include transparent-solid-shadow;
 
   &:hover,
   &:focus {
-    @include solid-shadow;
+    @include solid-shadow(var(--c-styled-button-secondary-outline-color));
   }
-
 }
 
 .c-styled-button-tertiary {
-  border-color: var(--discreet-text-color);
+  border-color: var(--border-color);
 }
 
 

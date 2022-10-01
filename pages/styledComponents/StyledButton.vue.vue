@@ -19,7 +19,7 @@ const themes = [
           :key="theme"
         >
           <th>
-            <code>primary</code> (default)
+            <code>{{ theme }}</code>
           </th>
           <td>
             <StyledButton :theme="theme">

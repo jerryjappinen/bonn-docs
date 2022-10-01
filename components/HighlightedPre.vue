@@ -15,7 +15,7 @@ const props = defineProps({
     :code="code"
     :lang="lang"
     :trim="trim"
-  ><slot /></HighlightedCode></pre>
+  /></pre>
 </template>
 
 <style lang="scss">
