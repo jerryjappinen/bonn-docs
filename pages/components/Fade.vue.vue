@@ -116,9 +116,10 @@ const directions = [
                 <Fade
                   :from="from"
                   :to="to"
+                  :reverse="reverse"
                 >
-                  <span v-if="demoValue" key="if" class="page-components-fade-demo-block">True</span>
-                  <span v-else key="else" class="page-components-fade-demo-block-alt">False</span>
+                  <span v-if="demoValue" key="if" class="page-components-fade-demo-block">hello</span>
+                  <span v-else key="else" class="page-components-fade-demo-block-alt">world</span>
                 </Fade>
               </Toggle>
             </td>

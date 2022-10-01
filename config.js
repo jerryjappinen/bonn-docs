@@ -35,9 +35,6 @@ export const componentPages = [
   'LiveDuration',
   'MobileWebAppBadge',
   'RichText',
-  // 'Slider',
-  'Spinner',
-  'Switch',
   'Textfield',
   'Tweet',
   'Toggle',
@@ -94,8 +91,11 @@ export const storePages = [
 
 export const styledComponentPages = [
   'Checkbox',
+  // 'Slider',
+  'Spinner',
   'StyledButton',
-  'StyledTextfield'
+  'StyledTextfield',
+  'Switch'
 ]
 
 export const utilPages = [
