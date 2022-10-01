@@ -10,6 +10,24 @@ const toggle = () => {
   <div class="page-test">
     <h2>Transition tests</h2>
 
+    <!-- <p>
+      <CursorComposableTest />
+      <CursorComposableTest />
+      <CursorComposableTest />
+      <CursorComposableTest />
+      <CursorComposableTest />
+    </p> -->
+
+    <p>
+      <PiniaComposableTest />
+      <PiniaComposableTest />
+      <PiniaComposableTest />
+      <PiniaComposableTest />
+      <PiniaComposableTest />
+    </p>
+
+    <h2>Transition tests</h2>
+
     <p>
       <StyledButton @click="toggle">Toggle</StyledButton>
     </p>
