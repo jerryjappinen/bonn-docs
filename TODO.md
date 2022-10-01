@@ -23,6 +23,7 @@
 - [ ] Make `isDev` work in Nuxt 3 runtime
 - [ ] Popover
 - [ ] `RichText` component for Hygraph
+- [ ] Expand color set slightly
 - [x] Fade with directions
   - [ ] Make overriding transition durations work
 
