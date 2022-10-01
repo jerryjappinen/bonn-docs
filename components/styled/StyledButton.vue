@@ -1,8 +1,6 @@
 <script setup>
 defineProps({
-  disabled: {
-    required: false
-  },
+  disabled: {},
 
   theme: {
     type: String,
@@ -30,9 +28,7 @@ defineProps({
   --c-styled-button-primary-text-color: var(--inverted-text-color);
   --c-styled-button-primary-background-color: var(--inverted-background-color);
   --c-styled-button-primary-outline-color: rgba(0, 0, 0, 0.1);
-
   --c-styled-button-primary-disabled-text-color: var(--inverted-discreet-text-color);
-
   --c-styled-button-secondary-outline-color: var(--c-styled-button-primary-outline-color);
 }
 

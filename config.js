@@ -23,7 +23,6 @@ export const hygraphApiUrl = 'https://api-eu-west-2.hygraph.com/v2/cl7n4zm4t28ec
 export const componentPages = [
   'AppStoreBadge',
   'Buttons',
-  'Checkbox',
   'ClickButton',
   'DateInterval',
   'Dropdown',
@@ -94,6 +93,7 @@ export const storePages = [
 ]
 
 export const styledComponentPages = [
+  'Checkbox',
   'StyledButton',
   'StyledTextfield'
 ]

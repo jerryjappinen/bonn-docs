@@ -29,7 +29,7 @@ const toggle = () => {
     <h2>Transition tests</h2>
 
     <p>
-      <StyledButton @click="toggle">Toggle</StyledButton>
+      <button @click="toggle">Toggle</button>
     </p>
 
     <div class="page-test-transition-test">
@@ -44,18 +44,19 @@ const toggle = () => {
 
 <style lang="scss">
 
-.page-test {
-  --c-fade-duration: 2000ms;
-}
+:root {
+  .page-test-transition-test {
+    --c-fade-duration: 9000ms !important;
+    // --c-fade-enter-duration: 10000ms !important;
+    // --c-fade-leave-duration: 11000ms !important;
 
-.page-test-transition-test {
+    div {
+      @include pad;
+      @include radius;
+      border-width: 5px;
+    }
 
-  div {
-    @include pad;
-    @include radius;
-    border-width: 5px;
   }
-
 }
 
 </style>

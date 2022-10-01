@@ -8,6 +8,7 @@ const val = ref(true)
     :css-vars="[
       'width',
       'border-width',
+      'radius',
       'enabled-on-color',
       'enabled-off-color',
       'enabled-check-color',

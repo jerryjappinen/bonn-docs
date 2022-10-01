@@ -25,8 +25,7 @@ const cssVars = computed(() => {
 
 const css = computed(() => {
   if (cssVars.value.length) {
-    return `/*CSS variables*/
-:root {${cssVars.value.map((cssVar) => {
+    return `:root {${cssVars.value.map((cssVar) => {
   return '\n' + `  --c-${kebabCase(unref(props.name))}-${kebabCase(cssVar)}: ...;`
 })}
 }`
@@ -44,6 +43,8 @@ const css = computed(() => {
     <HighlightedPre :code="importString" />
 
     <slot />
+
+    <h2>CSS variables</h2>
 
     <Dump
       v-if="css"
