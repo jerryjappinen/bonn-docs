@@ -21,9 +21,10 @@
   - [ ] `getUserAgentStringValue`
 - [x] Make `Textfield` support custom content and not just icons
 - [ ] Make `isDev` work in Nuxt 3 runtime
-- [ ] Popover
+- [ ] `Popover` component
 - [ ] `RichText` component for Hygraph
 - [ ] Expand color set slightly
+- [ ] Improve CSS variables API in components
 - [x] Fade with directions
   - [ ] Make overriding transition durations work
 

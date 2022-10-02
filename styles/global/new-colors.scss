@@ -1,0 +1,56 @@
+@import './new-color-values';
+
+.new-colors {
+
+  // Special colors
+  @each $name, $hsl in $special-colors {
+    --#{$name}-hsl: #{$hsl};
+    --#{$name}: hsl(var(--#{$name}-hsl));
+  }
+
+  // Color-code variables
+  @each $name-code, $hsl in $color-values {
+
+    // -raw variables will never change
+    --#{$name-code}-hsl-raw: #{$hsl};
+
+    // HSL-codes only: can be used for hsla() by users
+    --#{$name-code}-hsl: var(--#{$name-code}-hsl-raw);
+
+    // Regular variables
+    --#{$name-code}: hsl(var(--#{$name-code}-hsl));
+  }
+
+  // Flipped color-code variables
+  @each $name in $color-names {
+    @each $code in $color-codes {
+
+      // HSL-codes only
+      --inverted-#{$name}-#{$code}-hsl: var(--#{$name}-#{map-get($color-code-pairs, $code)}-hsl);
+
+      // Reguar variables
+      --inverted-#{$name}-#{$code}: hsl(var(--inverted-#{$name}-#{$code}-hsl));
+    }
+  }
+
+  // Named color variants
+  @each $color-name in $color-names {
+    @each $variant-name, $code in $color-variant-codes {
+
+      // Default
+      // e.g. --grey: var(--grey-50);
+      @if $variant-name == 'default' {
+        --#{$color-name}: var(--#{$color-name}-#{$code});
+        --inverted-#{$color-name}: var(--#{$color-name}-#{map-get($color-code-pairs, $code)});
+
+      // Other variants
+      // e.g. --very-faint-grey: var(--grey-10);
+      } @else {
+        --#{$variant-name}-#{$color-name}: var(--#{$color-name}-#{$code});
+        --inverted-#{$variant-name}-#{$color-name}: var(--#{$color-name}-#{map-get($color-code-pairs, $code)});
+      }
+
+    }
+  }
+
+}

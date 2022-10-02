@@ -1,0 +1,84 @@
+$special-colors: (
+  'white': '0, 0%, 100%',
+  'black': '0, 0%, 0%',
+);
+
+$color-names: 'grey', 'blue';
+
+$color-codes: 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100;
+
+$color-values: (
+  'grey-0': '0, 0%, 100%',
+  'grey-10': '0, 0%, 98%',
+  'grey-20': '0, 0%, 93%',
+  'grey-30': '0, 0%, 78%',
+  'grey-40': '0, 0%, 63%',
+  'grey-50': '0, 0%, 51%',
+  'grey-60': '0, 0%, 39%',
+  'grey-70': '0, 0%, 28%',
+  'grey-80': '0, 0%, 16%',
+  'grey-90': '0, 0%, 10%',
+  'grey-100': '0, 0%, 0%',
+
+  'blue-0': '207, 100%, 98%',
+  'blue-10': '205, 87%, 94%',
+  'blue-20': '207, 89%, 86%',
+  'blue-30': '207, 90%, 77%',
+  'blue-40': '207, 89%, 68%',
+  'blue-50': '207, 90%, 54%',
+  'blue-60': '208, 79%, 51%',
+  'blue-70': '210, 79%, 46%',
+  'blue-80': '212, 80%, 42%',
+  'blue-90': '216, 85%, 34%',
+  'blue-100': '216, 100%, 21%',
+);
+
+$color-code-pairs: (
+  0: 100,
+  10: 90,
+  20: 80,
+  30: 70,
+  40: 60,
+  50: 50,
+  60: 40,
+  70: 30,
+  80: 20,
+  90: 10,
+  100: 0
+);
+
+// FIXME: Should this be set color-by-color?
+$color-variant-codes: (
+  very-faint: 10,
+  faint: 30,
+  default: 50,
+  strong: 70,
+  very-strong: 90,
+);
+
+//   --very-faint-red: #ffe1df;
+//   --faint-red: #ffbeb9;
+//   --red: #f43646;
+//   --strong-red: #c1111f;
+//   --very-strong-red: #90000c;
+
+//   --faint-pink: #fc72a0;
+//   --pink: #E91E63;
+//   --strong-pink: #880E4F;
+
+//   --very-faint-orange: #ffcd82;
+//   --faint-orange: #ffcd82;
+//   --orange: #FF9800;
+//   --strong-orange: #E65100;
+
+//   --faint-yellow: #fff59f;
+//   --yellow: #FFEB3B;
+//   --strong-yellow: #F9A825;
+
+//   --faint-green: #9ef1a1;
+//   --green: #42bd46;
+//   --strong-green: #1B5E20;
+
+//   --faint-purple: #ea97f9;
+//   --purple: #9C27B0;
+//   --strong-purple: #4A148C;

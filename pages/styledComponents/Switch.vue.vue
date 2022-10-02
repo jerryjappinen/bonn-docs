@@ -1,12 +1,13 @@
 <script setup>
-const value1 = ref(true)
-const value2 = ref(false)
+const val = ref(true)
 </script>
 
 <template>
   <ComponentPage
     name="Switch"
     :css-vars="[
+      'border-width',
+      'radius',
       'on-color',
       'on-knob-color',
       'off-color',
@@ -15,24 +16,51 @@ const value2 = ref(false)
       'disabled-on-knob-color',
       'disabled-off-color',
       'disabled-off-knob-color',
-      'track-height',
-      'track-width',
+      'knob-width',
       'knob-margin',
-      'knob-width'
+      'track-width',
+      'track-height'
     ]"
   >
 
-    <p>
-      <Toggle v-model="value1">
-        <Switch :value="value2" />
-      </Toggle>
-    </p>
+    <table>
+      <tbody>
+        <tr>
+          <td>enabled</td>
+          <td>{{ val ? 'on' : 'off' }}</td>
+          <td>
+            <Toggle v-model="val">
+              <Switch :model-value="val" />
+            </Toggle>
+          </td>
+        </tr>
 
-    <p>
-      <Toggle v-model="value2">
-        <Switch :value="value2" />
-      </Toggle>
-    </p>
+        <tr>
+          <td>disabled</td>
+          <td>{{ val ? 'on' : 'off' }}</td>
+          <td>
+            <Switch :model-value="val" :disabled="true" />
+          </td>
+        </tr>
 
+        <tr>
+          <td>enabled</td>
+          <td>{{ val ? 'off' : 'on' }}</td>
+          <td>
+            <Toggle v-model="val">
+              <Switch :model-value="!val" />
+            </Toggle>
+          </td>
+        </tr>
+
+        <tr>
+          <td>disabled</td>
+          <td>{{ val ? 'off' : 'on' }}</td>
+          <td>
+            <Switch :model-value="!val" :disabled="true" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </ComponentPage>
 </template>

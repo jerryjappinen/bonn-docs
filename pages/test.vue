@@ -8,15 +8,15 @@ const toggle = () => {
 
 <template>
   <div class="page-test">
-    <h2>Transition tests</h2>
+    <h2>Composable tests</h2>
 
-    <!-- <p>
+    <p>
       <CursorComposableTest />
       <CursorComposableTest />
       <CursorComposableTest />
       <CursorComposableTest />
       <CursorComposableTest />
-    </p> -->
+    </p>
 
     <p>
       <PiniaComposableTest />

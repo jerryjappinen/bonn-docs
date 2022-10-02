@@ -78,6 +78,7 @@ export const nuxtPluginPages = [
 export const scssPages = [
   'body',
   'breakpoints',
+  'colors',
   'devices',
   'shadow',
   'variables',

@@ -1,0 +1,16 @@
+@import './new-color-values';
+
+// Flip HSL codes in dark mode
+.new-colors {
+
+  @include dark {
+
+    @each $name in $color-names {
+      @each $code in $color-codes {
+        --#{$name}-#{$code}-hsl: var(--#{$name}-#{map-get($color-code-pairs, $code)}-hsl-raw);
+      }
+    }
+
+  }
+
+}

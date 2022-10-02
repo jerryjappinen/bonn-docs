@@ -1,4 +1,3 @@
-// Global styling
 @import './shared';
 
 // Base styles
@@ -6,4 +5,7 @@
 @import 'bonn/scss/util';
 
 // This site
-@import './body';
+@import './global/body';
+@import './global/new-colors';
+@import './global/new-colors-dark';
+@import './global/variables';
