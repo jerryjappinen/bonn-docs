@@ -1,43 +1,35 @@
 <script setup>
 const colorNames = [
-  'grey',
-  'blue'
-
-  // 'red',
-  // 'pink',
-  // 'purple',
-  // 'deep-purple',
-  // 'indigo',
-  // 'cyan',
-  // 'teal',
-  // 'green',
-  // 'lime',
-  // 'yellow',
-  // 'amber',
-  // 'orange',
-  // 'brown'
+  'neutral',
+  'blue',
+  'green',
+  'purple',
+  'red',
+  'orange',
+  'yellow'
 ]
 
+// 8 variants
 const colorVariants = [
+  'very-very-very-faint-',
+  'very-very-faint-',
   'very-faint-',
   'faint-',
   '',
   'strong-',
-  'very-strong-'
+  'very-strong-',
+  'very-very-strong-'
 ]
 
 const colorCodes = [
-  0,
-  10,
-  20,
-  30,
-  40,
-  50,
-  60,
-  70,
-  80,
-  90,
-  100
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8
 ]
 </script>
 
@@ -53,7 +45,7 @@ const colorCodes = [
           <th
             v-for="colorCode in colorCodes"
             :key="colorCode"
-          >{{ colorCode }}</th>
+          ><code>{{ colorCode }}</code></th>
         </tr>
       </thead>
 
@@ -64,7 +56,7 @@ const colorCodes = [
           v-for="colorName in colorNames"
           :key="colorName"
         >
-          <th>{{ colorName }}</th>
+          <th><code>{{ colorName }}</code></th>
           <td
             v-for="colorCode in colorCodes"
             :key="colorCode"
@@ -80,8 +72,8 @@ const colorCodes = [
     <table>
       <thead>
         <tr>
-          <th colspan="7">Regular color</th>
-          <th colspan="7">Inverted scheme</th>
+          <th colspan="4">Regular color</th>
+          <th colspan="4">Inverted scheme</th>
         </tr>
       </thead>
 
@@ -97,20 +89,20 @@ const colorCodes = [
             v-for="colorVariant in colorVariants"
             :key="colorVariant"
           >
-            <td>{{ colorVariant + colorName }}</td>
-            <td :style="`color: var(--${colorVariant + colorName});`"><span class="solid-block" /></td>
-            <td :style="`color: var(--${colorVariant + colorName});`"><span class="outline-block" /></td>
-            <td :style="`color: var(--${colorVariant + colorName});`">Hello</td>
-            <td class="offset" :style="`color: var(--${colorVariant + colorName});`"><span class="solid-block" /></td>
+            <td><code>{{ colorVariant + colorName }}</code></td>
+            <td class="block-cell solid-cell" :style="`color: var(--${colorVariant + colorName});`"><span class="solid-block" /></td>
+            <td class="block-cell outline-cell" :style="`color: var(--${colorVariant + colorName});`"><span class="outline-block" /></td>
+            <td class="block-cell text-cell" :style="`color: var(--${colorVariant + colorName});`">Hello</td>
+            <!-- <td class="offset" :style="`color: var(--${colorVariant + colorName});`"><span class="solid-block" /></td>
             <td class="offset" :style="`color: var(--${colorVariant + colorName});`"><span class="outline-block" /></td>
-            <td class="offset" :style="`color: var(--${colorVariant + colorName});`">Hello</td>
-            <td>inverted-{{ colorVariant + colorName }}</td>
-            <td class="inverted" :style="`color: var(--inverted-${colorVariant + colorName});`"><span class="solid-block" /></td>
-            <td class="inverted" :style="`color: var(--inverted-${colorVariant + colorName});`"><span class="outline-block" /></td>
-            <td class="inverted" :style="`color: var(--inverted-${colorVariant + colorName});`">Hello</td>
-            <td class="inverted offset" :style="`color: var(--inverted-${colorVariant + colorName});`"><span class="solid-block" /></td>
+            <td class="offset" :style="`color: var(--${colorVariant + colorName});`">Hello</td> -->
+            <td><code>inverted-{{ colorVariant + colorName }}</code></td>
+            <td class="block-cell solid-cell inverted" :style="`color: var(--inverted-${colorVariant + colorName});`"><span class="solid-block" /></td>
+            <td class="block-cell outline-cell inverted" :style="`color: var(--inverted-${colorVariant + colorName});`"><span class="outline-block" /></td>
+            <td class="block-cell text-cell inverted" :style="`color: var(--inverted-${colorVariant + colorName});`">Hello</td>
+            <!-- <td class="inverted offset" :style="`color: var(--inverted-${colorVariant + colorName});`"><span class="solid-block" /></td>
             <td class="inverted offset" :style="`color: var(--inverted-${colorVariant + colorName});`"><span class="outline-block" /></td>
-            <td class="inverted offset" :style="`color: var(--inverted-${colorVariant + colorName});`">Hello</td>
+            <td class="inverted offset" :style="`color: var(--inverted-${colorVariant + colorName});`">Hello</td> -->
           </tr>
         </template>
       </tbody>
@@ -150,26 +142,56 @@ const colorCodes = [
 
 th,
 td {
+  @include pad-tight-even-max;
   vertical-align: middle;
-  @include pad-tight;
+
+  code {
+    @include small-font;
+  }
+
 }
 
 .inverted {
   background-color: var(--inverted-background-color);
 }
 
-.offset {
-  background-color: grey;
+.block-cell {
+
+  background-image: conic-gradient(
+    from 45deg at 50% 50%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.75) 100%)
+  ;
+
+  @include dark {
+    background-image: conic-gradient(
+      from 45deg at 50% 50%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 0.75) 100%)
+    ;
+  }
+
+}
+
+.outline-cell,
+.solid-cell,
+.text-cell {
+  text-align: center;
+}
+
+.outline-cell,
+.solid-cell {
+  width: 2em;
 }
 
 .outline-block,
 .solid-block {
   @include inline-block;
-  @include round;
-  border-width: 1px;
-  margin-right: 0.25em;
-  width: 0.75em;
-  height: 0.75em;
+  @include radius-tight;
+  @include border-box;
+  width: 1em;
+  height: 1em;
+  box-shadow: 0 0 0 1px inset currentColor;
   border-color: currentColor;
 }
 

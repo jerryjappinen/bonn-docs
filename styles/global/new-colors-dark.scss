@@ -5,9 +5,11 @@
 
   @include dark {
 
-    @each $name in $color-names {
-      @each $code in $color-codes {
-        --#{$name}-#{$code}-hsl: var(--#{$name}-#{map-get($color-code-pairs, $code)}-hsl-raw);
+    @each $color-name, $color-values in $colors {
+      @each $color-code, $color-value in $color-values {
+
+        // e.g. --grey-80-hsl: var(--grey-20-hsl-raw);
+        --#{$color-name}-#{$color-code}-hsl: var(--#{$color-name}-#{map-get($color-code-pairs, $color-code)}-hsl-raw);
       }
     }
 
