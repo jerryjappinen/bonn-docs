@@ -52,18 +52,14 @@ const configDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props
     <HighlightedPre :code="`defineNuxtConfig(${configName}(${configArgs.join(', ')}))`" />
 
     <Bodytext>
-
       <slot />
-
-      <p>
-        <ExternalLink :href="`https://github.com/jerryjappinen/bonn/blob/main/nuxt/config/${configName}.js`">
-          <Icon>
-            <IconGithub /> Source
-          </Icon>
-        </ExternalLink>
-      </p>
-
     </Bodytext>
+
+    <p>
+      <SourceLink :path="`nuxt/config/${name}.js`">
+        <Icon><IconGithub /></Icon> Source
+      </SourceLink>
+    </p>
 
   </div>
 </template>

@@ -53,11 +53,9 @@ const composableMethods = props.methods
     <HighlightedPre :code="`const ${props.name} = ${useName}()`" />
 
     <p>
-      <ExternalLink :href="`https://github.com/jerryjappinen/bonn/blob/main/composables/${useName}.js`">
-        <Icon>
-          <IconGithub /> Source
-        </Icon>
-      </ExternalLink>
+      <SourceLink :path="`composables/${useName}.js`">
+        <Icon><IconGithub /></Icon> Source
+      </SourceLink>
     </p>
 
 

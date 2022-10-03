@@ -1,5 +1,5 @@
 <script setup>
-  import compact from 'lodash-es/compact'
+import compact from 'lodash-es/compact'
 import flattenDeep from 'lodash-es/flattenDeep'
 import kebabCase from 'lodash-es/kebabCase'
 
@@ -44,22 +44,16 @@ const css = computed(() => {
 
     <slot />
 
-    <h2>CSS variables</h2>
+    <template v-if="css">
+      <h2>CSS variables</h2>
+      <Dump :data="css" />
+    </template>
 
-    <Dump
-      v-if="css"
-      :data="css"
-    />
-
-    <Bodytext>
-      <p>
-        <ExternalLink :href="`https://github.com/jerryjappinen/bonn/blob/main/components/${name}.js`">
-          <Icon>
-            <IconGithub /> Source
-          </Icon>
-        </ExternalLink>
-      </p>
-    </Bodytext>
+    <p>
+      <SourceLink :path="`components/${name}.js`">
+        <Icon><IconGithub /></Icon> Source
+      </SourceLink>
+    </p>
 
   </div>
 </template>

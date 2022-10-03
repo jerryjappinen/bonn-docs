@@ -71,18 +71,13 @@ export default defineStore('${storeName}', ${storeName}Setup(${storeArgs.join(',
     </template>
 
     <slot />
+    <!-- <Bodytext></Bodytext> -->
 
-    <Bodytext>
-
-      <p>
-        <ExternalLink :href="`https://github.com/jerryjappinen/bonn/blob/main/stores/setup/${storeName}.js`">
-          <Icon>
-            <IconGithub /> Source
-          </Icon>
-        </ExternalLink>
-      </p>
-
-    </Bodytext>
+    <p>
+      <SourceLink :path="`stores/setup/${name}.js`">
+        <Icon><IconGithub /></Icon> Source
+      </SourceLink>
+    </p>
 
   </div>
 </template>

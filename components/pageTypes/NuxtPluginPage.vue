@@ -23,18 +23,14 @@ export default defineNuxtPlugin(${pluginName}(${pluginArgs.join(', ')}))`"
     />
 
     <Bodytext>
-
       <slot />
-
-      <p>
-        <ExternalLink :href="`https://github.com/jerryjappinen/bonn/blob/main/nuxt/plugins/${pluginName}.js`">
-          <Icon>
-            <IconGithub /> Source
-          </Icon>
-        </ExternalLink>
-      </p>
-
     </Bodytext>
+
+    <p>
+      <SourceLink :path="`nuxt/plugins/${name}.js`">
+        <Icon><IconGithub /></Icon> Source
+      </SourceLink>
+    </p>
 
   </div>
 </template>

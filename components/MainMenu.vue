@@ -175,6 +175,10 @@ import {
       </li>
     </ul>
 
+    <p>
+      <SourceLink />
+    </p>
+
   </div>
 </template>
 

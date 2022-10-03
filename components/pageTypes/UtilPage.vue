@@ -41,15 +41,13 @@ const utilDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props.d
 
     <Bodytext>
       <slot />
-
-      <p>
-        <ExternalLink :href="`https://github.com/jerryjappinen/bonn/blob/main/util/${name}.js`">
-          <Icon>
-            <IconGithub /> Source
-          </Icon>
-        </ExternalLink>
-      </p>
-
     </Bodytext>
+
+    <p>
+      <SourceLink :path="`util/${name}.js`">
+        <Icon><IconGithub /></Icon> Source
+      </SourceLink>
+    </p>
+
   </div>
 </template>
