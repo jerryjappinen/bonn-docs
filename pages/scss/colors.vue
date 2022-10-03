@@ -42,10 +42,10 @@ const colorCodes = [
       <thead>
         <tr>
           <th>Codes</th>
-          <th
+          <td
             v-for="colorCode in colorCodes"
             :key="colorCode"
-          ><code>{{ colorCode }}</code></th>
+          ><code>{{ colorCode }}</code></td>
         </tr>
       </thead>
 
@@ -83,7 +83,7 @@ const colorCodes = [
           :key="colorName"
         >
           <tr>
-            <th colspan="14">{{ colorName }}</th>
+            <th colspan="14"><code>{{ colorName }}</code></th>
           </tr>
           <tr
             v-for="colorVariant in colorVariants"

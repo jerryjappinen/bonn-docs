@@ -1,3 +1,8 @@
+:root {
+  --semibold: 500;
+  --link-weight: var(--semibold);
+}
+
 // Override default variables here
 @include dark {
 
@@ -6,33 +11,37 @@
   }
 
   :root {
-    --grey: #8e8e8e;
-    --dark-grey: #464646;
-    --dark: #202020;
     --shadow-color: rgba(0, 0, 0, 0.75);
-
-    --text-color: var(--white);
-    --border-color: var(--dark-grey);
-    --background-color: var(--very-dark);
-    --offset-background-color: var(--dark);
-
-    --discreet-color-very-light: var(--dark-grey);
-    --discreet-color-light: var(--grey);
-    --discreet-color: var(--light-grey);
-    // --discreet-text-color: var(--discreet-color);
-
-    --inverted-text-color: var(--dark);
-    --inverted-border-color: var(--light-grey);
-    --inverted-background-color: var(--white);
-    --inverted-offset-background-color: var(--very-very-light-grey);
-
-    --inverted-discreet-color-very-light: var(--dark-grey);
-    --inverted-discreet-color-light: var(--grey);
-    --inverted-discreet-color: var(--grey);
-    // --inverted-discreet-text-color: var(--inverted-discreet-color);
-
-    --semibold: 500;
-    --link-weight: var(--semibold);
   }
 
+  // Update default colors
+  // // https://calcolor.co/palette/942409461
+  // --text-color: var(--very-strong-neutral, #222);
+  // --border-color: var(--faint-neutral, #ccc);
+  // --background-color: var(--very-very-very-faint-neutral, #fff);
+  // --offset-background-color: var(--very-very-faint-neutral, #eee);
+
+  // --discreet-color: var(--neutral, #999);
+  // --faint-discreet-color: var(--faint-neutral, #ccc);
+  // --very-faint-discreet-color: var(--very-faint-neutral, #ddd);
+  // --discreet-text-color: var(--discreet-color);
+
+  // --link-color: var(--blue, #1755ff);
+  // --link-active-color: var(--strong-blue, #003ce0);
+
+  // // Color usage in inverted elements (e.g. buttons and containers)
+  // // NOTE: this is NOT for dark mode
+  // // NOTE: for dark mode support, you should update flip these variables also
+  // --inverted-text-color: var(--very-very-very-faint-neutral);
+  // --inverted-border-color: var(--strong-neutral);
+  // --inverted-background-color: var(--very-very-strong-neutral);
+  // --inverted-offset-background-color: var(--very-strong-neutral);
+
+  // // --inverted-discreet-color: var(--discreet-color);
+  // // --inverted-faint-discreet-color: var(--faint-discreet-color);
+  // // --inverted-very-faint-discreet-color: var(--very-faint-discreet-color);
+  // // --inverted-discreet-text-color: var(--inverted-discreet-color);
+
+  // // --inverted-link-color: var(--link-color);
+  // // --inverted-link-active-color: var(--link-active-color);
 }
