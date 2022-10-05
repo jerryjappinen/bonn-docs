@@ -16,6 +16,10 @@ export const baseUrl = (processEnvExists() ? process.env.BASE_URL : null) || isD
   ? 'http://localhost:3000'
   : 'https://bonn.vercel.app'
 
+// Demo space on Contentful
+export const contentfulSpaceId = 'mytckhnubswe'
+export const contentfulAccessToken = '5Dh2GmqWAqsomhw9rh_7Ln5M49YwHKePcGBiIKdUbpU'
+
 // Demo space on Hygraph
 export const hygraphApiUrl = 'https://api-eu-west-2.hygraph.com/v2/cl7n4zm4t28ec01uh0oum04sc/master'
 
@@ -88,6 +92,7 @@ export const scssPages = [
 ]
 
 export const storePages = [
+  'contentful',
   'device',
   'hygraph'
 ]

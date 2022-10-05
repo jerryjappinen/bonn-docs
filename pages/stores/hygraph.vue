@@ -39,12 +39,14 @@ const fetchPeople = () => {
   >
 
     <p>
-      You must pass a request method that accepts 3 arguments. You can use <code>graphql-request</code>.
+      You must pass a request method that accepts 3 arguments (URL, query, variables). You can use <code>graphql-request</code>.
     </p>
 
     <HighlightedPre code="import { request } from 'graphql-request'
 
-useHygraph({ request })" />
+useHygraph({
+  request
+})" />
 
     <!-- <h4>Setup</h4>
 
