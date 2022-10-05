@@ -21,7 +21,7 @@ const sampleOptions = {
 
 const sampleQuery = {
   content_type: 'game',
-  limit: 5
+  limit: 3
 }
 
 const contentful = useContentful()
