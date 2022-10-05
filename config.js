@@ -18,7 +18,7 @@ export const baseUrl = (processEnvExists() ? process.env.BASE_URL : null) || isD
 
 // Demo space on Contentful
 export const contentfulSpaceId = 'mytckhnubswe'
-export const contentfulAccessToken = '5Dh2GmqWAqsomhw9rh_7Ln5M49YwHKePcGBiIKdUbpU'
+export const contentfulAccessToken = 'Ql1bv2l12RYe9o8Z8hqrJX5-puWKZesCVjJgiD-hd-4'
 
 // Demo space on Hygraph
 export const hygraphApiUrl = 'https://api-eu-west-2.hygraph.com/v2/cl7n4zm4t28ec01uh0oum04sc/master'
