@@ -137,3 +137,13 @@ export const utilPages = [
   'tryPromises',
   'wait'
 ]
+
+export const vercelPages = [
+  'endpoint',
+  'parseQuery'
+]
+
+export const vercelEndpointPages = [
+  'contentfulCreate',
+  'contentfulEntries'
+]

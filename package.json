@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@graphcms/rich-text-html-renderer": "^0.2.0",
-    "bonn": "^0.1.4",
+    "bonn": "^0.1.5",
     "date-fns": "^2.29.3",
     "lodash-es": "^4.17.21",
     "pinia": "^2.0.22"
