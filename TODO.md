@@ -25,8 +25,10 @@
 - [ ] `RichText` component for Hygraph
 - [ ] Expand color set slightly
 - [ ] Improve CSS variables API in components
+- [ ] Vercel helpers
+- [ ] Predefined Vercel endpoints
 - [x] Fade with directions
-  - [ ] Make overriding transition durations work
+  - [x] Make overriding transition durations work
 
 ### Later
 
