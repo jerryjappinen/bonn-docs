@@ -7,7 +7,9 @@ import {
   scssPages,
   storePages,
   styledComponentPages,
-  utilPages
+  utilPages,
+  vercelPages,
+  vercelEndpointPages
 } from '@/config'
 </script>
 
@@ -171,6 +173,34 @@ import {
         <NuxtLink :to="'/util/' + utilPage" class="c-main-menu-link">
           <IconJavascriptColor class="c-main-menu-icon" />
           <code>{{ utilPage }}</code>
+        </NuxtLink>
+      </li>
+    </ul>
+
+    <!-- Vercel -->
+    <h4 class="c-main-menu-lib">
+      Vercel
+    </h4>
+
+    <ul>
+      <li v-for="vercelPage in vercelPages" :key="vercelPage">
+        <NuxtLink :to="'/vercel/' + vercelPage" class="c-main-menu-link">
+          <IconVercel class="c-main-menu-icon" />
+          <code>{{ vercelPage }}</code>
+        </NuxtLink>
+      </li>
+    </ul>
+
+    <!-- Vercel -->
+    <h4 class="c-main-menu-lib">
+      Vercel
+    </h4>
+
+    <ul>
+      <li v-for="vercelEndpointPage in vercelEndpointPages" :key="vercelEndpointPage">
+        <NuxtLink :to="'/vercel/endpoints/' + vercelEndpointPage" class="c-main-menu-link">
+          <IconVercel class="c-main-menu-icon" />
+          <code>{{ vercelEndpointPage }}</code>
         </NuxtLink>
       </li>
     </ul>

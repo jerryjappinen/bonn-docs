@@ -30,14 +30,14 @@ const utilDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props.d
 <template>
   <div>
 
-    <h2><code>{{ async ? 'async ' : '' }}{{ props.name }}({{ utilArgs.join(', ') }})</code></h2>
+    <h2><code>{{ async ? 'async ' : '' }}{{ name }}({{ utilArgs.join(', ') }})</code></h2>
 
     <HighlightedPre
       v-if="utilDeps.length"
       :code="`npm i ${utilDeps.join(' ')}`"
     />
 
-    <HighlightedPre :code="`import ${props.name} from 'bonn/util/${props.name}'`" />
+    <HighlightedPre :code="`import ${name} from 'bonn/util/${name}'`" />
 
     <Bodytext>
       <slot />
