@@ -1,1 +1,1 @@
-module.exports = require('bonn/eslint/es6.cjs')
+module.exports = require('bonn/eslint/nuxt.cjs')

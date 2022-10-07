@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia'
 
-import { contentfulSpaceId, contentfulAccessToken } from '@/config'
-
 import contenful from 'bonn/stores/setup/contentful'
+
+import { contentfulSpaceId, contentfulAccessToken } from '@/config'
 
 export default defineStore('contenful', contenful({
   spaceId: contentfulSpaceId,
