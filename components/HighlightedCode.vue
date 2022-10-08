@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/no-v-html -->
 <script setup>
 import { computed, unref } from 'vue'
 
@@ -51,6 +50,7 @@ const stringify = (input) => {
 </script>
 
 <template>
+  <!-- eslint-disable vue/no-v-html -->
   <code
     class="c-highlighted-code"
     :data-language="lang"

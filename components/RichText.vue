@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/no-v-html -->
 <script setup>
 import { computed, unref } from 'vue'
 
@@ -39,6 +38,7 @@ const html = computed(() => {
 </script>
 
 <template>
+  <!-- eslint-disable vue/no-v-html -->
   <div
     class="c-rich-text"
     v-html="html"
