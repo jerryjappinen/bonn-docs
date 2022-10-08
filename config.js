@@ -59,6 +59,11 @@ export const composablePages = [
   'useViewport'
 ]
 
+export const githubActionPages = [
+  'publish',
+  'run'
+]
+
 export const nuxtConfigPages = [
   'assets',
   'bonn',

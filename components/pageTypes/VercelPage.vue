@@ -27,7 +27,7 @@ const endpointArgs = props.args ? (Array.isArray(props.args) ? props.args : [pro
     </Bodytext>
 
     <p>
-      <SourceLink :path="`vercel/endpoints/${name}.js`">
+      <SourceLink :path="`vercel/${name}.js`">
         <Icon><IconGithub /></Icon> Source
       </SourceLink>
     </p>

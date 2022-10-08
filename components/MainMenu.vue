@@ -2,6 +2,7 @@
 import {
   componentPages,
   composablePages,
+  githubActionPages,
   nuxtConfigPages,
   nuxtPluginPages,
   scssPages,
@@ -56,6 +57,10 @@ import {
         <NuxtLink to="/test" class="c-main-menu-link">
           Test
         </NuxtLink>
+      </li>
+
+      <li>
+        <SourceLink class="c-main-menu-link" />
       </li>
     </ul>
 
@@ -194,7 +199,7 @@ import {
 
     <!-- Vercel -->
     <h4 class="c-main-menu-lib">
-      Vercel
+      Vercel endpoints
     </h4>
 
     <ul>
@@ -206,9 +211,19 @@ import {
       </li>
     </ul>
 
-    <p>
-      <SourceLink />
-    </p>
+    <!-- GitHub -->
+    <h4 class="c-main-menu-lib">
+      GitHub actions
+    </h4>
+
+    <ul>
+      <li v-for="githubAction in githubActionPages" :key="githubAction">
+        <NuxtLink :to="'/github/actions/' + githubAction" class="c-main-menu-link">
+          <IconGithub class="c-main-menu-icon" />
+          <code>{{ githubAction }}</code>
+        </NuxtLink>
+      </li>
+    </ul>
   </div>
 </template>
 

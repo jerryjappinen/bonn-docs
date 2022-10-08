@@ -7,7 +7,6 @@
 - [ ] `ContentfulRichText` component
 - [ ] Proper syntax highlighting in code component
 - [ ] Load `Contentful.js` correctly as CJS in Nuxt 3
-- [ ] Document GitHub actions
 - [ ] Fix Vite build-time warnings on CSS
 
 ### Later
@@ -62,3 +61,4 @@
 - [x] Reusable GitHub actions
   - [x] Reusable workflows: https://docs.github.com/en/actions/using-workflows/reusing-workflows
   - [x] Composite actions: https://docs.github.com/en/actions/creating-actions/creating-a-composite-action
+- [x] Document GitHub actions
