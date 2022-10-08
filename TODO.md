@@ -1,17 +1,13 @@
 # Todo
 
-- [ ] `Popover` component and maybe Pinia store
-- [ ] Replace `.substr` with `.substring`
-  - [x] suffix/prefix utils
-  - [x] `getDomain`
-  - [ ] `composeClassnames`
-  - [ ] `getUserAgentStringValue`
+- [/] `SendInBlue` Vercel endpoint
+- [/] `Popover` component and maybe Pinia store
+- [/] `HygraphRichText` component
 - [ ] Make `isDev` work in Nuxt 3 runtime
-- [ ] `HygraphRichText` component
 - [ ] `ContentfulRichText` component
 - [ ] Proper syntax highlighting in code component
 - [ ] Load `Contentful.js` correctly as CJS in Nuxt 3
-- [ ] Add `eslint` configurations and plugins for Vue and Nuxt 3 support
+- [ ] Document GitHub actions
 
 ### Later
 
@@ -56,3 +52,12 @@
 - [x] Predefined Vercel endpoints
 - [x] Improve CSS variables API in components
 - [x] Fix `HighlightedPre` whitespace
+- [x] Add `eslint` configurations and plugins for Vue and Nuxt 3 support
+- [x] Replace `.substr` with `.substring`
+  - [x] suffix/prefix utils
+  - [x] `getDomain`
+  - [x] `composeClassnames`
+  - [x] `getUserAgentStringValue`
+- [x] Reusable GitHub actions
+  - [x] Reusable workflows: https://docs.github.com/en/actions/using-workflows/reusing-workflows
+  - [x] Composite actions: https://docs.github.com/en/actions/creating-actions/creating-a-composite-action
