@@ -34,13 +34,12 @@ const useName = 'use' + upperFirst(props.name)
 
 const composableArgs = props.args ? (Array.isArray(props.args) ? props.args : [props.args]) : []
 const composableDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props.deps]) : []
-const composableProps = props.props
-const composableMethods = props.methods
+const composableProps = unref(props.props)
+const composableMethods = unref(props.methods)
 </script>
 
 <template>
   <Bodytext>
-
     <h2><code>{{ useName }}({{ composableArgs.join(', ') }})</code></h2>
 
     <HighlightedPre
@@ -58,10 +57,7 @@ const composableMethods = props.methods
       </SourceLink>
     </p>
 
-
-
     <template v-if="composableProps">
-
       <h3>Properties</h3>
 
       <ClientOnly>
@@ -77,13 +73,9 @@ const composableMethods = props.methods
           </tbody>
         </table>
       </ClientOnly>
-
     </template>
 
-
-
     <template v-if="composableMethods">
-
       <h3>Methods</h3>
 
       <table>
@@ -93,19 +85,19 @@ const composableMethods = props.methods
             :key="key"
           >
             <th><HighlightedCode :code="`${name}.${key}`" /></th>
-            <td><button @click="method">{{ key }}</button></td>
+            <td>
+              <button @click="method">
+                {{ key }}
+              </button>
+            </td>
           </tr>
         </tbody>
       </table>
-
     </template>
-
-
 
     <h3>Other</h3>
 
     <slot />
-
   </Bodytext>
 </template>
 

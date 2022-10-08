@@ -45,6 +45,5 @@ function async demo () {
 }</code></pre>
 
     <p>{{ pings }}</p>
-
   </UtilPage>
 </template>

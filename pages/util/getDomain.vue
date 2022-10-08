@@ -21,7 +21,6 @@ const urls = [
   >
     <table>
       <tbody>
-
         <tr
           v-for="(url, i) in urls"
           :key="i"
@@ -38,7 +37,6 @@ const urls = [
           </td>
           <td>{{ getDomain() }}</td>
         </tr>
-
       </tbody>
     </table>
   </UtilPage>

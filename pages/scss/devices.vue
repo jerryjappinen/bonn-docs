@@ -1,10 +1,8 @@
 <template>
   <div>
-
     <h2>Widths</h2>
 
     <div class="width">
-
       <div class="iphone-very-tight">
         iphone-very-tight
       </div>
@@ -24,13 +22,11 @@
       <div class="iphone-very-loose">
         iphone-very-loose
       </div>
-
     </div>
 
     <h2>Heights</h2>
 
     <div class="height">
-
       <div class="iphone-very-tight">
         iphone-very-tight
       </div>
@@ -50,9 +46,7 @@
       <div class="iphone-very-loose">
         iphone-very-loose
       </div>
-
     </div>
-
   </div>
 </template>
 
@@ -79,7 +73,6 @@
   }
 
 }
-
 
 // Width
 
@@ -130,8 +123,6 @@
   }
 
 }
-
-
 
 // Height
 

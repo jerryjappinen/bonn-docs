@@ -5,7 +5,6 @@ const tweetId = 1537444796670701568
 
 <template>
   <ComponentPage name="Tweet">
-
     <div class="tweets">
       <Tweet
         :user-name="userName"
@@ -18,7 +17,6 @@ const tweetId = 1537444796670701568
         :dark="true"
       />
     </div>
-
   </ComponentPage>
 </template>
 

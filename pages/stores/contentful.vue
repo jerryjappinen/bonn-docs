@@ -37,14 +37,15 @@ const fetchData = () => {
     args="options"
     :arg-samples="sampleOptions"
   >
-
     <p>
       You must pass a request method that accepts 3 arguments. You can use <code>graphql-request</code>.
     </p>
 
-    <HighlightedPre code="import { request } from 'graphql-request'
+    <HighlightedPre
+      code="import { request } from 'graphql-request'
 
-useHygraph({ request })" />
+useHygraph({ request })"
+    />
 
     <h2>Sample</h2>
 
@@ -83,6 +84,5 @@ useHygraph({ request })" />
     <h4>Sample query</h4>
 
     <Dump :data="sampleQuery" />
-
   </PiniaStorePage>
 </template>

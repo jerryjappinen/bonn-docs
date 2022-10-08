@@ -1,18 +1,17 @@
 <script setup>
 // import endpoint from 'bonn/vercel/endpoint'
 
-const sampleOptions = {
-  callback: () => {}
-}
+// const sampleOptions = {
+//   callback: () => {}
+// }
 </script>
 
 <template>
-  <UtilPage
+  <VercelPage
     name="endpoint"
     args="options"
     args-sample="options"
   >
-
     <HighlightedPre
       file="api/my-endpoint.js"
       :code="`import endpoint from 'bonn/vercel/endpoint'
@@ -36,13 +35,14 @@ export default endpoint(({
       <p>Arguments passed to callback:</p>
     </Bodytext>
 
-    <Dump :data="`{
+    <Dump
+      :data="`{
 
-    }`" />
+    }`"
+    />
 
     <Bodytext>
       <p>The callback should return an object with a body and optionally contentType and status.</p>
     </Bodytext>
-
-  </UtilPage>
+  </VercelPage>
 </template>

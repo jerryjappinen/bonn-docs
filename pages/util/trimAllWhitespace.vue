@@ -24,7 +24,7 @@ bar     bar
       String with copious amounts of whitespace like this
     </p>
 
-    <pre><code>{{ string  }}</code></pre>
+    <pre><code>{{ string }}</code></pre>
 
     <p>
       becomes

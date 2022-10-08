@@ -4,9 +4,9 @@ import googleFonts from 'bonn/nuxt/config/googleFonts'
 
 // https://github.com/vbenjs/vite-plugin-compression#options
 const sampleOptions = {
-  'Poppins': true,
+  Poppins: true,
   'Mouse+Memoirs': false,
-  'Dosis': [200, 300, 800]
+  Dosis: [200, 300, 800]
 }
 </script>
 
@@ -26,13 +26,10 @@ const sampleOptions = {
 
     <Dump :data="googleFonts('Poppins', 'Dosis')" />
 
-
-
     <h4>Full weight options</h4>
 
     <pre><code>googleFonts({{ sampleOptions }})</code></pre>
 
     <Dump :data="googleFonts(sampleOptions)" />
-
   </NuxtConfigPage>
 </template>

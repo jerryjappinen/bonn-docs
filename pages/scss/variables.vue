@@ -30,45 +30,10 @@ const textUsage = [
   'default-line-height',
   'link-weight'
 ]
-
-const colorValues = [
-  'white',
-  'very-very-light-grey',
-  'very-light-grey',
-  'light-grey',
-  'grey',
-  'dark-grey',
-  'dark',
-  'very-dark',
-  'black',
-  'light-red',
-  'red',
-  'dark-red',
-  'light-pink',
-  'pink',
-  'dark-pink',
-  'light-orange',
-  'orange',
-  'dark-orange',
-  'light-yellow',
-  'yellow',
-  'dark-yellow',
-  'light-green',
-  'green',
-  'dark-green',
-  'light-purple',
-  'purple',
-  'dark-purple',
-  'light-blue',
-  'blue',
-  'dark-blue',
-]
 </script>
 
 <template>
   <div>
-
-
     <h2>Text usage</h2>
 
     <table>
@@ -81,8 +46,6 @@ const colorValues = [
         </tr>
       </tbody>
     </table>
-
-
 
     <h2>Color usage</h2>
 
@@ -109,39 +72,6 @@ const colorValues = [
           >
             <span class="block" />Text
           </td>
-
-        </tr>
-      </tbody>
-    </table>
-
-
-
-    <h2>Color values</h2>
-
-    <table>
-      <tbody>
-        <tr
-          v-for="color in colorValues"
-          :key="color"
-        >
-          <td><code>{{ color }}</code></td>
-
-          <!-- light -->
-          <td
-            class="light"
-            :style="`color: var(--${color})`"
-          >
-            <span class="block" />Text
-          </td>
-
-          <!-- dark -->
-          <td
-            class="dark"
-            :style="`color: var(--${color})`"
-          >
-            <span class="block" />Text
-          </td>
-
         </tr>
       </tbody>
     </table>

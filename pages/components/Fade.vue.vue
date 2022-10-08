@@ -46,11 +46,14 @@ const directions = [
       'to-bottom-distance'
     ]"
   >
-
     <Toggle v-model="demoValue" :block="true">
       <Fade>
-        <div v-if="demoValue" key="if" class="page-components-fade-demo-block">True</div>
-        <div v-else key="else" class="page-components-fade-demo-block-alt">False</div>
+        <div v-if="demoValue" key="if" class="page-components-fade-demo-block">
+          True
+        </div>
+        <div v-else key="else" class="page-components-fade-demo-block-alt">
+          False
+        </div>
       </Fade>
     </Toggle>
 
@@ -58,29 +61,45 @@ const directions = [
 
     <Toggle v-model="demoValue" :block="true">
       <Fade from="top">
-        <div v-if="demoValue" key="if" class="page-components-fade-demo-block">from="top"</div>
-        <div v-else key="else" class="page-components-fade-demo-block-alt">from="top"</div>
+        <div v-if="demoValue" key="if" class="page-components-fade-demo-block">
+          from="top"
+        </div>
+        <div v-else key="else" class="page-components-fade-demo-block-alt">
+          from="top"
+        </div>
       </Fade>
     </Toggle>
 
     <Toggle v-model="demoValue" :block="true">
       <Fade from="bottom">
-        <div v-if="demoValue" key="if" class="page-components-fade-demo-block">from="bottom"</div>
-        <div v-else key="else" class="page-components-fade-demo-block-alt">from="bottom"</div>
+        <div v-if="demoValue" key="if" class="page-components-fade-demo-block">
+          from="bottom"
+        </div>
+        <div v-else key="else" class="page-components-fade-demo-block-alt">
+          from="bottom"
+        </div>
       </Fade>
     </Toggle>
 
     <Toggle v-model="demoValue" :block="true">
       <Fade from="left">
-        <div v-if="demoValue" key="if" class="page-components-fade-demo-block">from="left"</div>
-        <div v-else key="else" class="page-components-fade-demo-block-alt">from="left"</div>
+        <div v-if="demoValue" key="if" class="page-components-fade-demo-block">
+          from="left"
+        </div>
+        <div v-else key="else" class="page-components-fade-demo-block-alt">
+          from="left"
+        </div>
       </Fade>
     </Toggle>
 
     <Toggle v-model="demoValue" :block="true">
       <Fade from="right">
-        <div v-if="demoValue" key="if" class="page-components-fade-demo-block">from="right"</div>
-        <div v-else key="else" class="page-components-fade-demo-block-alt">from="right"</div>
+        <div v-if="demoValue" key="if" class="page-components-fade-demo-block">
+          from="right"
+        </div>
+        <div v-else key="else" class="page-components-fade-demo-block-alt">
+          from="right"
+        </div>
       </Fade>
     </Toggle>
 
@@ -127,7 +146,6 @@ const directions = [
         </template>
       </tbody>
     </table>
-
   </ComponentPage>
 </template>
 

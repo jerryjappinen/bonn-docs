@@ -28,20 +28,20 @@ const clear = () => {
 
 <template>
   <ComponentPage name="Dropdown">
-
     <p>
-      Selected: <code>{{ selected }}</code> (<button @click="clear">clear</button>)
+      Selected: <code>{{ selected }}</code> (<button @click="clear">
+        clear
+      </button>)
     </p>
 
     <p>
       <Dropdown
+        v-model="selected"
         placeholder="Select one of the options available..."
         :options="options"
-        v-model="selected"
       />
     </p>
 
     <Dump :data="options" />
-
   </ComponentPage>
 </template>

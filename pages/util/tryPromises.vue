@@ -66,6 +66,5 @@ await tryPromises([
     <p v-else>
       Waiting...
     </p>
-
   </UtilPage>
 </template>

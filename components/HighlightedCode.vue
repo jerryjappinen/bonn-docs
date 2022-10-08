@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <script setup>
 import { computed, unref } from 'vue'
 
@@ -6,14 +7,17 @@ import trim from 'lodash-es/trim'
 import highlightCode from 'bonn/util/highlightCode'
 import toJson from 'bonn/util/toJson'
 
-// Props
-
 const props = defineProps({
+
   code: {
+    type: String,
     required: true
   },
 
-  lang: String,
+  lang: {
+    type: String,
+    default: undefined
+  },
 
   jsonify: {
     type: Boolean,
@@ -25,8 +29,6 @@ const props = defineProps({
     default: null
   }
 })
-
-
 
 const shouldTrim = computed(() => {
   const trim = unref(props.trim)

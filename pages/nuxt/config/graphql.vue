@@ -11,15 +11,19 @@ import GetPeople from '@/queries/GetPeople.gql'
       Adds support for importing <code>.gql</code> files.
     </p>
 
-    <HighlightedPre code="import GetPeople from '@/queries/GetPeople.gql'
+    <HighlightedPre
+      code="import GetPeople from '@/queries/GetPeople.gql'
 import { request } from 'graphql-request'
 
-const data = await request(GetPeople)" />
+const data = await request(GetPeople)"
+    />
 
     <Dump :data="GetPeople" />
 
     <p>
-      Uses <ExternalLink href="https://www.npmjs.com/package/@rollup/plugin-graphql">@rollup/plugin-graphql</ExternalLink> under the hood and supports the same options.
+      Uses <ExternalLink href="https://www.npmjs.com/package/@rollup/plugin-graphql">
+        @rollup/plugin-graphql
+      </ExternalLink> under the hood and supports the same options.
     </p>
   </NuxtConfigPage>
 </template>

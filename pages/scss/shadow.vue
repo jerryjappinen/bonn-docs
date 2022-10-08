@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <h2>Shadow</h2>
 
     <div class="shadows">
@@ -32,7 +31,6 @@
         shadow-very-loose
       </div>
     </div>
-
   </div>
 </template>
 

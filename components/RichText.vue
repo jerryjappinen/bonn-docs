@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <script setup>
 import { computed, unref } from 'vue'
 
@@ -6,7 +7,7 @@ import { astToHtmlString } from '@graphcms/rich-text-html-renderer'
 const props = defineProps({
   content: {
     type: Object,
-    default: true
+    required: true
   },
 
   references: {
@@ -36,7 +37,6 @@ const html = computed(() => {
   })
 })
 </script>
-
 
 <template>
   <div

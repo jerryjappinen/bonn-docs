@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <h1>Headline level 1</h1>
 
     <p>
@@ -22,7 +21,6 @@
     <h6>Headline level 6</h6>
 
     <div class="bodytext">
-
       <p>
         Some text goes here. <a href="./">This is a link</a> to this page.
       </p>
@@ -30,7 +28,6 @@
       <p>
         Some text goes here. This is a regular paragraph.
       </p>
-
     </div>
 
     <h4>Tables</h4>
@@ -74,6 +71,5 @@
 
       <caption>This is a table</caption>
     </table>
-
   </div>
 </template>

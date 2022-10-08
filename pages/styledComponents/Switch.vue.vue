@@ -22,7 +22,6 @@ const val = ref(true)
       'track-height'
     ]"
   >
-
     <table>
       <tbody>
         <tr>

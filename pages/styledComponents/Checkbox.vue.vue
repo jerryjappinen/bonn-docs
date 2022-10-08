@@ -17,7 +17,6 @@ const val = ref(true)
       'disabled-check-color'
     ]"
   >
-
     <p>
       <Toggle v-model="val">
         <Checkbox v-model="val" />
@@ -49,6 +48,5 @@ const val = ref(true)
         />
       </Toggle>
     </p>
-
   </ComponentPage>
 </template>

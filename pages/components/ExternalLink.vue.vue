@@ -4,7 +4,6 @@ const url = 'https://jerryjappinen.com'
 
 <template>
   <ComponentPage name="ExternalLink">
-
     <table>
       <tr>
         <th><code>here</code></th>
@@ -42,6 +41,5 @@ const url = 'https://jerryjappinen.com'
         </td>
       </tr>
     </table>
-
   </ComponentPage>
 </template>

@@ -22,7 +22,6 @@ const methods = {
     }"
     :methods="methods"
   >
-
     <h4>Change to a slower frame rate</h4>
 
     <p>
@@ -30,6 +29,5 @@ const methods = {
         setIntervalDuration(500)
       </button>
     </p>
-
   </ComposablePage>
 </template>

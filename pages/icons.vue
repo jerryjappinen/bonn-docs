@@ -1,18 +1,17 @@
 <template>
   <div>
-
     <h2>Icons</h2>
 
     <Bodytext>
-
       <p>
         Generic SVG icon set. Can be replaced with your custom icon set either fully or partly.
       </p>
 
       <p>
-        See full icon set at <ExternalLink href="https://github.com/jerryjappinen/bonn/icons">github.com/jerryjappinen/bonn/icons</ExternalLink>.
+        See full icon set at <ExternalLink href="https://github.com/jerryjappinen/bonn/icons">
+          github.com/jerryjappinen/bonn/icons
+        </ExternalLink>.
       </p>
-
     </Bodytext>
 
     <h3>Using individual icons</h3>
@@ -53,6 +52,5 @@
         <IconUndo />
       </Icon>
     </p>
-
   </div>
 </template>

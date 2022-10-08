@@ -21,7 +21,9 @@ const scriptTags = [
     </p>
 
     <p>
-      <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">Read more about script tags</ExternalLink>
+      <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script">
+        Read more about script tags
+      </ExternalLink>
     </p>
   </NuxtConfigPage>
 </template>

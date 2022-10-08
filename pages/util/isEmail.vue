@@ -11,9 +11,9 @@ const demo = ref('foo@bar.io')
   >
     <p>
       <input
-        type="email"
         v-model="demo"
-      />
+        type="email"
+      >
       {{ isEmail(demo.value) }}
     </p>
   </UtilPage>

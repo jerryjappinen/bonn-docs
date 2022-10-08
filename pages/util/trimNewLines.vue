@@ -31,6 +31,5 @@ bar     bar
     </p>
 
     <pre><code>{{ trimNewLines(string) }}</code></pre>
-
   </UtilPage>
 </template>

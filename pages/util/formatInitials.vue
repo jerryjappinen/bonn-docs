@@ -14,17 +14,15 @@ const initials = computed(() => {
     args="string"
     deps="lodash-es"
   >
-
     <p>
       <label>
         Edit this text:
-        <input type="text" v-model="text" />
+        <input v-model="text" type="text">
       </label>
     </p>
 
     <p>
       Corresponding initials: <code>{{ initials }}</code>
     </p>
-
   </UtilPage>
 </template>

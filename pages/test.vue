@@ -29,16 +29,21 @@ const toggle = () => {
     <h2>Transition tests</h2>
 
     <p>
-      <button @click="toggle">Toggle</button>
+      <button @click="toggle">
+        Toggle
+      </button>
     </p>
 
     <div class="page-test-transition-test">
       <Fade>
-        <div v-if="isToggled" key="is">Is toggled</div>
-        <div v-else key="not">Is not toggled</div>
+        <div v-if="isToggled" key="is">
+          Is toggled
+        </div>
+        <div v-else key="not">
+          Is not toggled
+        </div>
       </Fade>
     </div>
-
   </div>
 </template>
 

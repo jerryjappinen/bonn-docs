@@ -1,5 +1,6 @@
 <script setup>
 defineProps({
+  // eslint-disable-next-line vue/require-default-prop, vue/require-prop-types
   disabled: {},
 
   theme: {
@@ -19,7 +20,9 @@ defineProps({
     }"
     :disabled="disabled"
     :theme="theme"
-  ><slot /></ClickButton>
+  >
+    <slot />
+  </ClickButton>
 </template>
 
 <style lang="scss">
@@ -54,8 +57,6 @@ defineProps({
   border-width: 1.5px;
 }
 
-
-
 // Primary
 
 .c-styled-button-primary {
@@ -78,8 +79,6 @@ defineProps({
 .c-styled-button-primary-disabled {
   color: var(--c-styled-button-primary-disabled-text-color);
 }
-
-
 
 // Secondary, tertiary, transparent
 
@@ -105,8 +104,6 @@ defineProps({
 .c-styled-button-tertiary {
   border-color: var(--border-color);
 }
-
-
 
 // Link
 

@@ -10,16 +10,14 @@ const isLoading = ref(true)
       'delay'
     ]"
   >
-
     <p>
       <label>
-        <input type="checkbox" v-model="isLoading" /> <code>loading</code>
+        <input v-model="isLoading" type="checkbox"> <code>loading</code>
       </label>
     </p>
 
     <p>
       <Ellipsis :loading="isLoading" />
     </p>
-
   </ComponentPage>
 </template>

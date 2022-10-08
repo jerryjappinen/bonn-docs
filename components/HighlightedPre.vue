@@ -1,9 +1,16 @@
 <script setup>
-const props = defineProps({
+defineProps({
+  // eslint-disable-next-line vue/require-default-prop, vue/require-prop-types
   code: {},
+  // eslint-disable-next-line vue/require-default-prop, vue/require-prop-types
   lang: {},
+  // eslint-disable-next-line vue/require-default-prop, vue/require-prop-types
   trim: {},
-  file: String
+
+  file: {
+    type: String,
+    default: null
+  }
 })
 </script>
 

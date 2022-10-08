@@ -10,10 +10,8 @@ const themes = [
 
 <template>
   <ComponentPage name="StyledButton">
-
     <table>
       <tbody>
-
         <tr
           v-for="theme in themes"
           :key="theme"
@@ -34,6 +32,5 @@ const themes = [
         </tr>
       </tbody>
     </table>
-
   </ComponentPage>
 </template>

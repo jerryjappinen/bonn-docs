@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <h2>Breakpoints</h2>
 
     <div class="demo">
@@ -32,7 +31,6 @@ $breakpoint-tablet: $breakpoint-large;
 $breakpoint-laptop: $breakpoint-very-large;
 $breakpoint-monitor: $breakpoint-full;"
     />
-
   </div>
 </template>
 

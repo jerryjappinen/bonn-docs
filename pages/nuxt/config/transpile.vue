@@ -10,8 +10,6 @@ const sampleOptions = 'lodash-es'
     args="...moduleNames"
     :args-sample="sampleOptions"
   >
-
     <Dump :data="transpile(sampleOptions)" />
-
   </NuxtConfigPage>
 </template>

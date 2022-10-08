@@ -23,7 +23,7 @@ const props = defineProps({
 
 })
 
-const storeName = props.name
+const storeName = unref(props.name)
 const storeArgs = props.args ? (Array.isArray(props.args) ? props.args : [props.args]) : []
 const storeArgSamples = props.argSamples ? (Array.isArray(props.argSamples) ? props.argSamples : [props.argSamples]) : []
 const storeDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props.deps]) : []
@@ -31,7 +31,6 @@ const storeDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props.
 
 <template>
   <div>
-
     <h2>
       <code>stores/{{ storeName }}</code>
     </h2>
@@ -78,6 +77,5 @@ export default defineStore('${storeName}', ${storeName}Setup(${storeArgs.join(',
         <Icon><IconGithub /></Icon> Source
       </SourceLink>
     </p>
-
   </div>
 </template>

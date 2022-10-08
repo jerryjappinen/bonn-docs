@@ -18,7 +18,6 @@ const posts = computed(() => {
 
 <template>
   <ComponentPage name="RichText">
-
     <h2>
       All loaded posts
       <Ellipsis v-if="pending" />
@@ -30,8 +29,9 @@ const posts = computed(() => {
         :key="post.id"
         class="page-components-rich-text-post"
       >
-
-        <h3 class="post-title">{{ post.title }}</h3>
+        <h3 class="post-title">
+          {{ post.title }}
+        </h3>
 
         <template v-if="post.body && post.body.raw">
           <RichText
@@ -41,10 +41,8 @@ const posts = computed(() => {
           />
           <!-- <Dump :data="post.body.raw" /> -->
         </template>
-
       </div>
     </div>
-
   </ComponentPage>
 </template>
 

@@ -16,7 +16,9 @@ import {
 <template>
   <div class="c-main-menu">
     <h4>
-      <NuxtLink to="/">Bonn</NuxtLink>
+      <NuxtLink to="/">
+        Bonn
+      </NuxtLink>
     </h4>
 
     <ul>
@@ -55,7 +57,6 @@ import {
           Test
         </NuxtLink>
       </li>
-
     </ul>
 
     <!-- Scss -->
@@ -208,7 +209,6 @@ import {
     <p>
       <SourceLink />
     </p>
-
   </div>
 </template>
 

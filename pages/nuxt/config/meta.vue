@@ -23,6 +23,5 @@ const sampleOptions = {
     </p>
 
     <Dump :data="helper(sampleOptions)" />
-
   </NuxtConfigPage>
 </template>

@@ -6,13 +6,12 @@ const props = defineProps({
   }
 })
 
-const pluginName = props.name
+const pluginName = unref(props.name)
 const pluginArgs = props.args ? (Array.isArray(props.args) ? props.args : [props.args]) : []
 </script>
 
 <template>
   <div>
-
     <h2><code>{{ pluginName }}</code></h2>
 
     <HighlightedPre
@@ -31,6 +30,5 @@ export default defineNuxtPlugin(${pluginName}(${pluginArgs.join(', ')}))`"
         <Icon><IconGithub /></Icon> Source
       </SourceLink>
     </p>
-
   </div>
 </template>

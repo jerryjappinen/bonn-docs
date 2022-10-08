@@ -1,6 +1,5 @@
 <template>
   <ComponentPage name="Buttons">
-
     <buttons>
       <ClickButton>Foo</ClickButton>
       <ClickButton>Bar</ClickButton>
@@ -15,7 +14,6 @@
       <ClickButton>Foo</ClickButton>
       <ClickButton>Bar</ClickButton>
     </buttons>
-
   </ComponentPage>
 </template>
 

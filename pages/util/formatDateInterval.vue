@@ -25,7 +25,6 @@ const oldDate3 = new Date('2018-02-02 22:22:22')
 const oldDate4 = new Date('2019-02-02 22:22:22')</code></pre>
 
     <table>
-
       <tr>
         <td><code>formatDateInterval(oldDate1, oldDate2)</code></td>
         <td>{{ renderedDateInterval1 }}</td>
@@ -50,7 +49,6 @@ const oldDate4 = new Date('2019-02-02 22:22:22')</code></pre>
         <td><code>formatDateInterval(oldDate4, oldDate1)</code></td>
         <td>{{ renderedDateInterval5 }}</td>
       </tr>
-
     </table>
   </UtilPage>
 </template>

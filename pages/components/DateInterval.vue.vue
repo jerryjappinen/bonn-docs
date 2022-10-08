@@ -5,15 +5,13 @@ const endDate = '2022-04-01'
 
 <template>
   <ComponentPage name="DateInterval">
-
     <pre><code>&lt;DateInterval :startDate="{{ startDate }}" :endDate="{{ endDate }}" /&gt;</code></pre>
 
     <p>
       <DateInterval
-        :startDate="startDate"
-        :endDate="endDate"
+        :start-date="startDate"
+        :end-date="endDate"
       />
     </p>
-
   </ComponentPage>
 </template>

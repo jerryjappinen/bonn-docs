@@ -23,7 +23,7 @@ const props = defineProps({
 
 })
 
-const configName = props.name
+const configName = unref(props.name)
 const configArgs = props.args ? (Array.isArray(props.args) ? props.args : [props.args]) : []
 const configArgSamples = props.argSamples ? (Array.isArray(props.argSamples) ? props.argSamples : [props.argSamples]) : []
 const configDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props.deps]) : []
@@ -31,7 +31,6 @@ const configDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props
 
 <template>
   <div>
-
     <h2><code>{{ configName }}({{ configArgs.join(', ') }})</code></h2>
 
     <HighlightedPre
@@ -60,6 +59,5 @@ const configDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props
         <Icon><IconGithub /></Icon> Source
       </SourceLink>
     </p>
-
   </div>
 </template>

@@ -16,7 +16,9 @@ const sampleOptions = {
     </p>
 
     <p>
-      See <ExternalLink href="https://github.com/svg/svgo/tree/main/plugins">SVGO documentation</ExternalLink> for all supported options.
+      See <ExternalLink href="https://github.com/svg/svgo/tree/main/plugins">
+        SVGO documentation
+      </ExternalLink> for all supported options.
     </p>
 
     <Dump :data="sampleOptions" />

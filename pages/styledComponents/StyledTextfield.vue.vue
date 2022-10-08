@@ -4,10 +4,8 @@ const textValue = ref('')
 
 <template>
   <ComponentPage name="StyledTextfield">
-
     <table>
       <tbody>
-
         <tr>
           <th>
             <code>default</code>
@@ -40,9 +38,7 @@ const textValue = ref('')
             />
           </td>
         </tr>
-
       </tbody>
     </table>
-
   </ComponentPage>
 </template>

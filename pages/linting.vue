@@ -1,9 +1,17 @@
 <script setup>
+
 const packageJsonCode = `{
   "scripts": {
-    "lint": "eslint --ignore-path .gitignore \"**/*.{js,ts}\""
+    "lint": "eslint --ignore-path .gitignore \\"**/*.{js,ts}\\""
   }
 }`
+
+const packageJsonCodeVue = `{
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore \\"**/*.{js,ts,vue}\\""
+  }
+}`
+
 </script>
 
 <template>
@@ -13,8 +21,6 @@ const packageJsonCode = `{
     <p>
       Bonn includes good defaults for JavaScript, Vue and Nuxt projects. You can simply import the default configuration. <code>bonn</code> includes all the dependencies.
     </p>
-
-
 
     <h4>eslint</h4>
 
@@ -32,7 +38,19 @@ const packageJsonCode = `{
       :code="packageJsonCode"
     />
 
+    <p>
+      For Nuxt projects:
+    </p>
 
+    <HighlightedPre
+      file=".eslintrc.js"
+      code="module.exports = require('bonn/eslint/nuxt.cjs')"
+    />
+
+    <HighlightedPre
+      file="package.json"
+      :code="packageJsonCodeVue"
+    />
 
     <h4>Prettier</h4>
 
@@ -44,6 +62,5 @@ const packageJsonCode = `{
       file="prettier.config.js"
       code="module.exports = require('bonn/prettier')"
     />
-
   </Bodytext>
 </template>

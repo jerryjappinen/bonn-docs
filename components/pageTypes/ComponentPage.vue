@@ -23,21 +23,19 @@ const cssVars = computed(() => {
   return compact(flattenDeep([unref(props.cssVars)]))
 })
 
-const css = computed(() => {
-  if (cssVars.value.length) {
-    return `:root {${cssVars.value.map((cssVar) => {
-  return '\n' + `  --c-${kebabCase(unref(props.name))}-${kebabCase(cssVar)}: ...;`
-})}
-}`
-  }
+const getCssVariableLine = (cssVar) => {
+  return `--c-${kebabCase(unref(props.name))}-${kebabCase(cssVar)}: ...;`
+}
 
-  return null
+const css = computed(() => {
+  return cssVars.value.length
+    ? ':root {' + cssVars.value.map(cssVar => '\n' + '  ' + getCssVariableLine(cssVar)) + '\n' + '}'
+    : null
 })
 </script>
 
 <template>
   <div>
-
     <h2><code>{{ name }}</code></h2>
 
     <HighlightedPre :code="importString" />
@@ -54,6 +52,5 @@ const css = computed(() => {
         <Icon><IconGithub /></Icon> Source
       </SourceLink>
     </p>
-
   </div>
 </template>

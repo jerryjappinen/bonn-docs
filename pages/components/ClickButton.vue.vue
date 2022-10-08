@@ -7,7 +7,6 @@ const onClick = () => {
 <template>
   <ComponentPage name="ClickButton">
     <div class="grid">
-
       <div>
         <ClickButton href="https://domain.com" :pad="true">
           Pad
@@ -105,9 +104,7 @@ const onClick = () => {
           Two icons
         </ClickButton>
       </div>
-
     </div>
-
   </ComponentPage>
 </template>
 

@@ -35,7 +35,6 @@ const colorCodes = [
 
 <template>
   <div class="new-colors">
-
     <h2>Full color codes</h2>
 
     <table>
@@ -45,12 +44,13 @@ const colorCodes = [
           <td
             v-for="colorCode in colorCodes"
             :key="colorCode"
-          ><code>{{ colorCode }}</code></td>
+          >
+            <code>{{ colorCode }}</code>
+          </td>
         </tr>
       </thead>
 
       <tbody>
-
         <!-- Code sheet -->
         <tr
           v-for="colorName in colorNames"
@@ -61,9 +61,10 @@ const colorCodes = [
             v-for="colorCode in colorCodes"
             :key="colorCode"
             :style="`color: var(--${colorName + '-' + colorCode});`"
-          ><span class="solid-block" /><span class="outline-block" /></td>
+          >
+            <span class="solid-block" /><span class="outline-block" />
+          </td>
         </tr>
-
       </tbody>
     </table>
 
@@ -72,8 +73,12 @@ const colorCodes = [
     <table>
       <thead>
         <tr>
-          <th colspan="4">Regular color</th>
-          <th colspan="4">Inverted scheme</th>
+          <th colspan="4">
+            Regular color
+          </th>
+          <th colspan="4">
+            Inverted scheme
+          </th>
         </tr>
       </thead>
 
@@ -83,23 +88,37 @@ const colorCodes = [
           :key="colorName"
         >
           <tr>
-            <th colspan="14"><code>{{ colorName }}</code></th>
+            <th colspan="14">
+              <code>{{ colorName }}</code>
+            </th>
           </tr>
           <tr
             v-for="colorVariant in colorVariants"
             :key="colorVariant"
           >
             <td><code>{{ colorVariant + colorName }}</code></td>
-            <td class="block-cell solid-cell" :style="`color: var(--${colorVariant + colorName});`"><span class="solid-block" /></td>
-            <td class="block-cell outline-cell" :style="`color: var(--${colorVariant + colorName});`"><span class="outline-block" /></td>
-            <td class="block-cell text-cell" :style="`color: var(--${colorVariant + colorName});`">Hello</td>
+            <td class="block-cell solid-cell" :style="`color: var(--${colorVariant + colorName});`">
+              <span class="solid-block" />
+            </td>
+            <td class="block-cell outline-cell" :style="`color: var(--${colorVariant + colorName});`">
+              <span class="outline-block" />
+            </td>
+            <td class="block-cell text-cell" :style="`color: var(--${colorVariant + colorName});`">
+              Hello
+            </td>
             <!-- <td class="offset" :style="`color: var(--${colorVariant + colorName});`"><span class="solid-block" /></td>
             <td class="offset" :style="`color: var(--${colorVariant + colorName});`"><span class="outline-block" /></td>
             <td class="offset" :style="`color: var(--${colorVariant + colorName});`">Hello</td> -->
             <td><code>inverted-{{ colorVariant + colorName }}</code></td>
-            <td class="block-cell solid-cell inverted" :style="`color: var(--inverted-${colorVariant + colorName});`"><span class="solid-block" /></td>
-            <td class="block-cell outline-cell inverted" :style="`color: var(--inverted-${colorVariant + colorName});`"><span class="outline-block" /></td>
-            <td class="block-cell text-cell inverted" :style="`color: var(--inverted-${colorVariant + colorName});`">Hello</td>
+            <td class="block-cell solid-cell inverted" :style="`color: var(--inverted-${colorVariant + colorName});`">
+              <span class="solid-block" />
+            </td>
+            <td class="block-cell outline-cell inverted" :style="`color: var(--inverted-${colorVariant + colorName});`">
+              <span class="outline-block" />
+            </td>
+            <td class="block-cell text-cell inverted" :style="`color: var(--inverted-${colorVariant + colorName});`">
+              Hello
+            </td>
             <!-- <td class="inverted offset" :style="`color: var(--inverted-${colorVariant + colorName});`"><span class="solid-block" /></td>
             <td class="inverted offset" :style="`color: var(--inverted-${colorVariant + colorName});`"><span class="outline-block" /></td>
             <td class="inverted offset" :style="`color: var(--inverted-${colorVariant + colorName});`">Hello</td> -->
@@ -112,7 +131,6 @@ const colorCodes = [
 
     <table>
       <tbody>
-
         <!-- Codes -->
         <template
           v-for="colorName in colorNames"
@@ -123,18 +141,28 @@ const colorCodes = [
             :key="colorCode"
           >
             <td>{{ colorName + '-' + colorCode }}</td>
-            <td :style="`color: var(--${colorName + '-' + colorCode});`"><span class="solid-block" /></td>
-            <td :style="`color: var(--${colorName + '-' + colorCode});`"><span class="outline-block" /></td>
-            <td :style="`color: var(--${colorName + '-' + colorCode});`">Hello</td>
-            <td class="inverted" :style="`color: var(--${colorName + '-' + colorCode});`"><span class="solid-block" /></td>
-            <td class="inverted" :style="`color: var(--${colorName + '-' + colorCode});`"><span class="outline-block" /></td>
-            <td class="inverted" :style="`color: var(--${colorName + '-' + colorCode});`">Hello</td>
+            <td :style="`color: var(--${colorName + '-' + colorCode});`">
+              <span class="solid-block" />
+            </td>
+            <td :style="`color: var(--${colorName + '-' + colorCode});`">
+              <span class="outline-block" />
+            </td>
+            <td :style="`color: var(--${colorName + '-' + colorCode});`">
+              Hello
+            </td>
+            <td class="inverted" :style="`color: var(--${colorName + '-' + colorCode});`">
+              <span class="solid-block" />
+            </td>
+            <td class="inverted" :style="`color: var(--${colorName + '-' + colorCode});`">
+              <span class="outline-block" />
+            </td>
+            <td class="inverted" :style="`color: var(--${colorName + '-' + colorCode});`">
+              Hello
+            </td>
           </tr>
         </template>
-
       </tbody>
     </table>
-
   </div>
 </template>
 

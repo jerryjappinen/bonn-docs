@@ -4,7 +4,6 @@ const booleanValue = ref(false)
 
 <template>
   <ComponentPage name="Toggle">
-
     <p>
       <Toggle v-model="booleanValue">
         Click to toggle boolean value
@@ -12,6 +11,5 @@ const booleanValue = ref(false)
     </p>
 
     <Dump :data="{ booleanValue }" />
-
   </ComponentPage>
 </template>

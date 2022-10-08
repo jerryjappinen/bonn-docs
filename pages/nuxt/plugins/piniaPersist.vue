@@ -7,9 +7,8 @@ const store = useMyStore()
 <template>
   <NuxtPluginPage
     name="piniaPersist"
-    pluginArgs="options"
+    plugin-args="options"
   >
-
     <Dump :data="store.someValue" />
 
     <p>
@@ -17,10 +16,13 @@ const store = useMyStore()
     </p>
 
     <p>
-      <ExternalLink href="https://github.com/prazdevs/pinia-plugin-persistedstate"><code>pinia-plugin-persistedstate</code></ExternalLink> is included out of the box. Enable it in your store like this:
+      <ExternalLink href="https://github.com/prazdevs/pinia-plugin-persistedstate">
+        <code>pinia-plugin-persistedstate</code>
+      </ExternalLink> is included out of the box. Enable it in your store like this:
     </p>
 
-    <HighlightedPre code="import { defineStore } from 'pinia'
+    <HighlightedPre
+      code="import { defineStore } from 'pinia'
 
 export default defineStore('myStore', {
   persist: true,
@@ -30,8 +32,8 @@ export default defineStore('myStore', {
       someState: 'hello pinia'
     }
   }
-})" />
-
+})"
+    />
   </NuxtPluginPage>
 </template>
 

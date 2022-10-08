@@ -1,6 +1,5 @@
 <template>
   <ComponentPage name="EmailLink">
-
     <p>
       <EmailLink
         to="some.person@email.com"
@@ -11,6 +10,5 @@
         Email link to Some Person
       </EmailLink>
     </p>
-
   </ComponentPage>
 </template>

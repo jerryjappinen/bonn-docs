@@ -1,6 +1,5 @@
 <template>
   <div class="c-layout-default">
-
     <!-- Content area -->
     <div class="c-layout-default-main">
       <div class="c-layout-default-main-content">
@@ -52,8 +51,6 @@
 .c-layout-default-main-content {
   @include buffer-relative;
 }
-
-
 
 // Menu
 

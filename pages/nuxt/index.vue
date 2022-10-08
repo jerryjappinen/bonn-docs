@@ -10,16 +10,18 @@
 
     <pre><code>defineNuxtConfig(bonn())</code></pre>
 
-
-
     <h3>Config helpers</h3>
 
     <p>
-      <ExternalLink href="https://nuxt.js">Nuxt config</ExternalLink> can be quite complex and require careful orchestration when creating a non-trivial app. Bonn's Nuxt config helpers make it easy to add various features in <code>nuxt.config</code> without knowing the exact various config parameters that need to be added to enable said feature.
+      <ExternalLink href="https://nuxt.js">
+        Nuxt config
+      </ExternalLink> can be quite complex and require careful orchestration when creating a non-trivial app. Bonn's Nuxt config helpers make it easy to add various features in <code>nuxt.config</code> without knowing the exact various config parameters that need to be added to enable said feature.
     </p>
 
     <p>
-      For example, to enable SCSS in your Nuxt app, you can simply use the <NuxtLink href="/nuxt/config/scss">scss helper</NuxtLink>.
+      For example, to enable SCSS in your Nuxt app, you can simply use the <NuxtLink href="/nuxt/config/scss">
+        scss helper
+      </NuxtLink>.
     </p>
 
     <pre><code>export default defineNuxtConfig(scss({
@@ -50,6 +52,5 @@ export default defineNuxtConfig(mergeConfigs(
     }
   })
 ))</code></pre>
-
   </div>
 </template>

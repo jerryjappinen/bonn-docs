@@ -12,7 +12,9 @@ const sampleOptions = {}
     :deps="['markdown-it']"
   >
     <p>
-      <strong>Support for Markdown imports.</strong> See <ExternalLink href="https://github.com/markdown-it/markdown-it#init-with-presets-and-options">markdown-it docs</ExternalLink> for supported options.
+      <strong>Support for Markdown imports.</strong> See <ExternalLink href="https://github.com/markdown-it/markdown-it#init-with-presets-and-options">
+        markdown-it docs
+      </ExternalLink> for supported options.
     </p>
 
     <p>
@@ -20,6 +22,5 @@ const sampleOptions = {}
     </p>
 
     <!-- <Dump :data="markdown(sampleOptions)" /> -->
-
   </NuxtConfigPage>
 </template>

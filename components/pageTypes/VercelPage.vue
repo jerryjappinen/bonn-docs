@@ -20,7 +20,7 @@ const endpointArgs = props.args ? (Array.isArray(props.args) ? props.args : [pro
   <div>
     <h2><code>{{ name }}({{ endpointArgs.join(', ') }})</code></h2>
 
-    <HighlightedPre :code="`import ${name} from 'bonn/vercel/endpoints/${name}'`" />
+    <HighlightedPre :code="`import ${name} from 'bonn/vercel/${name}'`" />
 
     <Bodytext>
       <slot />

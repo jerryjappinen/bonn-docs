@@ -20,6 +20,5 @@ ${testCsv}`
 
     <Dump :data="testCsvWithHeaders" />
     <Dump :data="csvToJson(testCsvWithHeaders, true)" />
-
   </UtilPage>
 </template>

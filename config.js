@@ -40,6 +40,8 @@ export const componentPages = [
   'GooglePlayBadge',
   'LiveDuration',
   'MobileWebAppBadge',
+  'PhoneNumber',
+  'Popover',
   'RichText',
   'Textfield',
   'Tweet',

@@ -29,7 +29,6 @@ const utilDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props.d
 
 <template>
   <div>
-
     <h2><code>{{ async ? 'async ' : '' }}{{ name }}({{ utilArgs.join(', ') }})</code></h2>
 
     <HighlightedPre
@@ -48,6 +47,5 @@ const utilDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props.d
         <Icon><IconGithub /></Icon> Source
       </SourceLink>
     </p>
-
   </div>
 </template>

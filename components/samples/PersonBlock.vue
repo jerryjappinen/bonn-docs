@@ -17,12 +17,11 @@ const photo = computed(() => {
 
 <template>
   <div class="c-person-block">
-
     <img
       v-if="photo"
       :src="photo.url"
       class="c-person-block-image"
-    />
+    >
 
     <span class="c-person-block-name">
       {{ person.name }}

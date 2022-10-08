@@ -2,25 +2,25 @@
 import helper from 'bonn/nuxt/config/pwa'
 
 const sampleOptions = {
-    icon: true,
-    maskable: true,
+  icon: true,
+  maskable: true,
 
-    title: 'Foo bar',
-    // shortTitle,
-    // description,
+  title: 'Foo bar',
+  // shortTitle,
+  // description,
 
-    // startPath,
-    // rtl,
-    // lang,
+  // startPath,
+  // rtl,
+  // lang,
 
-    // backgroundColor,
-    // themeColor,
+  // backgroundColor,
+  // themeColor,
 
-    // fullscreen, standalone, minimal-ui, browser
-    // https://developer.mozilla.org/en-US/docs/Web/Manifest/display
-    // display,
-    offline: true
-  }
+  // fullscreen, standalone, minimal-ui, browser
+  // https://developer.mozilla.org/en-US/docs/Web/Manifest/display
+  // display,
+  offline: true
+}
 </script>
 
 <template>
@@ -29,8 +29,12 @@ const sampleOptions = {
     args="options"
     :args-sample="sampleOptions"
   >
+    <h1>NOTE: experimental</h1>
+
     <p>
-      Use the <ExternalLink href="https://pwa.nuxtjs.org/"><code>pwa</code></ExternalLink> module to enable web ap features.
+      Use the <ExternalLink href="https://pwa.nuxtjs.org/">
+        <code>pwa</code>
+      </ExternalLink> module to enable web ap features.
     </p>
 
     <h4><code>manifest.json</code></h4>
@@ -46,6 +50,5 @@ const sampleOptions = {
     <h4>Output</h4>
 
     <Dump :data="helper(sampleOptions)" />
-
   </NuxtConfigPage>
 </template>

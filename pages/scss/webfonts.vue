@@ -1,8 +1,6 @@
 <template>
   <div>
-
     <Bodytext>
-
       <h2>Webfonts</h2>
 
       <h4>Google Fonts</h4>
@@ -10,7 +8,9 @@
       <h5>nuxt.config</h5>
 
       <p>
-        The easiest way to implement Google Fonts is using the <code>nuxt.config</code> helper <NuxtLink to="/nuxt/config/googleFonts">googleFonts()</NuxtLink>.
+        The easiest way to implement Google Fonts is using the <code>nuxt.config</code> helper <NuxtLink to="/nuxt/config/googleFonts">
+          googleFonts()
+        </NuxtLink>.
       </p>
 
       <HighlightedPre
@@ -79,8 +79,6 @@
     $woffdata: null,
     $woff2data: null
   )</code></pre>
-
-  </Bodytext>
-
+    </Bodytext>
   </div>
 </template>

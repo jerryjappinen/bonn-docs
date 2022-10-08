@@ -3,7 +3,6 @@
     name="Spinner"
     css-vars="circle-size"
   >
-
     <div class="grid">
       <div>
         <spinner />
@@ -24,7 +23,6 @@
         <spinner :stroke-width="2" />
       </div>
     </div>
-
   </ComponentPage>
 </template>
 

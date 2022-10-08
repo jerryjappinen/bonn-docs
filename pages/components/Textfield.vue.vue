@@ -16,10 +16,8 @@ const monthValue = ref('')
     ]"
     class="page-components-textfield"
   >
-
     <table>
       <tbody>
-
         <tr>
           <td>Default</td>
           <td colspan="2">
@@ -147,7 +145,6 @@ const monthValue = ref('')
             />
           </td>
         </tr>
-
       </tbody>
     </table>
 
@@ -155,12 +152,13 @@ const monthValue = ref('')
 
     <table>
       <tbody>
-
         <tr>
           <td>
             <code>autocomplete</code> enables <ExternalLink
               href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#inappropriate-for-the-control"
-            >browser's autocomplete</ExternalLink> feature. Always use the <code>name</code> attribute when using autocomplete.
+            >
+              browser's autocomplete
+            </ExternalLink> feature. Always use the <code>name</code> attribute when using autocomplete.
           </td>
           <td>
             <Textfield
@@ -170,7 +168,6 @@ const monthValue = ref('')
             />
           </td>
         </tr>
-
       </tbody>
     </table>
 
@@ -179,7 +176,9 @@ const monthValue = ref('')
     <p>
       Set <code>type</code> to any <ExternalLink
         href="https://www.w3schools.com/tags/att_input_type.asp"
-      >HTML input type</ExternalLink>. Default is <code>text</code>.
+      >
+        HTML input type
+      </ExternalLink>. Default is <code>text</code>.
     </p>
 
     <table>
@@ -192,7 +191,6 @@ const monthValue = ref('')
       </thead>
 
       <tbody>
-
         <tr>
           <td>
             <Textfield
@@ -216,10 +214,8 @@ const monthValue = ref('')
             <br>{{ monthValue }} ({{ typeof monthValue }})
           </td>
         </tr>
-
       </tbody>
     </table>
-
   </ComponentPage>
 </template>
 
