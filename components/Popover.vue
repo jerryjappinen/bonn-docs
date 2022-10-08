@@ -289,14 +289,18 @@ const updatePosition = () => {
 // FIXME: split some of this into StyledPopover
 
 :root {
-  --c-popover-z-index: 10000;
+  // --c-popover-z-index: 10000;
   // --c-popover-overlay-opacity: 0.5;
   // --c-popover-background-color: var(--background-color);
   // --c-popover-overlay-color: var(--inverted-background-color);
+
+  // --c-popover-fullscreen-min-height: var(--content-width-tight);
+  // --c-popover-inline-width: var(--content-width-tight);
+  // --c-popover-inline-max-height: var(--content-width);
 }
 
 .c-popover {
-  z-index: var(--c-popover-z-index);
+  z-index: var(--c-popover-z-index, 10000);
 }
 
 .c-popover-content {
@@ -333,7 +337,7 @@ const updatePosition = () => {
   left: 0;
   bottom: 0;
   width: 100%;
-  min-height: $width-content-tight;
+  min-height: var(--c-popover-fullscreen-min-height, var(--content-width-tight));
   max-height: calc(100vh - 3em);
 }
 
@@ -351,8 +355,9 @@ const updatePosition = () => {
   @include shadow;
   @include absolute;
   @include radius-loose;
-  width: $width-popover-tight;
-  max-height: $height-popover-tight;
+
+  width: var(--c-popover-inline-width, var(--content-width-tight));
+  max-height: var(--c-popover-inline-max-height, var(--content-width));
 }
 
 </style>
