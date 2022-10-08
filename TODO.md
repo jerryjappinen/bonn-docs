@@ -8,6 +8,7 @@
 - [ ] Proper syntax highlighting in code component
 - [ ] Load `Contentful.js` correctly as CJS in Nuxt 3
 - [ ] Document GitHub actions
+- [ ] Fix Vite build-time warnings on CSS
 
 ### Later
 
