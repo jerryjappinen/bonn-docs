@@ -19,10 +19,12 @@ const renderedDateInterval5 = formatDateInterval(oldDate4, oldDate1)
     :args="['olderDate', 'newerDate: new Date()']"
     deps="date-fns"
   >
-    <pre><code>const oldDate1 = new Date('2018-01-01 22:22:22')
+    <HighlightedPre
+      :code="`const oldDate1 = new Date('2018-01-01 22:22:22')
 const oldDate2 = new Date('2018-01-02 22:22:22')
 const oldDate3 = new Date('2018-02-02 22:22:22')
-const oldDate4 = new Date('2019-02-02 22:22:22')</code></pre>
+const oldDate4 = new Date('2019-02-02 22:22:22')`"
+    />
 
     <table>
       <tr>

@@ -13,7 +13,7 @@ import pinia from 'bonn/nuxt/config/pinia'
 import scss from 'bonn/nuxt/config/scss'
 import sitemap from 'bonn/nuxt/config/sitemap'
 import svg from 'bonn/nuxt/config/svg'
-// import transpile from 'bonn/nuxt/config/transpile'
+import transpile from 'bonn/nuxt/config/transpile'
 import viewport from 'bonn/nuxt/config/viewport'
 
 import {
@@ -29,6 +29,8 @@ import {
 import routes from './routes'
 
 const config = mergeConfigs(
+  transpile('prism-es6'),
+
   assets({
     baseUrl,
     longSiteTitle,
@@ -77,16 +79,7 @@ const config = mergeConfigs(
     typescript: {
       shim: false
     }
-  }),
-
-  // transpile(
-  //   'md5-hex',
-  //   'blueimp-md5',
-  //   'gravatar-url',
-  //   'vite-svg-loader'
-  // )
-
-  {}
+  })
 )
 
 // console.log(JSON.stringify(config, null, 2))

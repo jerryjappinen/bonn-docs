@@ -24,12 +24,12 @@ bar     bar
       String with copious amounts of whitespace like this
     </p>
 
-    <pre><code>{{ string }}</code></pre>
+    <HighlightedPre :code="string" />
 
     <p>
       becomes
     </p>
 
-    <pre><code>{{ trimWhitespace(string) }}</code></pre>
+    <HighlightedPre :code="trimWhitespace(string)" />
   </UtilPage>
 </template>

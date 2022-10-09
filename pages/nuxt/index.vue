@@ -8,7 +8,7 @@
       You can easily auto-import the components, composables and icons in your Nuxt app:
     </p>
 
-    <pre><code>defineNuxtConfig(bonn())</code></pre>
+    <HighlightedPre :code="`defineNuxtConfig(bonn())`" />
 
     <h3>Config helpers</h3>
 
@@ -24,10 +24,12 @@
       </NuxtLink>.
     </p>
 
-    <pre><code>export default defineNuxtConfig(scss({
+    <HighlightedPre
+      :code="`export default defineNuxtConfig(scss({
   global: 'stylehels/global.scss',
   shared: 'styles/shared.scss'
-}))</code></pre>
+}))`"
+    />
 
     <p>
       This helper will enable the required modules and add the relevant options in your Nuxt config. You don't have to know the exact format, the helper will take care of it. In most cases the required dependencies are also included in the <code>bonn</code> package.
@@ -37,7 +39,8 @@
       You will of course want to combine all these configs. Use `mergeConfigs()` to achieve this:
     </p>
 
-    <pre><code>import { mergeConfigs, dev, assets, scss, svg } from 'bonn/nuxt/config'
+    <HighlightedPre
+      :code="`import { mergeConfigs, dev, assets, scss, svg } from 'bonn/nuxt/config'
 
 export default defineNuxtConfig(mergeConfigs(
   assets({ /*...*/ }),
@@ -51,6 +54,7 @@ export default defineNuxtConfig(mergeConfigs(
       shim: false
     }
   })
-))</code></pre>
+))`"
+    />
   </div>
 </template>

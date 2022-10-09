@@ -39,7 +39,9 @@
         If you're using the <code>scss</code> default styles, any web fonts added to the <code>$webfonts</code> variable will be loaded.
       </p>
 
-      <pre><code>$webfonts: (
+      <HighlightedPre
+        lang="css"
+        :code="`$webfonts: (
     (
       font-family: 'Source Sans Pro',
       font-weight: 400,
@@ -64,21 +66,24 @@
       font-style: italic,
       path: 'source-sans/sourcesanspro-bolditalic-webfont',
     ),
-  );
-  </code></pre>
+  );`"
+      />
 
       <p>
         Loading will be done using the <code>font-face</code> mixin, which you can also use manually:
       </p>
 
-      <pre><code>@include font-face(
+      <HighlightedPre
+        lang="css"
+        :code="`@include font-face(
     $font-family,
     $font-weight,
     $font-style,
     $filepath,
     $woffdata: null,
     $woff2data: null
-  )</code></pre>
+  )`"
+      />
     </Bodytext>
   </div>
 </template>

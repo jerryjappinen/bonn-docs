@@ -4,7 +4,7 @@ import { VueComponent as DocsReadme } from '../README.md'
 </script>
 
 <template>
-  <Bodytext>
+  <Bodytext class="prism">
     <LibReadme />
     <DocsReadme />
   </Bodytext>

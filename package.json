@@ -17,10 +17,10 @@
   },
   "dependencies": {
     "@graphcms/rich-text-html-renderer": "^0.2.0",
-    "bonn": "^0.2.4",
+    "bonn": "^0.2.10",
     "date-fns": "^2.29.3",
     "lodash-es": "^4.17.21",
-    "pinia": "^2.0.22"
+    "pinia": "^2.0.23"
   },
   "devDependencies": {
     "nuxt": "^3.0.0-rc.11"

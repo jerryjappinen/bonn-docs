@@ -3,16 +3,15 @@
 - [/] `SendInBlue` Vercel endpoint
 - [/] `Popover` component and maybe Pinia store
 - [/] `HygraphRichText` component
-- [ ] Make `isDev` work in Nuxt 3 runtime
-- [ ] `ContentfulRichText` component
-- [ ] Proper syntax highlighting in code component
 - [ ] Load `Contentful.js` correctly as CJS in Nuxt 3
 - [ ] Fix Vite build-time warnings on CSS
 
 ### Later
 
 - [ ] Load `pinia` persistance plugin by default
+- [ ] Make `isDev` work in Nuxt 3 runtime
 - [ ] Make `bonn` dev alias work in Nuxt
+- [ ] `ContentfulRichText` component (see https://www.npmjs.com/package/contentful-rich-text-vue-renderer)
 - [ ] Add a customised `NuxtAppPage` component
   - Might be tricky with `definePageMeta` being a macro
 - [ ] Notifications service with Pinia
@@ -62,3 +61,4 @@
   - [x] Reusable workflows: https://docs.github.com/en/actions/using-workflows/reusing-workflows
   - [x] Composite actions: https://docs.github.com/en/actions/creating-actions/creating-a-composite-action
 - [x] Document GitHub actions
+- [x] Proper syntax highlighting in code component

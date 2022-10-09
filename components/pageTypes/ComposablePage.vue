@@ -39,7 +39,7 @@ const composableMethods = unref(props.methods)
 </script>
 
 <template>
-  <Bodytext>
+  <div>
     <h2><code>{{ useName }}({{ composableArgs.join(', ') }})</code></h2>
 
     <HighlightedPre
@@ -50,12 +50,6 @@ const composableMethods = unref(props.methods)
     <HighlightedPre :code="`import { ${useName} } from 'bonn/composables'`" />
 
     <HighlightedPre :code="`const ${props.name} = ${useName}()`" />
-
-    <p>
-      <SourceLink :path="`composables/${useName}.js`">
-        <Icon><IconGithub /></Icon> Source
-      </SourceLink>
-    </p>
 
     <template v-if="composableProps">
       <h3>Properties</h3>
@@ -97,8 +91,16 @@ const composableMethods = unref(props.methods)
 
     <h3>Other</h3>
 
-    <slot />
-  </Bodytext>
+    <Bodytext>
+      <slot />
+    </Bodytext>
+
+    <p>
+      <SourceLink :path="`composables/${useName}.js`">
+        <Icon><IconGithub /></Icon> Source
+      </SourceLink>
+    </p>
+  </div>
 </template>
 
 <style lang="scss" scoped>

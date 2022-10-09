@@ -51,7 +51,7 @@ const toggle = () => {
 
 :root {
   .page-test-transition-test {
-    --c-fade-duration: 9000ms !important;
+    --c-fade-duration: 2000ms !important;
     // --c-fade-enter-duration: 10000ms !important;
     // --c-fade-leave-duration: 11000ms !important;
 

@@ -39,7 +39,8 @@ onMounted(demo)
 
     <h3>Example</h3>
 
-    <pre><code>async function demo () {
+    <HighlightedPre
+      :code="`async function demo () {
   await wait(Math.random() * 1000)
 
   if (Math.random() &lt; 0.5) {
@@ -53,7 +54,8 @@ await tryPromises([
   demo(),
   demo(),
   demo()
-])</code></pre>
+])`"
+    />
 
     <p>
       <button @click="demo">
@@ -61,7 +63,10 @@ await tryPromises([
       </button>
     </p>
 
-    <pre v-if="results"><code>{{ results }}</code></pre>
+    <HighlightedPre
+      v-if="results"
+      :code="results"
+    />
 
     <p v-else>
       Waiting...

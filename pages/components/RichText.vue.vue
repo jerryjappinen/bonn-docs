@@ -34,7 +34,7 @@ const posts = computed(() => {
         </h3>
 
         <template v-if="post.body && post.body.raw">
-          <RichText
+          <CustomRichText
             :content="post.body.raw"
             :references="post.body.references"
             class="page-components-rich-text-post-body"

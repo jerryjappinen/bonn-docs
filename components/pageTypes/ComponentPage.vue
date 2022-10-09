@@ -44,7 +44,7 @@ const css = computed(() => {
 
     <template v-if="css">
       <h2>CSS variables</h2>
-      <Dump :data="css" />
+      <HighlightedPre :code="css" lang="code" />
     </template>
 
     <p>

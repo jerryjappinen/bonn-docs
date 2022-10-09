@@ -22,13 +22,13 @@ const sampleOptions = {
 
     <h4>Quick and dirty</h4>
 
-    <pre><code>googleFonts('Poppins', 'Dosis')</code></pre>
+    <HighlightedPre code="googleFonts('Poppins', 'Dosis')" />
 
     <Dump :data="googleFonts('Poppins', 'Dosis')" />
 
     <h4>Full weight options</h4>
 
-    <pre><code>googleFonts({{ sampleOptions }})</code></pre>
+    <HighlightedPre :code="`googleFonts(${sampleOptions})`" />
 
     <Dump :data="googleFonts(sampleOptions)" />
   </NuxtConfigPage>

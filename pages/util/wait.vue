@@ -31,7 +31,8 @@ onMounted(demo)
 
     <h3>Example</h3>
 
-    <pre><code>const pings = []
+    <HighlightedPre
+      :code="`const pings = []
 
 function ping () {
   pings.push(Math.random())
@@ -42,7 +43,8 @@ function async demo () {
     ping()
     await wait(3000)
   }
-}</code></pre>
+}`"
+    />
 
     <p>{{ pings }}</p>
   </UtilPage>

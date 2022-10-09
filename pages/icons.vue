@@ -1,3 +1,7 @@
+<script setup>
+const codeSample = '<IconFigma /><IconCheck />'
+</script>
+
 <template>
   <div>
     <h2>Icons</h2>
@@ -16,7 +20,7 @@
 
     <h3>Using individual icons</h3>
 
-    <pre><code>&lt;IconFigma /&gt; &lt;IconCheck /&gt;</code></pre>
+    <HighlightedPre :code="codeSample" lang="html" />
 
     <!-- I want to use the Icon assets in some standardised way -->
     <p>

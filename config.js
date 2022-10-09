@@ -91,7 +91,6 @@ export const nuxtPluginPages = [
 export const scssPages = [
   'body',
   'breakpoints',
-  'colors',
   'devices',
   'shadow',
   'variables',
@@ -99,7 +98,7 @@ export const scssPages = [
 ]
 
 export const storePages = [
-  'contentful',
+  // 'contentful',
   'device',
   'hygraph'
 ]

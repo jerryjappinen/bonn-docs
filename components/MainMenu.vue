@@ -60,7 +60,9 @@ import {
       </li>
 
       <li>
-        <SourceLink class="c-main-menu-link" />
+        <SourceLink class="c-main-menu-link">
+          GitHub <Icon><IconExternal /></Icon>
+        </SourceLink>
       </li>
     </ul>
 

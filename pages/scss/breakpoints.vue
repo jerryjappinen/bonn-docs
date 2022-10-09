@@ -16,8 +16,10 @@
       <div class="breakpoint-monitor" />
     </div>
 
+    <h2>SCSS</h2>
+
     <HighlightedPre
-      lang="scss"
+      lang="css"
       code="$breakpoint-tiny: $iphone;
 $breakpoint-small: 800px;
 $breakpoint-medium: 960px;

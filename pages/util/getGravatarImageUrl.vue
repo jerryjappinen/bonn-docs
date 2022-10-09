@@ -18,12 +18,5 @@ const size = ref(128)
 
       <input v-model="size" type="number">
     </p>
-
-    <!-- <pre><code>const imageUrl = getGravatarImageUrl(email, size)
-// {{ imageUrl }}</code></pre> -->
-
-    <!-- <p>
-      <img :src="imageUrl">
-    </p> -->
   </UtilPage>
 </template>
