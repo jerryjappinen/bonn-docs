@@ -1,10 +1,17 @@
 # Todo
 
-- [/] `SendInBlue` Vercel endpoint
-- [/] `Popover` component and maybe Pinia store
-- [/] `HygraphRichText` component
+### Started
+
+- [ ] `SendInBlue` Vercel endpoint
+- [ ] `Popover` component and maybe Pinia store
+- [ ] `HygraphRichText` component
+
+### Next
+
 - [ ] Load `Contentful.js` correctly as CJS in Nuxt 3
+- [ ] Search service as a Pinia store (`Fuse.js`)
 - [ ] Fix Vite build-time warnings on CSS
+- [ ] Move TODO.md to issues
 
 ### Later
 
