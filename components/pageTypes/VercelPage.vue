@@ -13,7 +13,10 @@ const props = defineProps({
 
 })
 
-const endpointArgs = props.args ? (Array.isArray(props.args) ? props.args : [props.args]) : []
+const endpointArgs = computed(() => {
+  const args = unref(props.args)
+  return args ? (Array.isArray(args) ? args : [args]) : []
+})
 </script>
 
 <template>

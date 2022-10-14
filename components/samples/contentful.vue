@@ -36,6 +36,7 @@ const fetchData = () => {
     name="contentful"
     args="options"
     :arg-samples="sampleOptions"
+    deps="contentful-util"
   >
     <p>
       You must pass a request method that accepts 3 arguments. You can use <code>graphql-request</code>.

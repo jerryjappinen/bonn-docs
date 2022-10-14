@@ -17,7 +17,7 @@ const posts = computed(() => {
 </script>
 
 <template>
-  <ComponentPage name="RichText">
+  <ComponentPage name="RichText" deps="@graphcms/rich-text-html-renderer">
     <h2>
       All loaded posts
       <Ellipsis v-if="pending" />

@@ -23,8 +23,15 @@ const props = defineProps({
 
 })
 
-const utilArgs = props.args ? (Array.isArray(props.args) ? props.args : [props.args]) : []
-const utilDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props.deps]) : []
+const utilArgs = computed(() => {
+  const args = unref(props.args)
+  return args ? (Array.isArray(args) ? args : [args]) : []
+})
+
+const utilDeps = computed(() => {
+  const deps = unref(props.deps)
+  return deps ? (Array.isArray(deps) ? deps : [deps]) : []
+})
 </script>
 
 <template>

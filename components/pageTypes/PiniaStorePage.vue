@@ -23,16 +23,26 @@ const props = defineProps({
 
 })
 
-const storeName = unref(props.name)
-const storeArgs = props.args ? (Array.isArray(props.args) ? props.args : [props.args]) : []
-const storeArgSamples = props.argSamples ? (Array.isArray(props.argSamples) ? props.argSamples : [props.argSamples]) : []
-const storeDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props.deps]) : []
+const storeArgs = computed(() => {
+  const args = unref(props.args)
+  return args ? (Array.isArray(args) ? args : [args]) : []
+})
+
+const storeArgSamples = computed(() => {
+  const argSamples = unref(props.argSamples)
+  return argSamples ? (Array.isArray(argSamples) ? argSamples : [argSamples]) : []
+})
+
+const storeDeps = computed(() => {
+  const deps = unref(props.deps)
+  return deps ? (Array.isArray(deps) ? deps : [deps]) : []
+})
 </script>
 
 <template>
   <div>
     <h2>
-      <code>stores/{{ storeName }}</code>
+      <code>stores/{{ name }}</code>
     </h2>
 
     <HighlightedPre
@@ -46,7 +56,7 @@ const storeDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props.
 
     <HighlightedPre
       file="pages/MyPage.vue"
-      :code="`import ${storeName} from 'bonn/stores/${storeName}'`"
+      :code="`import ${name} from 'bonn/stores/${name}'`"
     />
 
     <p>
@@ -56,9 +66,9 @@ const storeDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props.
     <HighlightedPre
       file="stores/myHygraphStore.js"
       :code="`import { defineStore } from 'pinia'
-import ${storeName}Setup from 'bonn/stores/setup/${storeName}'
+import ${name}Setup from 'bonn/stores/setup/${name}'
 
-export default defineStore('${storeName}', ${storeName}Setup(${storeArgs.join(', ')}))`"
+export default defineStore('${name}', ${name}Setup(${storeArgs.join(', ')}))`"
     />
 
     <template v-if="storeArgSamples.length">

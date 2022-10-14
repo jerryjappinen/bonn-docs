@@ -13,11 +13,19 @@ const props = defineProps({
   cssVars: {
     type: [Array, String],
     default: null
+  },
+
+  deps: {
+    type: [Array, String],
+    default: null
   }
 
 })
 
-const importString = `import ${props.name} from 'bonn/components/${props.name}'`
+const deps = computed(() => {
+  const deps = unref(props.deps)
+  return deps ? (Array.isArray(deps) ? deps : [deps]) : []
+})
 
 const cssVars = computed(() => {
   return compact(flattenDeep([unref(props.cssVars)]))
@@ -32,13 +40,19 @@ const css = computed(() => {
     ? ':root {' + cssVars.value.map(cssVar => '\n' + '  ' + getCssVariableLine(cssVar)) + '\n' + '}'
     : null
 })
+
 </script>
 
 <template>
   <div>
     <h2><code>{{ name }}</code></h2>
 
-    <HighlightedPre :code="importString" />
+    <HighlightedPre
+      v-if="deps.length"
+      :code="'npm i ' + deps.join(' ')"
+    />
+
+    <HighlightedPre :code="`import ${name} from 'bonn/components/${name}'`" />
 
     <slot />
 

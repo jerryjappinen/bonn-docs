@@ -32,10 +32,24 @@ const props = defineProps({
 
 const useName = 'use' + upperFirst(props.name)
 
-const composableArgs = props.args ? (Array.isArray(props.args) ? props.args : [props.args]) : []
-const composableDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props.deps]) : []
-const composableProps = unref(props.props)
-const composableMethods = unref(props.methods)
+const composableArgs = computed(() => {
+  const args = unref(props.args)
+  return args ? (Array.isArray(args) ? args : [args]) : []
+})
+
+const composableProps = computed(() => {
+  return props.props
+})
+
+const deps = computed(() => {
+  const deps = unref(props.deps)
+  return deps ? (Array.isArray(deps) ? deps : [deps]) : []
+})
+
+const methods = computed(() => {
+  const methods = unref(props.methods)
+  return methods ? (Array.isArray(methods) ? methods : [methods]) : []
+})
 </script>
 
 <template>
@@ -43,13 +57,13 @@ const composableMethods = unref(props.methods)
     <h2><code>{{ useName }}({{ composableArgs.join(', ') }})</code></h2>
 
     <HighlightedPre
-      v-if="composableDeps.length"
-      :code="'npm i ' + composableDeps.join(' ')"
+      v-if="deps.length"
+      :code="'npm i ' + deps.join(' ')"
     />
 
     <HighlightedPre :code="`import { ${useName} } from 'bonn/composables'`" />
 
-    <HighlightedPre :code="`const ${props.name} = ${useName}()`" />
+    <HighlightedPre :code="`const ${name} = ${useName}()`" />
 
     <template v-if="composableProps">
       <h3>Properties</h3>
@@ -69,13 +83,13 @@ const composableMethods = unref(props.methods)
       </ClientOnly>
     </template>
 
-    <template v-if="composableMethods">
+    <template v-if="methods">
       <h3>Methods</h3>
 
       <table>
         <tbody>
           <tr
-            v-for="(method, key) in composableMethods"
+            v-for="(method, key) in methods"
             :key="key"
           >
             <th><HighlightedCode :code="`${name}.${key}`" /></th>

@@ -48,12 +48,6 @@ import {
       </li>
 
       <li>
-        <NuxtLink to="/todo" class="c-main-menu-link">
-          Todo
-        </NuxtLink>
-      </li>
-
-      <li>
         <NuxtLink to="/test" class="c-main-menu-link">
           Test
         </NuxtLink>
