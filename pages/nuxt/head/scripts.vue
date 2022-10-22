@@ -10,7 +10,7 @@ const scriptTags = [
 </script>
 
 <template>
-  <NuxtConfigPage
+  <NuxtHeadPage
     name="scripts"
     args="scriptTags"
     :args-sample="scriptTags"
@@ -25,5 +25,5 @@ const scriptTags = [
         Read more about script tags
       </ExternalLink>
     </p>
-  </NuxtConfigPage>
+  </NuxtHeadPage>
 </template>

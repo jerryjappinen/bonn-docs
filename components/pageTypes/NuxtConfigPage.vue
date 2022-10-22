@@ -1,4 +1,6 @@
 <script setup>
+import arrayProp from '@/util/arrayProp'
+
 const props = defineProps({
 
   name: {
@@ -11,7 +13,7 @@ const props = defineProps({
     default: null
   },
 
-  argSamples: {
+  argsSample: {
     type: [Array, String, Object],
     default: null
   },
@@ -23,32 +25,31 @@ const props = defineProps({
 
 })
 
-const configName = unref(props.name)
-const configArgs = props.args ? (Array.isArray(props.args) ? props.args : [props.args]) : []
-const configArgSamples = props.argSamples ? (Array.isArray(props.argSamples) ? props.argSamples : [props.argSamples]) : []
-const configDeps = props.deps ? (Array.isArray(props.deps) ? props.deps : [props.deps]) : []
+const args = arrayProp(props.args)
+const argsSample = arrayProp(props.argsSample)
+const deps = arrayProp(props.deps)
 </script>
 
 <template>
   <div>
-    <h2><code>{{ configName }}({{ configArgs.join(', ') }})</code></h2>
+    <h2><code>{{ name }}({{ args.join(', ') }})</code></h2>
 
     <HighlightedPre
-      v-if="configDeps.length"
-      :code="`npm i -D ${configDeps.join(' ')}`"
+      v-if="deps.length"
+      :code="`npm i -D ${deps.join(' ')}`"
     />
 
-    <HighlightedPre :code="`import ${configName} from 'bonn/nuxt/config/${configName}'`" />
+    <HighlightedPre :code="`import ${name} from 'bonn/nuxt/config/${name}'`" />
 
-    <template v-if="configArgSamples.length">
+    <template v-if="argsSample.length">
       <Dump
-        v-for="(sample, i) in configArgSamples"
+        v-for="(sample, i) in argsSample"
         :key="i"
         :data="sample"
       />
     </template>
 
-    <HighlightedPre :code="`defineNuxtConfig(${configName}(${configArgs.join(', ')}))`" />
+    <HighlightedPre :code="`defineNuxtConfig(${name}(${args.join(', ')}))`" />
 
     <Bodytext>
       <slot />

@@ -1,4 +1,6 @@
 <script setup>
+import arrayProp from '@/util/arrayProp'
+
 const props = defineProps({
 
   name: {
@@ -23,24 +25,17 @@ const props = defineProps({
 
 })
 
-const utilArgs = computed(() => {
-  const args = unref(props.args)
-  return args ? (Array.isArray(args) ? args : [args]) : []
-})
-
-const utilDeps = computed(() => {
-  const deps = unref(props.deps)
-  return deps ? (Array.isArray(deps) ? deps : [deps]) : []
-})
+const args = arrayProp(props.args)
+const deps = arrayProp(props.deps)
 </script>
 
 <template>
   <div>
-    <h2><code>{{ async ? 'async ' : '' }}{{ name }}({{ utilArgs.join(', ') }})</code></h2>
+    <h2><code>{{ async ? 'async ' : '' }}{{ name }}({{ args.join(', ') }})</code></h2>
 
     <HighlightedPre
-      v-if="utilDeps.length"
-      :code="`npm i ${utilDeps.join(' ')}`"
+      v-if="deps.length"
+      :code="`npm i ${deps.join(' ')}`"
     />
 
     <HighlightedPre :code="`import ${name} from 'bonn/util/${name}'`" />

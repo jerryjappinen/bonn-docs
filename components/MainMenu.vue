@@ -4,6 +4,7 @@ import {
   composablePages,
   githubActionPages,
   nuxtConfigPages,
+  nuxtHeadPages,
   nuxtPluginPages,
   scssPages,
   storePages,
@@ -66,13 +67,6 @@ import {
     </h4>
 
     <ul>
-      <li>
-        <NuxtLink :to="'/scss'" class="c-main-menu-link">
-          <IconScssColor class="c-main-menu-icon" />
-          <code>Overview</code>
-        </NuxtLink>
-      </li>
-
       <li v-for="scssPage in scssPages" :key="scssPage">
         <NuxtLink :to="'/scss/' + scssPage" class="c-main-menu-link">
           <IconScssColor class="c-main-menu-icon" />
@@ -119,6 +113,20 @@ import {
         <NuxtLink :to="'/composables/' + composablePage" class="c-main-menu-link">
           <IconVue class="c-main-menu-icon" />
           <code>{{ composablePage }}</code>
+        </NuxtLink>
+      </li>
+    </ul>
+
+    <!-- nuxt head -->
+    <h4 class="c-main-menu-lib">
+      Nuxt head
+    </h4>
+
+    <ul>
+      <li v-for="nuxtHeadPage in nuxtHeadPages" :key="nuxtHeadPage">
+        <NuxtLink :to="'/nuxt/head/' + nuxtHeadPage" class="c-main-menu-link">
+          <IconNuxtColor class="c-main-menu-icon" />
+          <code>{{ nuxtHeadPage }}</code>
         </NuxtLink>
       </li>
     </ul>

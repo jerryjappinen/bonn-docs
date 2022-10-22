@@ -1,84 +1,90 @@
 import mergeConfigs from 'bonn/nuxt/config/mergeConfigs'
 import dev from 'bonn/nuxt/config/dev'
 
-import assets from 'bonn/nuxt/config/assets'
 import bonn from 'bonn/nuxt/config/bonn'
 // import compression from 'bonn/nuxt/config/compression'
+import coverImage from 'bonn/nuxt/config/coverImage'
 import graphql from 'bonn/nuxt/config/graphql'
+import icon from 'bonn/nuxt/config/icon'
+import manifest from 'bonn/nuxt/config/manifest'
 import markdown from 'bonn/nuxt/config/markdown'
 import meta from 'bonn/nuxt/config/meta'
-import noComponentDirectoryPrefixes from 'bonn/nuxt/config/noComponentDirectoryPrefixes'
+import noComponentPrefixing from 'bonn/nuxt/config/noComponentPrefixing'
 import pinia from 'bonn/nuxt/config/pinia'
 // import scripts from 'bonn/nuxt/config/scripts'
 import scss from 'bonn/nuxt/config/scss'
 import sitemap from 'bonn/nuxt/config/sitemap'
 import svg from 'bonn/nuxt/config/svg'
 import transpile from 'bonn/nuxt/config/transpile'
+import twitterUsername from 'bonn/nuxt/config/twitterUsername'
 import viewport from 'bonn/nuxt/config/viewport'
 
-import {
-  baseUrl,
-  siteAuthor,
-  siteTitle,
-  siteDescription,
-  siteMainColor,
-  twitterUsername,
-  longSiteTitle
-} from './config'
+import { baseUrl, meta as metaData } from './config'
 
 import routes from './routes'
 
 const config = mergeConfigs(
-  transpile('prism-es6'),
 
-  assets({
-    baseUrl,
-    longSiteTitle,
+  // FIXME: Untested
+  // compression(),
 
-    coverImage: true,
-    favicon: true,
-    appleTouchIcon: true,
-    maskIcon: true,
-    // maskIconColor: '#000',
-    manifest: true
-  }),
-  graphql(),
-  markdown(),
-  meta({
-    siteAuthor,
-    siteTitle,
-    longSiteTitle,
-    siteDescription,
-    twitterUsername
-  }),
-  noComponentDirectoryPrefixes(),
-  pinia(),
-  scss({
-    global: ['styles/global.scss'],
-    shared: ['styles/shared.scss']
-  }),
-  sitemap({
-    // baseUrl, // breaks
-    routes
-  }),
-  svg(),
-  viewport({
-    themeColor: siteMainColor
+  // Dev only
+  // https://v3.nuxtjs.org/getting-started/installation
+  dev({
+    typescript: {
+      shim: false
+    }
   }),
 
+  // Library support
+  transpile(
+    'prism-es6',
+    'lodash-es'
+  ),
+
+  // File format support
   bonn({
     // dev: true,
     icons: true,
     components: true,
     composables: true
   }),
-  // compression(), // untested
+  graphql(),
+  markdown(),
+  svg(),
+  noComponentPrefixing(),
+  scss({
+    global: ['styles/global.scss'],
+    shared: ['styles/shared.scss']
+  }),
 
-  // Dev only
-  dev({
-    typescript: {
-      shim: false
-    }
+  // Site data
+  icon({
+    favicon: true,
+    // faviconIco: true,
+    appleTouchIcon: true,
+    maskIcon: true
+    // maskIconColor: '#000'
+  }),
+  manifest(),
+  coverImage({
+    baseUrl,
+    title: metaData.longTitle,
+    path: 'cover-image.png'
+  }),
+
+  meta(metaData),
+  twitterUsername(metaData.twitterUsername),
+
+  pinia(),
+
+  sitemap({
+    // baseUrl, // breaks
+    routes
+  }),
+
+  viewport({
+    themeColor: metaData.mainColor
   })
 )
 

@@ -1,5 +1,8 @@
-// https://prazdevs.github.io/pinia-plugin-persistedstate/frameworks/nuxt-3.html
-import piniaPersist from 'bonn/nuxt/plugins/piniaPersist'
+import { createNuxtPersistedState } from 'pinia-plugin-persistedstate/nuxt'
 
-// eslint-disable-next-line no-undef
-export default defineNuxtPlugin(piniaPersist())
+export default defineNuxtPlugin((nuxtApp) => {
+  // `useCookie` is auto imported in Nuxt
+  nuxtApp.$pinia.use(createNuxtPersistedState(useCookie, {
+
+  }))
+})

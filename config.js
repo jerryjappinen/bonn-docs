@@ -2,14 +2,18 @@ import isDev from 'bonn/util/isDev'
 import processEnvExists from 'bonn/util/processEnvExists'
 
 // Meta data
-export const siteAuthor = 'Jerry Jäppinen'
-export const siteTitle = 'Bonn'
-export const siteTagline = 'Develop faster'
-export const siteDescription = 'Utility, style and component library for web development.'
-export const siteMainColor = '#ffffff' // '#21324b'
-export const siteAccentColor = '#0052cd'
-export const twitterUsername = 'jerryjappinen'
-export const longSiteTitle = `${siteTitle} – ${siteTagline}`
+export const meta = {
+  author: 'Jerry Jäppinen',
+  title: 'Bonn',
+  tagline: 'Develop faster',
+  longTitle: 'Bonn - Develop faster',
+  description: 'Utility, style and component library for web development.',
+
+  twitterUsername: 'jerryjappinen',
+
+  mainColor: '#ffffff', // '#21324b'
+  accentColor: '#0052cd'
+}
 
 // Paths
 export const baseUrl = (processEnvExists() ? process.env.BASE_URL : null) || isDev()
@@ -65,23 +69,26 @@ export const githubActionPages = [
 ]
 
 export const nuxtConfigPages = [
-  'assets',
   'bonn',
   'compression',
   'googleFonts',
   'graphql',
   'markdown',
   'meta',
-  'noComponentDirectoryPrefixes',
+  'noComponentPrefixing',
   'pinia',
   'pwa',
-  'scripts',
   'scss',
   'sitemap',
   'svg',
   'transpile',
   'viewport',
   'webfonts'
+]
+
+export const nuxtHeadPages = [
+  'icon',
+  'scripts'
 ]
 
 export const nuxtPluginPages = [
@@ -151,5 +158,6 @@ export const vercelPages = [
 
 export const vercelEndpointPages = [
   'contentfulCreate',
-  'contentfulEntries'
+  'contentfulEntries',
+  'googleSheet'
 ]

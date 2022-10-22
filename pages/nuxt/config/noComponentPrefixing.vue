@@ -1,12 +1,12 @@
 <script setup>
-import noComponentDirectoryPrefixes from 'bonn/nuxt/config/noComponentDirectoryPrefixes'
+import noComponentPrefixing from 'bonn/nuxt/config/noComponentPrefixing'
 
 const sampleOptions = '~/customComponentsDir'
 </script>
 
 <template>
   <NuxtConfigPage
-    name="noComponentDirectoryPrefixes"
+    name="noComponentPrefixing"
     args="componentsDir"
     :args-sample="sampleOptions"
   >
@@ -16,6 +16,6 @@ const sampleOptions = '~/customComponentsDir'
       </ExternalLink>. When you use this, the names of your custom components will always match their file names, regardless of directory structure.
     </p>
 
-    <Dump :data="noComponentDirectoryPrefixes()" />
+    <Dump :data="noComponentPrefixing()" />
   </NuxtConfigPage>
 </template>

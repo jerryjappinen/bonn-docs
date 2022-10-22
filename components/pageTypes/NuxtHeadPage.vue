@@ -32,37 +32,30 @@ const deps = arrayProp(props.deps)
 
 <template>
   <div>
-    <h2>
-      <code>stores/{{ name }}</code>
-    </h2>
+    <h2><code>{{ name }}({{ args.join(', ') }})</code></h2>
 
     <HighlightedPre
       v-if="deps.length"
       :code="`npm i -D ${deps.join(' ')}`"
     />
 
-    <p>
-      Use directly in your app:
-    </p>
-
     <HighlightedPre
-      file="pages/MyPage.vue"
-      :code="`import ${name} from 'bonn/stores/${name}'`"
+      :code="`import ${name} from 'bonn/nuxt/head/${name}'
+
+useHead(${name}(${args.join(', ')}))`"
     />
 
-    <p>
-      Or make a customised store:
-    </p>
+    In <code>nuxt.config</code>:
 
     <HighlightedPre
-      file="stores/myHygraphStore.js"
-      :code="`import { defineStore } from 'pinia'
-import ${name}Setup from 'bonn/stores/setup/${name}'
+      :code="`import ${name} from 'bonn/nuxt/config/${name}'
 
-export default defineStore('${name}', ${name}Setup(${args.join(', ')}))`"
+defineNuxtConfig(${name}(${args.join(', ')}))`"
     />
 
     <template v-if="argsSample.length">
+      <p>Sample arguments:</p>
+
       <Dump
         v-for="(sample, i) in argsSample"
         :key="i"
@@ -70,11 +63,12 @@ export default defineStore('${name}', ${name}Setup(${args.join(', ')}))`"
       />
     </template>
 
-    <slot />
-    <!-- <Bodytext></Bodytext> -->
+    <Bodytext>
+      <slot />
+    </Bodytext>
 
     <p>
-      <SourceLink :path="`stores/setup/${name}.js`">
+      <SourceLink :path="`nuxt/head/${name}.js`">
         <Icon><IconGithub /></Icon> Source
       </SourceLink>
     </p>

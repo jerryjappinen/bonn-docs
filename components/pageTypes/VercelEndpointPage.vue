@@ -1,4 +1,6 @@
 <script setup>
+import arrayProp from '@/util/arrayProp'
+
 const props = defineProps({
 
   name: {
@@ -9,23 +11,40 @@ const props = defineProps({
   args: {
     type: [Array, String],
     default: null
+  },
+
+  examplePaths: {
+    type: [Array, String],
+    default: null
   }
 
 })
 
-const endpointArgs = computed(() => {
-  const args = unref(props.args)
-  return args ? (Array.isArray(args) ? args : [args]) : []
-})
+const args = arrayProp(props.args)
+const examplePaths = arrayProp(props.examplePaths)
 </script>
 
 <template>
   <div>
-    <h2><code>{{ name }}({{ endpointArgs.join(', ') }})</code></h2>
+    <h2><code>{{ name }}</code></h2>
 
-    <HighlightedPre :code="`import ${name} from 'bonn/vercel/endpoints/${name}'`" />
+    <HighlightedPre
+      file="api/my-endpoint.js"
+      :code="`import ${name} from 'bonn/vercel/endpoints/${name}'
+
+export default ${name}(${ args.join(', ') })`"
+    />
 
     <Bodytext>
+      <ul v-if="examplePaths.length">
+        <li
+          v-for="examplePath in examplePaths"
+          :key="examplePath"
+        >
+          <a :href="`/api/${examplePath}`">/api/{{ examplePath }}</a>
+        </li>
+      </ul>
+
       <slot />
     </Bodytext>
 

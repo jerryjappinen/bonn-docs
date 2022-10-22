@@ -2,13 +2,10 @@
 import helper from 'bonn/nuxt/config/meta'
 
 const sampleOptions = {
-  siteAuthor: 'Author Name',
-  siteTitle: 'My App',
-  longSiteTitle: 'My App – Super nice app for you',
-  siteDescription: 'Longer description that can complement the title somehow',
-  siteMainColor: '#abc',
-  facebookAppId: 'abc-123',
-  twitterUsername: 'TwitterHandle'
+  author: 'Author Name',
+  title: 'My App',
+  longTitle: 'My App – Super nice app for you',
+  description: 'Longer description that can complement the title somehow'
 }
 </script>
 

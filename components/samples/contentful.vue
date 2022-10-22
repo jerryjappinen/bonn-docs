@@ -35,7 +35,7 @@ const fetchData = () => {
   <PiniaStorePage
     name="contentful"
     args="options"
-    :arg-samples="sampleOptions"
+    :args-sample="sampleOptions"
     deps="contentful-util"
   >
     <p>

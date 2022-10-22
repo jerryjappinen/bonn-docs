@@ -34,7 +34,7 @@ const fetchPeople = () => {
   <PiniaStorePage
     name="hygraph"
     args="options"
-    :arg-samples="sampleOptions"
+    :args-sample="sampleOptions"
     deps="graphql-request"
   >
     <p>

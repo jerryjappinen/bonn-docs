@@ -6,18 +6,19 @@
   },
   "scripts": {
     "dev": "nuxt dev",
+    "vercel": "vercel dev",
     "open": "npm run dev -- -o",
     "build": "npm run build:static",
     "build:server": "nuxt build",
     "build:static": "nuxt generate",
     "preview": "nuxt preview",
-    "lint": "eslint --ignore-path .gitignore \"**/*.{js,ts,vue}\"",
+    "lint": "eslint --ignore-path .gitignore \"**/*.{js,cjs,mjs,ts,vue}\"",
     "lint:watch": "npm run lint -- --watch",
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
     "@graphcms/rich-text-html-renderer": "^0.2.0",
-    "bonn": "^0.2.13",
+    "bonn": "^0.4.8",
     "contentful-util": "^1.1.0",
     "date-fns": "^2.29.3",
     "graphql-request": "^5.0.0",
@@ -25,6 +26,7 @@
     "pinia": "^2.0.23"
   },
   "devDependencies": {
-    "nuxt": "^3.0.0-rc.11"
+    "nuxt": "^3.0.0-rc.11",
+    "vercel": "^28.4.12"
   }
 }
