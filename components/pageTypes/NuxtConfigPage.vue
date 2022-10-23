@@ -39,7 +39,7 @@ const deps = arrayProp(props.deps)
       :code="`npm i -D ${deps.join(' ')}`"
     />
 
-    <HighlightedPre :code="`import ${name} from 'bonn/nuxt/config/${name}'`" />
+    <HighlightedPre :code="`import { ${name} } from 'bonn/nuxt/config'`" />
 
     <template v-if="argsSample.length">
       <Dump

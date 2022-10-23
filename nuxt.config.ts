@@ -1,23 +1,25 @@
 import mergeConfigs from 'bonn/nuxt/config/mergeConfigs'
 import dev from 'bonn/nuxt/config/dev'
 
-import bonn from 'bonn/nuxt/config/bonn'
-// import compression from 'bonn/nuxt/config/compression'
-import coverImage from 'bonn/nuxt/config/coverImage'
-import graphql from 'bonn/nuxt/config/graphql'
-import icon from 'bonn/nuxt/config/icon'
-import manifest from 'bonn/nuxt/config/manifest'
-import markdown from 'bonn/nuxt/config/markdown'
-import meta from 'bonn/nuxt/config/meta'
-import noComponentPrefixing from 'bonn/nuxt/config/noComponentPrefixing'
-import pinia from 'bonn/nuxt/config/pinia'
-// import scripts from 'bonn/nuxt/config/scripts'
-import scss from 'bonn/nuxt/config/scss'
-import sitemap from 'bonn/nuxt/config/sitemap'
-import svg from 'bonn/nuxt/config/svg'
-import transpile from 'bonn/nuxt/config/transpile'
-import twitterUsername from 'bonn/nuxt/config/twitterUsername'
-import viewport from 'bonn/nuxt/config/viewport'
+import {
+  bonn,
+  // compression,
+  coverImage,
+  graphql,
+  icon,
+  manifest,
+  markdown,
+  meta,
+  noComponentPrefixing,
+  pinia,
+  // scripts,
+  scss,
+  sitemap,
+  svg,
+  transpile,
+  twitterUsername,
+  viewport
+} from 'bonn/nuxt/config'
 
 import { baseUrl, meta as metaData } from './config'
 
