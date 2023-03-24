@@ -5,7 +5,7 @@ import {
   githubActionPages,
   nuxtConfigPages,
   nuxtHeadPages,
-  nuxtPluginPages,
+  // nuxtPluginPages,
   scssPages,
   storePages,
   styledComponentPages,
@@ -146,7 +146,7 @@ import {
     </ul>
 
     <!-- Nuxt plugins -->
-    <h4 class="c-main-menu-lib">
+    <!-- <h4 class="c-main-menu-lib">
       Nuxt plugins
     </h4>
 
@@ -157,7 +157,7 @@ import {
           <code>{{ nuxtPluginPage }}</code>
         </NuxtLink>
       </li>
-    </ul>
+    </ul> -->
 
     <!-- Pinia stores -->
     <h4 class="c-main-menu-lib">

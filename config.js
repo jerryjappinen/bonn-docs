@@ -91,9 +91,11 @@ export const nuxtHeadPages = [
   'scripts'
 ]
 
-export const nuxtPluginPages = [
-  'piniaPersist'
-]
+// Currently no Nuxt
+// The plugins directory contains your Javascript plugins that you want to run before instantiating the root Vue.js Application
+// export const nuxtPluginPages = [
+//   'piniaPersist'
+// ]
 
 export const scssPages = [
   'body',

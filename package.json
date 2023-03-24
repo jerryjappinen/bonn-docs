@@ -6,7 +6,7 @@
   },
   "scripts": {
     "dev": "nuxt dev",
-    "vercel": "vercel dev",
+    "v": "vercel dev",
     "open": "npm run dev -- -o",
     "build": "npm run build:static",
     "build:server": "nuxt build",
@@ -18,15 +18,15 @@
   },
   "dependencies": {
     "@graphcms/rich-text-html-renderer": "^0.2.0",
-    "bonn": "^0.4.12",
+    "bonn": "^0.5.3",
     "contentful-util": "^1.1.0",
     "date-fns": "^2.29.3",
-    "graphql-request": "^5.0.0",
+    "graphql-request": "^5.2.0",
     "lodash-es": "^4.17.21",
-    "pinia": "^2.0.23"
+    "pinia": "^2.0.33"
   },
   "devDependencies": {
-    "nuxt": "^3.0.0-rc.12",
-    "vercel": "^28.4.12"
+    "nuxt": "^3.3.1",
+    "vercel": "^28.18.1"
   }
 }

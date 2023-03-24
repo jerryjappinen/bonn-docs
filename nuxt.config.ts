@@ -14,7 +14,7 @@ import {
   pinia,
   // scripts,
   scss,
-  sitemap,
+  // sitemap,
   svg,
   transpile,
   twitterUsername,
@@ -78,12 +78,14 @@ const config = mergeConfigs(
   meta(metaData),
   twitterUsername(metaData.twitterUsername),
 
-  pinia(),
-
-  sitemap({
-    // baseUrl, // breaks
-    routes
+  pinia({
+    persist: true
   }),
+
+  // sitemap({
+  //   baseUrl,
+  //   routes
+  // }),
 
   viewport({
     themeColor: metaData.mainColor
