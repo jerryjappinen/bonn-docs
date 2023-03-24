@@ -23,7 +23,7 @@ import {
 
 import { baseUrl, meta as metaData } from './config'
 
-import routes from './routes'
+// import routes from './routes'
 
 const config = mergeConfigs(
 
@@ -83,8 +83,8 @@ const config = mergeConfigs(
   }),
 
   // sitemap({
-  //   baseUrl,
-  //   routes
+  //   baseUrl
+  //   // routes
   // }),
 
   viewport({
