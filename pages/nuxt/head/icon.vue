@@ -1,5 +1,5 @@
 <script setup>
-import icon from 'bonn/nuxt/head/icon'
+import helper from 'bonn/nuxt/head/icon'
 
 const sampleOptions = {
   favicon: 'favicon.svg', // or `true`
@@ -12,10 +12,10 @@ const sampleOptions = {
 
 <template>
   <NuxtConfigPage
-    name="assets"
+    name="icon"
     args="options"
     :args-sample="sampleOptions"
   >
-    <Dump :data="icon(sampleOptions)" />
+    <Dump :data="helper(sampleOptions)" />
   </NuxtConfigPage>
 </template>

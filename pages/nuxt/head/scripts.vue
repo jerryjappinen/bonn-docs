@@ -1,4 +1,6 @@
 <script setup>
+import helper from 'bonn/nuxt/head/scripts'
+
 const scriptTags = [
   'https://script.domain.com/script.js',
   {
@@ -25,5 +27,7 @@ const scriptTags = [
         Read more about script tags
       </ExternalLink>
     </p>
+
+    <Dump :data="helper(...scriptTags)" />
   </NuxtHeadPage>
 </template>

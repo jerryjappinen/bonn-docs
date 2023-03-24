@@ -1,5 +1,5 @@
 <script setup>
-import metaConfig from 'bonn/nuxt/config/viewport'
+import helper from 'bonn/nuxt/head/viewport'
 
 const sampleOptions = {
   width: 'device-width',
@@ -9,13 +9,13 @@ const sampleOptions = {
 </script>
 
 <template>
-  <NuxtConfigPage
+  <NuxtHeadPage
     name="viewport"
     args="options"
     :args-sample="sampleOptions"
   >
     <p>Add common viewport meta tags and mobile zooming options.</p>
 
-    <Dump :data="metaConfig(sampleOptions)" />
-  </NuxtConfigPage>
+    <Dump :data="helper(sampleOptions)" />
+  </NuxtHeadPage>
 </template>

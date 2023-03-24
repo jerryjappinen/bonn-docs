@@ -74,7 +74,6 @@ export const nuxtConfigPages = [
   'googleFonts',
   'graphql',
   'markdown',
-  'meta',
   'noComponentPrefixing',
   'pinia',
   'pwa',
@@ -82,13 +81,15 @@ export const nuxtConfigPages = [
   'sitemap',
   'svg',
   'transpile',
-  'viewport',
   'webfonts'
 ]
 
 export const nuxtHeadPages = [
+  'coverImage',
   'icon',
-  'scripts'
+  'meta',
+  'scripts',
+  'viewport'
 ]
 
 // Currently no Nuxt
@@ -132,7 +133,7 @@ export const utilPages = [
   'formatMonth',
   'formatSlug',
   'getDomain',
-  'getGravatarImageUrl',
+  'getGravatarUrl',
   'getNameFromEmail',
   'isAbsoluteUrl',
   'isDev',

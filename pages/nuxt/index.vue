@@ -10,6 +10,16 @@
 
     <HighlightedPre :code="`defineNuxtConfig(bonn())`" />
 
+    <h3>Head helpers</h3>
+
+    <p>
+      Head helpers allow setting page meta information, like page title or favicon, and other meta elements like script and link tags.
+    </p>
+
+    <p>
+      Each head helper also has the equivalent config helper. This way, you can use the same format to use site-wide defaults and page-specific overrides to titles, favicons and others.
+    </p>
+
     <h3>Config helpers</h3>
 
     <p>

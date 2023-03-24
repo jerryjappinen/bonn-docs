@@ -1,5 +1,5 @@
 <script setup>
-import helper from 'bonn/nuxt/config/meta'
+import helper from 'bonn/nuxt/head/meta'
 
 const sampleOptions = {
   author: 'Author Name',
@@ -10,7 +10,7 @@ const sampleOptions = {
 </script>
 
 <template>
-  <NuxtConfigPage
+  <NuxtHeadPage
     name="meta"
     args="options"
     :args-sample="sampleOptions"
@@ -20,5 +20,5 @@ const sampleOptions = {
     </p>
 
     <Dump :data="helper(sampleOptions)" />
-  </NuxtConfigPage>
+  </NuxtHeadPage>
 </template>
