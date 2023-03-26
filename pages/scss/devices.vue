@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <ScssPage>
     <h2>Widths</h2>
 
     <div class="width">
@@ -47,7 +47,7 @@
         iphone-very-loose
       </div>
     </div>
-  </div>
+  </ScssPage>
 </template>
 
 <style lang="scss" scoped>

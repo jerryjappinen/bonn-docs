@@ -33,7 +33,7 @@ const textUsage = [
 </script>
 
 <template>
-  <div>
+  <ScssPage>
     <h2>Text usage</h2>
 
     <table>
@@ -75,7 +75,7 @@ const textUsage = [
         </tr>
       </tbody>
     </table>
-  </div>
+  </ScssPage>
 </template>
 
 <style lang="scss" scoped>

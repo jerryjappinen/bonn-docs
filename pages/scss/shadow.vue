@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <ScssPage>
     <h2>Shadow</h2>
 
     <div class="shadows">
@@ -31,7 +31,7 @@
         shadow-very-loose
       </div>
     </div>
-  </div>
+  </ScssPage>
 </template>
 
 <style lang="scss" scoped>

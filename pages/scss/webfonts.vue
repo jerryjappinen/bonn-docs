@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <ScssPage>
     <Bodytext>
       <h2>Webfonts</h2>
 
@@ -85,5 +85,5 @@
   )`"
       />
     </Bodytext>
-  </div>
+  </ScssPage>
 </template>

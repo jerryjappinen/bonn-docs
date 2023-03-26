@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <ScssPage>
     <h1>Headline level 1</h1>
 
     <p>
@@ -71,5 +71,5 @@
 
       <caption>This is a table</caption>
     </table>
-  </div>
+  </ScssPage>
 </template>
