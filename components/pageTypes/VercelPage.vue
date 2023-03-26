@@ -21,6 +21,10 @@ const endpointArgs = computed(() => {
 
 <template>
   <div>
+    <Crumbs :source-path="`vercel/${name}.js`">
+      <Icon><IconVercel /></Icon> Vercel
+    </Crumbs>
+
     <h2><code>{{ name }}({{ endpointArgs.join(', ') }})</code></h2>
 
     <HighlightedPre :code="`import ${name} from 'bonn/vercel/${name}'`" />
@@ -28,11 +32,5 @@ const endpointArgs = computed(() => {
     <Bodytext>
       <slot />
     </Bodytext>
-
-    <p>
-      <SourceLink :path="`vercel/${name}.js`">
-        <Icon><IconGithub /></Icon> Source
-      </SourceLink>
-    </p>
   </div>
 </template>

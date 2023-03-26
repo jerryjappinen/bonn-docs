@@ -26,6 +26,10 @@ const examplePaths = arrayProp(props.examplePaths)
 
 <template>
   <div>
+    <Crumbs :source-path="`vercel/endpoints/${name}.js`">
+      <Icon><IconVercel /></Icon> Vercel endpoint
+    </Crumbs>
+
     <h2><code>{{ name }}</code></h2>
 
     <HighlightedPre
@@ -47,11 +51,5 @@ export default ${name}(${ args.join(', ') })`"
 
       <slot />
     </Bodytext>
-
-    <p>
-      <SourceLink :path="`vercel/endpoints/${name}.js`">
-        <Icon><IconGithub /></Icon> Source
-      </SourceLink>
-    </p>
   </div>
 </template>

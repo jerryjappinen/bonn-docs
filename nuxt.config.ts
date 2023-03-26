@@ -82,6 +82,7 @@ const config = mergeConfigs(
     persist: true
   }),
 
+  // Currently no working sitemap module
   // sitemap({
   //   baseUrl
   //   // routes

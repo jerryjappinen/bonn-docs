@@ -32,6 +32,10 @@ const deps = arrayProp(props.deps)
 
 <template>
   <div>
+    <Crumbs :source-path="`nuxt/config/${name}.js`">
+      <Icon><IconNuxtColor /></Icon> Nuxt config
+    </Crumbs>
+
     <h2><code>{{ name }}({{ args.join(', ') }})</code></h2>
 
     <HighlightedPre
@@ -54,11 +58,5 @@ const deps = arrayProp(props.deps)
     <Bodytext>
       <slot />
     </Bodytext>
-
-    <p>
-      <SourceLink :path="`nuxt/config/${name}.js`">
-        <Icon><IconGithub /></Icon> Source
-      </SourceLink>
-    </p>
   </div>
 </template>

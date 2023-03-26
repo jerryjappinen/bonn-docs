@@ -59,6 +59,7 @@ export const composablePages = [
   'useNetwork',
   'usePersist',
   'usePlatform',
+  'useSearch',
   'useTime',
   'useViewport'
 ]

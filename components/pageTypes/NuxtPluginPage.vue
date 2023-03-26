@@ -23,6 +23,10 @@ const pluginArgs = computed(() => {
 
 <template>
   <div>
+    <Crumbs :source-path="`nuxt/plugins/${name}.js`">
+      <Icon><IconNuxtColor /></Icon> Nuxt plugin
+    </Crumbs>
+
     <h2><code>{{ name }}</code></h2>
 
     <HighlightedPre
@@ -35,11 +39,5 @@ export default defineNuxtPlugin(${name}(${pluginArgs.join(', ')}))`"
     <Bodytext>
       <slot />
     </Bodytext>
-
-    <p>
-      <SourceLink :path="`nuxt/plugins/${name}.js`">
-        <Icon><IconGithub /></Icon> Source
-      </SourceLink>
-    </p>
   </div>
 </template>

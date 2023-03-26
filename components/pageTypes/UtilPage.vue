@@ -31,6 +31,10 @@ const deps = arrayProp(props.deps)
 
 <template>
   <div>
+    <Crumbs :source-path="`util/${name}.js`">
+      <Icon><IconJavascriptColor /></Icon> Utilities
+    </Crumbs>
+
     <h2><code>{{ async ? 'async ' : '' }}{{ name }}({{ args.join(', ') }})</code></h2>
 
     <HighlightedPre
@@ -43,11 +47,5 @@ const deps = arrayProp(props.deps)
     <Bodytext>
       <slot />
     </Bodytext>
-
-    <p>
-      <SourceLink :path="`util/${name}.js`">
-        <Icon><IconGithub /></Icon> Source
-      </SourceLink>
-    </p>
   </div>
 </template>

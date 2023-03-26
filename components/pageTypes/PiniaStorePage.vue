@@ -1,4 +1,6 @@
 <script setup>
+import upperFirst from 'lodash-es/upperFirst'
+
 import arrayProp from '@/util/arrayProp'
 
 const props = defineProps({
@@ -32,6 +34,10 @@ const deps = arrayProp(props.deps)
 
 <template>
   <div>
+    <Crumbs :source-path="`stores/setup/${name}.js`">
+      <Icon><IconPiniaColor /></Icon> Pinia store
+    </Crumbs>
+
     <h2>
       <code>stores/{{ name }}</code>
     </h2>
@@ -55,7 +61,7 @@ const deps = arrayProp(props.deps)
     </p>
 
     <HighlightedPre
-      file="stores/myHygraphStore.js"
+      :file="`stores/my${upperFirst(name)}Store.js`"
       :code="`import { defineStore } from 'pinia'
 import ${name}Setup from 'bonn/stores/setup/${name}'
 
@@ -71,12 +77,5 @@ export default defineStore('${name}', ${name}Setup(${args.join(', ')}))`"
     </template>
 
     <slot />
-    <!-- <Bodytext></Bodytext> -->
-
-    <p>
-      <SourceLink :path="`stores/setup/${name}.js`">
-        <Icon><IconGithub /></Icon> Source
-      </SourceLink>
-    </p>
   </div>
 </template>

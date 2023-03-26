@@ -54,6 +54,10 @@ const methods = computed(() => {
 
 <template>
   <div>
+    <Crumbs :source-path="`composables/${useName}.js`">
+      <Icon><IconVue /></Icon> Composables
+    </Crumbs>
+
     <h2><code>{{ useName }}({{ composableArgs.join(', ') }})</code></h2>
 
     <HighlightedPre
@@ -108,12 +112,6 @@ const methods = computed(() => {
     <Bodytext>
       <slot />
     </Bodytext>
-
-    <p>
-      <SourceLink :path="`composables/${useName}.js`">
-        <Icon><IconGithub /></Icon> Source
-      </SourceLink>
-    </p>
   </div>
 </template>
 

@@ -48,6 +48,10 @@ jobs:
 
 <template>
   <div>
+    <Crumbs :source-path="`.github/actions/${name}.yml`">
+      <Icon><IconGithub /></Icon> GitHub actions
+    </Crumbs>
+
     <h2><code>{{ name }}.yml</code></h2>
 
     <!-- <p>
@@ -63,11 +67,5 @@ jobs:
     <Bodytext>
       <slot />
     </Bodytext>
-
-    <p>
-      <SourceLink :path="`.github/actions/${name}.yml`">
-        <Icon><IconGithub /></Icon> Source
-      </SourceLink>
-    </p>
   </div>
 </template>

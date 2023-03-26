@@ -45,6 +45,10 @@ const css = computed(() => {
 
 <template>
   <div>
+    <Crumbs :source-path="`components/${name}.js`">
+      <Icon><IconVueColor /></Icon> Components
+    </Crumbs>
+
     <h2><code>{{ name }}</code></h2>
 
     <HighlightedPre
@@ -60,11 +64,5 @@ const css = computed(() => {
       <h2>CSS variables</h2>
       <HighlightedPre :code="css" lang="code" />
     </template>
-
-    <p>
-      <SourceLink :path="`components/${name}.js`">
-        <Icon><IconGithub /></Icon> Source
-      </SourceLink>
-    </p>
   </div>
 </template>
