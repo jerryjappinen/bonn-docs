@@ -1,5 +1,7 @@
 <script setup>
 import {
+  npmUrl,
+
   componentPages,
   composablePages,
   githubActionPages,
@@ -53,16 +55,10 @@ import {
           Test
         </NuxtLink>
       </li>
-
-      <li>
-        <SourceLink class="c-main-menu-link">
-          GitHub <Icon><IconExternal /></Icon>
-        </SourceLink>
-      </li>
     </ul>
 
     <!-- Scss -->
-    <h4 class="c-main-menu-lib">
+    <h4 class="c-main-menu-subtitle">
       SCSS
     </h4>
 
@@ -76,7 +72,7 @@ import {
     </ul>
 
     <!-- Components -->
-    <h4 class="c-main-menu-lib">
+    <h4 class="c-main-menu-subtitle">
       Components
     </h4>
 
@@ -90,7 +86,7 @@ import {
     </ul>
 
     <!-- Styled components -->
-    <h4 class="c-main-menu-lib">
+    <h4 class="c-main-menu-subtitle">
       Styled components
     </h4>
 
@@ -104,7 +100,7 @@ import {
     </ul>
 
     <!-- Composables -->
-    <h4 class="c-main-menu-lib">
+    <h4 class="c-main-menu-subtitle">
       Composables
     </h4>
 
@@ -118,7 +114,7 @@ import {
     </ul>
 
     <!-- nuxt head -->
-    <h4 class="c-main-menu-lib">
+    <h4 class="c-main-menu-subtitle">
       Nuxt head
     </h4>
 
@@ -132,7 +128,7 @@ import {
     </ul>
 
     <!-- nuxt.config -->
-    <h4 class="c-main-menu-lib">
+    <h4 class="c-main-menu-subtitle">
       nuxt.config
     </h4>
 
@@ -146,7 +142,7 @@ import {
     </ul>
 
     <!-- Nuxt plugins -->
-    <!-- <h4 class="c-main-menu-lib">
+    <!-- <h4 class="c-main-menu-subtitle">
       Nuxt plugins
     </h4>
 
@@ -160,7 +156,7 @@ import {
     </ul> -->
 
     <!-- Pinia stores -->
-    <h4 class="c-main-menu-lib">
+    <h4 class="c-main-menu-subtitle">
       Stores
     </h4>
 
@@ -174,7 +170,7 @@ import {
     </ul>
 
     <!-- Utilities -->
-    <h4 class="c-main-menu-lib">
+    <h4 class="c-main-menu-subtitle">
       Utilities
     </h4>
 
@@ -188,7 +184,7 @@ import {
     </ul>
 
     <!-- Vercel -->
-    <h4 class="c-main-menu-lib">
+    <h4 class="c-main-menu-subtitle">
       Vercel
     </h4>
 
@@ -202,7 +198,7 @@ import {
     </ul>
 
     <!-- Vercel -->
-    <h4 class="c-main-menu-lib">
+    <h4 class="c-main-menu-subtitle">
       Vercel endpoints
     </h4>
 
@@ -216,7 +212,7 @@ import {
     </ul>
 
     <!-- GitHub -->
-    <h4 class="c-main-menu-lib">
+    <h4 class="c-main-menu-subtitle">
       GitHub actions
     </h4>
 
@@ -228,18 +224,39 @@ import {
         </NuxtLink>
       </li>
     </ul>
+
+    <!-- Other links -->
+    <h4 class="c-main-menu-subtitle">
+      External links
+    </h4>
+
+    <ul>
+      <li>
+        <SourceLink class="c-main-menu-link">
+          <IconGithub class="c-main-menu-icon" />
+          GitHub
+        </SourceLink>
+      </li>
+
+      <li>
+        <ExternalLink :href="npmUrl" class="c-main-menu-link">
+          <IconNpm class="c-main-menu-icon" />
+          NPM
+        </ExternalLink>
+      </li>
+    </ul>
   </div>
 </template>
 
 <style lang="scss">
 
-.c-main-menu-lib,
+.c-main-menu-subtitle,
 .c-main-menu-link {
   @include flex;
   @include flex-center;
 }
 
-.c-main-menu-lib {
+.c-main-menu-subtitle {
   // @include discreet;
   @include push-tight-bottom(0.5);
   @include small-font;

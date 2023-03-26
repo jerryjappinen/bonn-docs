@@ -28,6 +28,7 @@ export const contentfulAccessToken = 'Ql1bv2l12RYe9o8Z8hqrJX5-puWKZesCVjJgiD-hd-
 export const hygraphApiUrl = 'https://api-eu-west-2.hygraph.com/v2/cl7n4zm4t28ec01uh0oum04sc/master'
 
 export const githubUrl = 'https://github.com/jerryjappinen/bonn'
+export const npmUrl = 'https://npmjs.org/bonn'
 
 // Pages
 export const componentPages = [
