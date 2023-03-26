@@ -15,6 +15,36 @@ import {
   vercelPages,
   vercelEndpointPages
 } from '@/config'
+
+const componentPagesOpen = ref(true)
+const composablePagesOpen = ref(true)
+const githubActionPagesOpen = ref(true)
+const nuxtConfigPagesOpen = ref(true)
+const nuxtHeadPagesOpen = ref(true)
+// const nuxtPluginPagesOpen = ref(true)
+const scssPagesOpen = ref(true)
+const storePagesOpen = ref(true)
+const styledComponentPagesOpen = ref(true)
+const utilPagesOpen = ref(true)
+const vercelPagesOpen = ref(true)
+const vercelEndpointPagesOpen = ref(true)
+
+const closeAll = () => {
+  componentPagesOpen.value = false
+  composablePagesOpen.value = false
+  githubActionPagesOpen.value = false
+  nuxtConfigPagesOpen.value = false
+  nuxtHeadPagesOpen.value = false
+  // nuxtPluginPagesOpen.value = false
+  scssPagesOpen.value = false
+  storePagesOpen.value = false
+  styledComponentPagesOpen.value = false
+  utilPagesOpen.value = false
+  vercelPagesOpen.value = false
+  vercelEndpointPagesOpen.value = false
+}
+
+onMounted(closeAll)
 </script>
 
 <template>
@@ -59,10 +89,16 @@ import {
 
     <!-- Scss -->
     <h4 class="c-main-menu-subtitle">
-      SCSS
+      <Icon>
+        <IconChevronDown v-if="scssPagesOpen" />
+        <IconChevronRight v-else />
+      </Icon>
+      <Toggle v-model="scssPagesOpen">
+        SCSS
+      </Toggle>
     </h4>
 
-    <ul>
+    <ul v-if="scssPagesOpen">
       <li v-for="scssPage in scssPages" :key="scssPage">
         <NuxtLink :to="'/scss/' + scssPage" class="c-main-menu-link">
           <IconScssColor class="c-main-menu-icon" />
@@ -258,8 +294,13 @@ import {
 
 .c-main-menu-subtitle {
   // @include discreet;
+  @include push-top;
   @include push-tight-bottom(0.5);
   @include small-font;
+
+  .c-toggle {
+    @include flex-grow;
+  }
 
   + ul {
     @include no-push-top;

@@ -12,6 +12,7 @@ import {
   meta,
   noComponentPrefixing,
   pinia,
+  robots,
   // scripts,
   scss,
   // sitemap,
@@ -81,6 +82,8 @@ const config = mergeConfigs(
   pinia({
     persist: true
   }),
+
+  robots(),
 
   // Currently no working sitemap module
   // sitemap({

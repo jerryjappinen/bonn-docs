@@ -79,6 +79,7 @@ export const nuxtConfigPages = [
   'noComponentPrefixing',
   'pinia',
   'pwa',
+  'robots',
   'scss',
   'sitemap',
   'svg',
