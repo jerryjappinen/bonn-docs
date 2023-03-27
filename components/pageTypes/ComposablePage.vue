@@ -87,7 +87,7 @@ const methods = computed(() => {
       </ClientOnly>
     </template>
 
-    <template v-if="methods">
+    <template v-if="methods && methods.length">
       <h3>Methods</h3>
 
       <table>
