@@ -1,8 +1,9 @@
 {
   "name": "bonn-docs",
   "private": true,
+  "type": "module",
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "scripts": {
     "dev": "nuxt dev",
@@ -17,17 +18,16 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
-    "@graphcms/rich-text-html-renderer": "^0.2.0",
-    "bonn": "^0.5.11",
-    "contentful-util": "^1.1.0",
-    "date-fns": "^2.29.3",
+    "@graphcms/rich-text-html-renderer": "^0.3.0",
+    "bonn": "^0.5.21",
+    "date-fns": "^2.30.0",
     "fuse.js": "^6.6.2",
-    "graphql-request": "^5.2.0",
+    "graphql-request": "^6.1.0",
     "lodash-es": "^4.17.21",
-    "pinia": "^2.0.33"
+    "pinia": "^2.1.6"
   },
   "devDependencies": {
-    "nuxt": "^3.3.1",
-    "vercel": "^28.18.1"
+    "nuxt": "^3.7.4",
+    "vercel": "^32.3.1"
   }
 }
