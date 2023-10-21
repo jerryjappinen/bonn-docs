@@ -3,7 +3,7 @@ import dev from 'bonn/nuxt/config/dev'
 
 const sampleOptions = {
   app: {
-    baseUrl: 'https://localhost:8000'
+    baseUrl: '/app/'
   }
 }
 </script>

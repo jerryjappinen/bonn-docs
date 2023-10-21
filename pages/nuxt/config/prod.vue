@@ -3,7 +3,7 @@ import prod from 'bonn/nuxt/config/prod'
 
 const sampleOptions = {
   app: {
-    baseUrl: 'https://mydomain.com'
+    baseUrl: '/app/'
   }
 }
 </script>
