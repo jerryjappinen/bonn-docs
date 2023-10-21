@@ -28,6 +28,19 @@ import routes from './routes'
 
 const config = mergeConfigs(
 
+  // They just straight-up broke all deployments
+  // FIXME: remove this once this issue is closed:
+  // https://github.com/nuxt/cli/issues/193
+  {
+    hooks: {
+      close (nuxt: { options: { _prepare: any } }) {
+        if (!nuxt.options._prepare) {
+          process.exit()
+        }
+      }
+    }
+  },
+
   // FIXME: Untested
   // compression(),
 
