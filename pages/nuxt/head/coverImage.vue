@@ -3,7 +3,7 @@ import helper from 'bonn/nuxt/head/coverImage'
 
 const sampleOptions = {
   title: 'Page title used with cover image',
-  // baseUrl: 'https://baseurl.com',
+  host: 'https://myapp.com',
   path: 'path/to/cover/image.jpg'
 }
 </script>
