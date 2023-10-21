@@ -1,7 +1,7 @@
-import mergeConfigs from 'bonn/nuxt/config/mergeConfigs'
-import dev from 'bonn/nuxt/config/dev'
-
 import {
+  dev,
+  mergeConfigs,
+
   bonn,
   // compression,
   coverImage,
@@ -13,23 +13,27 @@ import {
   noComponentPrefixing,
   pinia,
   robots,
+  routing,
   // scripts,
   scss,
-  // sitemap,
   svg,
   transpile,
   twitterUsername,
   viewport
 } from 'bonn/nuxt/config'
 
-import { baseUrl, meta as metaData } from './config'
+import { host, meta as metaData } from './config'
 
-// import routes from './routes'
+import routes from './routes'
 
 const config = mergeConfigs(
 
   // FIXME: Untested
   // compression(),
+
+  routing({
+    routes
+  }),
 
   // Dev only
   // https://v3.nuxtjs.org/getting-started/installation
@@ -71,7 +75,7 @@ const config = mergeConfigs(
   }),
   manifest(),
   coverImage({
-    baseUrl,
+    host,
     title: metaData.longTitle,
     path: 'cover-image.png'
   }),
@@ -84,12 +88,6 @@ const config = mergeConfigs(
   }),
 
   robots(),
-
-  // Currently no working sitemap module
-  // sitemap({
-  //   baseUrl
-  //   // routes
-  // }),
 
   viewport({
     themeColor: metaData.mainColor

@@ -1,4 +1,6 @@
 <script setup>
+import { host } from '@/config'
+
 import arrayProp from '@/util/arrayProp'
 
 const props = defineProps({
@@ -45,7 +47,7 @@ export default ${name}(${ args.join(', ') })`"
           v-for="examplePath in examplePaths"
           :key="examplePath"
         >
-          <a :href="`/api/${examplePath}`">/api/{{ examplePath }}</a>
+          <a :href="`${host}/api/${examplePath}`">/api/{{ examplePath }}</a>
         </li>
       </ul>
 

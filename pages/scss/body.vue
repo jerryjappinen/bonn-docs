@@ -3,7 +3,9 @@
     <h1>Headline level 1</h1>
 
     <p>
-      Some text goes here. <a href="./">This is a link</a> to this page.
+      Some text goes here. <nuxt-link href="/">
+        This is a link
+      </nuxt-link> to this page.
     </p>
 
     <p>
@@ -22,7 +24,9 @@
 
     <div class="bodytext">
       <p>
-        Some text goes here. <a href="./">This is a link</a> to this page.
+        Some text goes here. <nuxt-link href="/">
+          This is a link
+        </nuxt-link> to home page.
       </p>
 
       <p>
