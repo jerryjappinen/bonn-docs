@@ -1,4 +1,3 @@
-// Vidya list
 import endpoint from 'bonn/vercel/endpoint'
 
 import fetchPrivateGoogleSheet from 'bonn/util/fetchPrivateGoogleSheet'
