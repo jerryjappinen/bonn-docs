@@ -36,7 +36,10 @@ const formattedFileSizes = fileSizes.map(formatFileSize)
 
     <table>
       <tbody>
-        <tr v-for="(formatted, i) in formattedFileSizes" :key="i">
+        <tr
+          v-for="(formatted, i) in formattedFileSizes"
+          :key="i"
+        >
           <td><code>formatFileSize({{ fileSizes[i] }})</code></td>
           <td>{{ formatted }}</td>
         </tr>

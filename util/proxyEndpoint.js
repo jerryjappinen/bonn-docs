@@ -27,7 +27,7 @@ export default (targetDomain, optionsInput) => {
   const headersToRemove = options.headersToRemove || []
   const callback = options.callback
 
-  let target = targetDomain || req.query.domain
+  let target = targetDomain
   if (!isAbsoluteUrl(target)) {
     target = 'https://' + target
   }
@@ -59,7 +59,7 @@ export default (targetDomain, optionsInput) => {
   })
 
   return (req, res) => {
-    console.log(request.url, req.query.path, req)
+    console.log(req.url, req.query.path, req)
 
     return apiProxy(req, res)
   }

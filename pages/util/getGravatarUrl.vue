@@ -17,7 +17,10 @@ const imageUrl = computed(() => {
     <p>
       <input v-model="email">
 
-      <input v-model="size" type="number">
+      <input
+        v-model="size"
+        type="number"
+      >
     </p>
 
     <Dump :data="imageUrl" />

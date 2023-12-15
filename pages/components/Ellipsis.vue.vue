@@ -12,7 +12,10 @@ const isLoading = ref(true)
   >
     <p>
       <label>
-        <input v-model="isLoading" type="checkbox"> <code>loading</code>
+        <input
+          v-model="isLoading"
+          type="checkbox"
+        > <code>loading</code>
       </label>
     </p>
 

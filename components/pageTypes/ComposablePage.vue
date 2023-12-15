@@ -60,11 +60,6 @@ const methods = computed(() => {
 
     <h2><code>{{ useName }}({{ composableArgs.join(', ') }})</code></h2>
 
-    <HighlightedPre
-      v-if="deps.length"
-      :code="'npm i ' + deps.join(' ')"
-    />
-
     <HighlightedPre :code="`import { ${useName} } from 'bonn/composables'`" />
 
     <HighlightedPre :code="`const ${name} = ${useName}()`" />
@@ -112,6 +107,10 @@ const methods = computed(() => {
     <Bodytext>
       <slot />
     </Bodytext>
+
+    <p v-if="deps && deps.length">
+      Uses these packages: {{ deps.join(' ') }}
+    </p>
   </div>
 </template>
 

@@ -38,7 +38,10 @@ const val = ref(true)
           <td>disabled</td>
           <td>{{ val ? 'on' : 'off' }}</td>
           <td>
-            <Switch :model-value="val" :disabled="true" />
+            <Switch
+              :model-value="val"
+              :disabled="true"
+            />
           </td>
         </tr>
 
@@ -56,7 +59,10 @@ const val = ref(true)
           <td>disabled</td>
           <td>{{ val ? 'off' : 'on' }}</td>
           <td>
-            <Switch :model-value="!val" :disabled="true" />
+            <Switch
+              :model-value="!val"
+              :disabled="true"
+            />
           </td>
         </tr>
       </tbody>

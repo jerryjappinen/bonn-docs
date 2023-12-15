@@ -38,11 +38,6 @@ const deps = arrayProp(props.deps)
 
     <h2><code>{{ name }}({{ args.join(', ') }})</code></h2>
 
-    <HighlightedPre
-      v-if="deps.length"
-      :code="`npm i -D ${deps.join(' ')}`"
-    />
-
     <HighlightedPre :code="`import { ${name} } from 'bonn/nuxt/config'`" />
 
     <template v-if="argsSample.length">
@@ -58,5 +53,9 @@ const deps = arrayProp(props.deps)
     <Bodytext>
       <slot />
     </Bodytext>
+
+    <p v-if="deps && deps.length">
+      Uses these packages: {{ deps.join(' ') }}
+    </p>
   </div>
 </template>

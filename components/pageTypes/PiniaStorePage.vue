@@ -42,11 +42,6 @@ const deps = arrayProp(props.deps)
       <code>stores/{{ name }}</code>
     </h2>
 
-    <HighlightedPre
-      v-if="deps.length"
-      :code="`npm i -D ${deps.join(' ')}`"
-    />
-
     <p>
       Use directly in your app:
     </p>
@@ -75,6 +70,10 @@ export default defineStore('${name}', ${name}Setup(${args.join(', ')}))`"
         :data="sample"
       />
     </template>
+
+    <p v-if="deps && deps.length">
+      Uses these packages: {{ deps.join(' ') }}
+    </p>
 
     <slot />
   </div>

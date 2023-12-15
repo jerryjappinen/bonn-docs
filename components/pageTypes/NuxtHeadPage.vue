@@ -39,11 +39,6 @@ const deps = arrayProp(props.deps)
     <h2><code>{{ name }}({{ args.join(', ') }})</code></h2>
 
     <HighlightedPre
-      v-if="deps.length"
-      :code="`npm i -D ${deps.join(' ')}`"
-    />
-
-    <HighlightedPre
       :code="`import ${name} from 'bonn/nuxt/head/${name}'
 
 useHead(${name}(${args.join(', ')}))`"
@@ -70,5 +65,9 @@ defineNuxtConfig(${name}(${args.join(', ')}))`"
     <Bodytext>
       <slot />
     </Bodytext>
+
+    <p v-if="deps && deps.length">
+      Uses these packages: {{ deps.join(' ') }}
+    </p>
   </div>
 </template>

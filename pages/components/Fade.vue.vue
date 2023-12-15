@@ -46,12 +46,23 @@ const directions = [
       'to-bottom-distance'
     ]"
   >
-    <Toggle v-model="demoValue" :block="true">
+    <Toggle
+      v-model="demoValue"
+      :block="true"
+    >
       <Fade>
-        <div v-if="demoValue" key="if" class="page-components-fade-demo-block">
+        <div
+          v-if="demoValue"
+          key="if"
+          class="page-components-fade-demo-block"
+        >
           True
         </div>
-        <div v-else key="else" class="page-components-fade-demo-block-alt">
+        <div
+          v-else
+          key="else"
+          class="page-components-fade-demo-block-alt"
+        >
           False
         </div>
       </Fade>
@@ -59,45 +70,89 @@ const directions = [
 
     <h3>Directions</h3>
 
-    <Toggle v-model="demoValue" :block="true">
+    <Toggle
+      v-model="demoValue"
+      :block="true"
+    >
       <Fade from="top">
-        <div v-if="demoValue" key="if" class="page-components-fade-demo-block">
+        <div
+          v-if="demoValue"
+          key="if"
+          class="page-components-fade-demo-block"
+        >
           from="top"
         </div>
-        <div v-else key="else" class="page-components-fade-demo-block-alt">
+        <div
+          v-else
+          key="else"
+          class="page-components-fade-demo-block-alt"
+        >
           from="top"
         </div>
       </Fade>
     </Toggle>
 
-    <Toggle v-model="demoValue" :block="true">
+    <Toggle
+      v-model="demoValue"
+      :block="true"
+    >
       <Fade from="bottom">
-        <div v-if="demoValue" key="if" class="page-components-fade-demo-block">
+        <div
+          v-if="demoValue"
+          key="if"
+          class="page-components-fade-demo-block"
+        >
           from="bottom"
         </div>
-        <div v-else key="else" class="page-components-fade-demo-block-alt">
+        <div
+          v-else
+          key="else"
+          class="page-components-fade-demo-block-alt"
+        >
           from="bottom"
         </div>
       </Fade>
     </Toggle>
 
-    <Toggle v-model="demoValue" :block="true">
+    <Toggle
+      v-model="demoValue"
+      :block="true"
+    >
       <Fade from="left">
-        <div v-if="demoValue" key="if" class="page-components-fade-demo-block">
+        <div
+          v-if="demoValue"
+          key="if"
+          class="page-components-fade-demo-block"
+        >
           from="left"
         </div>
-        <div v-else key="else" class="page-components-fade-demo-block-alt">
+        <div
+          v-else
+          key="else"
+          class="page-components-fade-demo-block-alt"
+        >
           from="left"
         </div>
       </Fade>
     </Toggle>
 
-    <Toggle v-model="demoValue" :block="true">
+    <Toggle
+      v-model="demoValue"
+      :block="true"
+    >
       <Fade from="right">
-        <div v-if="demoValue" key="if" class="page-components-fade-demo-block">
+        <div
+          v-if="demoValue"
+          key="if"
+          class="page-components-fade-demo-block"
+        >
           from="right"
         </div>
-        <div v-else key="else" class="page-components-fade-demo-block-alt">
+        <div
+          v-else
+          key="else"
+          class="page-components-fade-demo-block-alt"
+        >
           from="right"
         </div>
       </Fade>
@@ -106,7 +161,10 @@ const directions = [
     <h3>Completely custom directions</h3>
 
     <p>
-      <Toggle v-model="reverse" :block="true">
+      <Toggle
+        v-model="reverse"
+        :block="true"
+      >
         <Switch :value="reverse" />
         Reverse
       </Toggle>
@@ -131,14 +189,25 @@ const directions = [
             <td><code>{{ to }}</code></td>
             <td><code>{{ reverse }}</code></td>
             <td>
-              <Toggle v-model="demoValue" :block="true">
+              <Toggle
+                v-model="demoValue"
+                :block="true"
+              >
                 <Fade
                   :from="from"
                   :to="to"
                   :reverse="reverse"
                 >
-                  <span v-if="demoValue" key="if" class="page-components-fade-demo-block">hello</span>
-                  <span v-else key="else" class="page-components-fade-demo-block-alt">world</span>
+                  <span
+                    v-if="demoValue"
+                    key="if"
+                    class="page-components-fade-demo-block"
+                  >hello</span>
+                  <span
+                    v-else
+                    key="else"
+                    class="page-components-fade-demo-block-alt"
+                  >world</span>
                 </Fade>
               </Toggle>
             </td>

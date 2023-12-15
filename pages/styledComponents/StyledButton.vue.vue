@@ -25,7 +25,10 @@ const themes = [
             </StyledButton>
           </td>
           <td>
-            <StyledButton :theme="theme" :disabled="true">
+            <StyledButton
+              :theme="theme"
+              :disabled="true"
+            >
               {{ theme }} disabled
             </StyledButton>
           </td>

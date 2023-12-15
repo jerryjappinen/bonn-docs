@@ -36,10 +36,16 @@ const toggle = () => {
 
     <div class="page-test-transition-test">
       <Fade>
-        <div v-if="isToggled" key="is">
+        <div
+          v-if="isToggled"
+          key="is"
+        >
           Is toggled
         </div>
-        <div v-else key="not">
+        <div
+          v-else
+          key="not"
+        >
           Is not toggled
         </div>
       </Fade>

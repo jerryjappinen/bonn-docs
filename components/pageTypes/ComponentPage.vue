@@ -51,18 +51,20 @@ const css = computed(() => {
 
     <h2><code>{{ name }}</code></h2>
 
-    <HighlightedPre
-      v-if="deps.length"
-      :code="'npm i ' + deps.join(' ')"
-    />
-
     <HighlightedPre :code="`import ${name} from 'bonn/components/${name}'`" />
 
     <slot />
 
     <template v-if="css">
       <h2>CSS variables</h2>
-      <HighlightedPre :code="css" lang="code" />
+      <HighlightedPre
+        :code="css"
+        lang="code"
+      />
     </template>
+
+    <p v-if="deps && deps.length">
+      Uses these packages: {{ deps.join(' ') }}
+    </p>
   </div>
 </template>

@@ -68,7 +68,10 @@ const results = computed(() => {
       >
 
       <label>
-        <input v-model="isCaseSensitive" type="checkbox">
+        <input
+          v-model="isCaseSensitive"
+          type="checkbox"
+        >
         isCaseSensitive
       </label>
     </form>

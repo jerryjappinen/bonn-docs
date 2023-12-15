@@ -37,15 +37,14 @@ const deps = arrayProp(props.deps)
 
     <h2><code>{{ async ? 'async ' : '' }}{{ name }}({{ args.join(', ') }})</code></h2>
 
-    <HighlightedPre
-      v-if="deps.length"
-      :code="`npm i ${deps.join(' ')}`"
-    />
-
     <HighlightedPre :code="`import ${name} from 'bonn/utils/${name}'`" />
 
     <Bodytext>
       <slot />
     </Bodytext>
+
+    <p v-if="deps && deps.length">
+      Uses these packages: {{ deps.join(' ') }}
+    </p>
   </div>
 </template>

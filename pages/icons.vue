@@ -20,7 +20,10 @@ const codeSample = '<IconFigma /><IconCheck />'
 
     <h3>Using individual icons</h3>
 
-    <HighlightedPre :code="codeSample" lang="html" />
+    <HighlightedPre
+      :code="codeSample"
+      lang="html"
+    />
 
     <!-- I want to use the Icon assets in some standardised way -->
     <p>

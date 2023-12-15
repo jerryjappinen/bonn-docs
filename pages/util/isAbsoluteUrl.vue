@@ -21,7 +21,10 @@ const urls = [
   >
     <table>
       <tbody>
-        <tr v-for="(url, i) in urls" :key="i">
+        <tr
+          v-for="(url, i) in urls"
+          :key="i"
+        >
           <td><code>isAbsoluteUrl('{{ url }}')</code></td>
           <td><code>{{ isAbsoluteUrl(url) }}</code></td>
         </tr>

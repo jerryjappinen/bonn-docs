@@ -27,31 +27,46 @@ import {
 
     <ul>
       <li>
-        <NuxtLink to="/" class="c-main-menu-link">
+        <NuxtLink
+          to="/"
+          class="c-main-menu-link"
+        >
           Readme
         </NuxtLink>
       </li>
 
       <li>
-        <NuxtLink to="/linting" class="c-main-menu-link">
+        <NuxtLink
+          to="/linting"
+          class="c-main-menu-link"
+        >
           Linting
         </NuxtLink>
       </li>
 
       <li>
-        <NuxtLink to="/icons" class="c-main-menu-link">
+        <NuxtLink
+          to="/icons"
+          class="c-main-menu-link"
+        >
           Icons
         </NuxtLink>
       </li>
 
       <li>
-        <NuxtLink to="/nuxt/" class="c-main-menu-link">
+        <NuxtLink
+          to="/nuxt/"
+          class="c-main-menu-link"
+        >
           Nuxt
         </NuxtLink>
       </li>
 
       <li>
-        <NuxtLink to="/test" class="c-main-menu-link">
+        <NuxtLink
+          to="/test"
+          class="c-main-menu-link"
+        >
           Test
         </NuxtLink>
       </li>
@@ -63,8 +78,14 @@ import {
     </h4>
 
     <ul>
-      <li v-for="scssPage in scssPages" :key="scssPage">
-        <NuxtLink :to="'/scss/' + scssPage" class="c-main-menu-link">
+      <li
+        v-for="scssPage in scssPages"
+        :key="scssPage"
+      >
+        <NuxtLink
+          :to="'/scss/' + scssPage"
+          class="c-main-menu-link"
+        >
           <IconScssColor class="c-main-menu-icon" />
           <code>{{ scssPage }}</code>
         </NuxtLink>
@@ -77,8 +98,14 @@ import {
     </h4>
 
     <ul>
-      <li v-for="componentPage in componentPages" :key="componentPage">
-        <NuxtLink :to="`/components/${componentPage}.vue`" class="c-main-menu-link">
+      <li
+        v-for="componentPage in componentPages"
+        :key="componentPage"
+      >
+        <NuxtLink
+          :to="`/components/${componentPage}.vue`"
+          class="c-main-menu-link"
+        >
           <IconVueColor class="c-main-menu-icon" />
           <code>{{ componentPage }}</code>
         </NuxtLink>
@@ -91,8 +118,14 @@ import {
     </h4>
 
     <ul>
-      <li v-for="componentPage in styledComponentPages" :key="componentPage">
-        <NuxtLink :to="`/styledComponents/${componentPage}.vue`" class="c-main-menu-link">
+      <li
+        v-for="componentPage in styledComponentPages"
+        :key="componentPage"
+      >
+        <NuxtLink
+          :to="`/styledComponents/${componentPage}.vue`"
+          class="c-main-menu-link"
+        >
           <IconVueColor class="c-main-menu-icon" />
           <code>{{ componentPage }}</code>
         </NuxtLink>
@@ -105,8 +138,14 @@ import {
     </h4>
 
     <ul>
-      <li v-for="composablePage in composablePages" :key="composablePage">
-        <NuxtLink :to="'/composables/' + composablePage" class="c-main-menu-link">
+      <li
+        v-for="composablePage in composablePages"
+        :key="composablePage"
+      >
+        <NuxtLink
+          :to="'/composables/' + composablePage"
+          class="c-main-menu-link"
+        >
           <IconVue class="c-main-menu-icon" />
           <code>{{ composablePage }}</code>
         </NuxtLink>
@@ -119,8 +158,14 @@ import {
     </h4>
 
     <ul>
-      <li v-for="nuxtHeadPage in nuxtHeadPages" :key="nuxtHeadPage">
-        <NuxtLink :to="'/nuxt/head/' + nuxtHeadPage" class="c-main-menu-link">
+      <li
+        v-for="nuxtHeadPage in nuxtHeadPages"
+        :key="nuxtHeadPage"
+      >
+        <NuxtLink
+          :to="'/nuxt/head/' + nuxtHeadPage"
+          class="c-main-menu-link"
+        >
           <IconNuxtColor class="c-main-menu-icon" />
           <code>{{ nuxtHeadPage }}</code>
         </NuxtLink>
@@ -133,8 +178,14 @@ import {
     </h4>
 
     <ul>
-      <li v-for="nuxtConfigPage in nuxtConfigPages" :key="nuxtConfigPage">
-        <NuxtLink :to="'/nuxt/config/' + nuxtConfigPage" class="c-main-menu-link">
+      <li
+        v-for="nuxtConfigPage in nuxtConfigPages"
+        :key="nuxtConfigPage"
+      >
+        <NuxtLink
+          :to="'/nuxt/config/' + nuxtConfigPage"
+          class="c-main-menu-link"
+        >
           <IconNuxtColor class="c-main-menu-icon" />
           <code>{{ nuxtConfigPage }}</code>
         </NuxtLink>
@@ -161,8 +212,14 @@ import {
     </h4>
 
     <ul>
-      <li v-for="storePage in storePages" :key="storePage">
-        <NuxtLink :to="'/stores/' + storePage" class="c-main-menu-link">
+      <li
+        v-for="storePage in storePages"
+        :key="storePage"
+      >
+        <NuxtLink
+          :to="'/stores/' + storePage"
+          class="c-main-menu-link"
+        >
           <IconPiniaColor class="c-main-menu-icon" />
           <code>{{ storePage }}</code>
         </NuxtLink>
@@ -175,8 +232,14 @@ import {
     </h4>
 
     <ul>
-      <li v-for="utilPage in utilPages" :key="utilPage">
-        <NuxtLink :to="'/util/' + utilPage" class="c-main-menu-link">
+      <li
+        v-for="utilPage in utilPages"
+        :key="utilPage"
+      >
+        <NuxtLink
+          :to="'/util/' + utilPage"
+          class="c-main-menu-link"
+        >
           <IconJavascriptColor class="c-main-menu-icon" />
           <code>{{ utilPage }}</code>
         </NuxtLink>
@@ -189,8 +252,14 @@ import {
     </h4>
 
     <ul>
-      <li v-for="vercelPage in vercelPages" :key="vercelPage">
-        <NuxtLink :to="'/vercel/' + vercelPage" class="c-main-menu-link">
+      <li
+        v-for="vercelPage in vercelPages"
+        :key="vercelPage"
+      >
+        <NuxtLink
+          :to="'/vercel/' + vercelPage"
+          class="c-main-menu-link"
+        >
           <IconVercel class="c-main-menu-icon" />
           <code>{{ vercelPage }}</code>
         </NuxtLink>
@@ -203,8 +272,14 @@ import {
     </h4>
 
     <ul>
-      <li v-for="vercelEndpointPage in vercelEndpointPages" :key="vercelEndpointPage">
-        <NuxtLink :to="'/vercel/endpoints/' + vercelEndpointPage" class="c-main-menu-link">
+      <li
+        v-for="vercelEndpointPage in vercelEndpointPages"
+        :key="vercelEndpointPage"
+      >
+        <NuxtLink
+          :to="'/vercel/endpoints/' + vercelEndpointPage"
+          class="c-main-menu-link"
+        >
           <IconVercel class="c-main-menu-icon" />
           <code>{{ vercelEndpointPage }}</code>
         </NuxtLink>
@@ -217,8 +292,14 @@ import {
     </h4>
 
     <ul>
-      <li v-for="githubAction in githubActionPages" :key="githubAction">
-        <NuxtLink :to="'/github/actions/' + githubAction" class="c-main-menu-link">
+      <li
+        v-for="githubAction in githubActionPages"
+        :key="githubAction"
+      >
+        <NuxtLink
+          :to="'/github/actions/' + githubAction"
+          class="c-main-menu-link"
+        >
           <IconGithub class="c-main-menu-icon" />
           <code>{{ githubAction }}</code>
         </NuxtLink>
@@ -239,7 +320,10 @@ import {
       </li>
 
       <li>
-        <ExternalLink :href="npmUrl" class="c-main-menu-link">
+        <ExternalLink
+          :href="npmUrl"
+          class="c-main-menu-link"
+        >
           <IconNpm class="c-main-menu-icon" />
           NPM
         </ExternalLink>

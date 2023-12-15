@@ -17,7 +17,10 @@ const initials = computed(() => {
     <p>
       <label>
         Edit this text:
-        <input v-model="text" type="text">
+        <input
+          v-model="text"
+          type="text"
+        >
       </label>
     </p>
 

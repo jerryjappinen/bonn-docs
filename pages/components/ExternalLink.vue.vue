@@ -15,7 +15,10 @@ const url = 'https://jerryjappinen.com'
         <td><code>false</code></td>
         <td><code>false</code></td>
         <td>
-          <ExternalLink :refer="true" :href="url">
+          <ExternalLink
+            :refer="true"
+            :href="url"
+          >
             {{ url }}
           </ExternalLink>
         </td>
@@ -25,7 +28,10 @@ const url = 'https://jerryjappinen.com'
         <td><code>true</code></td>
         <td><code>false</code></td>
         <td>
-          <ExternalLink :here="true" :href="url">
+          <ExternalLink
+            :here="true"
+            :href="url"
+          >
             {{ url }}
           </ExternalLink>
         </td>
@@ -35,7 +41,10 @@ const url = 'https://jerryjappinen.com'
         <td><code>false</code></td>
         <td><code>true</code></td>
         <td>
-          <ExternalLink :refer="true" :href="url">
+          <ExternalLink
+            :refer="true"
+            :href="url"
+          >
             {{ url }}
           </ExternalLink>
         </td>
