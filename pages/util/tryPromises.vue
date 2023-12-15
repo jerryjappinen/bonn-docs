@@ -1,6 +1,6 @@
 <script setup>
-import tryPromises from 'bonn/util/tryPromises'
-import wait from 'bonn/util/wait'
+import tryPromises from 'bonn/utils/tryPromises'
+import wait from 'bonn/utils/wait'
 
 const results = ref(null)
 

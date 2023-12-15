@@ -1,6 +1,4 @@
 <script setup>
-import useContentful from '@/stores/useContentful'
-
 const sampleQuery = {
   content_type: 'snippet',
   limit: 20
@@ -35,7 +33,10 @@ onMounted(fetchData)
         Snippets loaded: {{ contentful.entriesByType.snippet.length }}
       </p>
 
-      <div v-if="richTextDoc" class="debug">
+      <div
+        v-if="richTextDoc"
+        class="debug"
+      >
         <MyContentfulRichText :document="richTextDoc" />
       </div>
     </div>
@@ -53,3 +54,4 @@ onMounted(fetchData)
 }
 
 </style>
+~/stores/contentful

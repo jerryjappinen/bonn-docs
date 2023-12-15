@@ -15,9 +15,9 @@ const togglePopoverTwo = () => {
   <ComponentPage name="Popover">
     <!-- Popover 1 -->
     <Relative>
-      <StyledClickButton @click="togglePopoverOne">
+      <ClickButton @click="togglePopoverOne">
         Open popover
-      </StyledClickButton>
+      </ClickButton>
       <PopoverTransition>
         <Popover v-if="popoverOneIsOpen">
           <h3>Hello World!</h3>
@@ -28,9 +28,9 @@ const togglePopoverTwo = () => {
 
     <!-- Popover 2 -->
     <Relative>
-      <StyledClickButton @click="togglePopoverTwo">
+      <ClickButton @click="togglePopoverTwo">
         Open popover
-      </StyledClickButton>
+      </ClickButton>
       <PopoverTransition>
         <Popover v-if="popoverTwoIsOpen">
           <h3>Hello World!</h3>

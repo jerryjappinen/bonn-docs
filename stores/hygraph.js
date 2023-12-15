@@ -1,12 +1,10 @@
-import { defineStore } from 'pinia'
-
 import { request } from 'graphql-request'
 
 import hygraph from 'bonn/stores/setup/hygraph'
 
 import { hygraphApiUrl } from '@/config'
 
-export default defineStore('hygraph', hygraph({
+export const useHygraph = defineStore('hygraph', hygraph({
   // persist: true,
   request,
 

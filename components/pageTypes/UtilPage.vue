@@ -42,7 +42,7 @@ const deps = arrayProp(props.deps)
       :code="`npm i ${deps.join(' ')}`"
     />
 
-    <HighlightedPre :code="`import ${name} from 'bonn/util/${name}'`" />
+    <HighlightedPre :code="`import ${name} from 'bonn/utils/${name}'`" />
 
     <Bodytext>
       <slot />

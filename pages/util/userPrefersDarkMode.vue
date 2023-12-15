@@ -1,5 +1,5 @@
 <script setup>
-import userPrefersDarkMode from 'bonn/util/userPrefersDarkMode'
+import userPrefersDarkMode from 'bonn/utils/userPrefersDarkMode'
 </script>
 
 <template>

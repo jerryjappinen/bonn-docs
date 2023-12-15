@@ -1,5 +1,5 @@
 <script setup>
-import getGravatarUrl from 'bonn/util/getGravatarUrl'
+import getGravatarUrl from 'bonn/utils/getGravatarUrl'
 
 const email = ref('eiskis@gmail.com')
 const size = ref(128)

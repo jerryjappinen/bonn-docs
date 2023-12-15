@@ -1,5 +1,5 @@
 <script setup>
-import isAbsoluteUrl from 'bonn/util/isAbsoluteUrl'
+import isAbsoluteUrl from 'bonn/utils/isAbsoluteUrl'
 
 const urls = [
   'http://foo.bar',

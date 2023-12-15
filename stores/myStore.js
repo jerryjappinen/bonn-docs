@@ -1,6 +1,4 @@
-import { defineStore } from 'pinia'
-
-export default defineStore('myStore', {
+export const useMyStore = defineStore('myStore', {
   persist: {
     paths: [
       'someValue'

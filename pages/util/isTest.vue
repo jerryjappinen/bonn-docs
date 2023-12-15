@@ -1,5 +1,5 @@
 <script setup>
-import isTest from 'bonn/util/isTest'
+import isTest from 'bonn/utils/isTest'
 </script>
 
 <template>

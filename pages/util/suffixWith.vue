@@ -1,5 +1,5 @@
 <script setup>
-import suffixWith from 'bonn/util/suffixWith'
+import suffixWith from 'bonn/utils/suffixWith'
 
 const string = ref('string')
 const suffix = ref('/')

@@ -1,6 +1,4 @@
 <script setup>
-import useHygraph from '@/stores/useHygraph'
-
 const props = defineProps({
   person: {
     type: Object,
@@ -42,3 +40,4 @@ const photo = computed(() => {
 }
 
 </style>
+~/stores/hygraph

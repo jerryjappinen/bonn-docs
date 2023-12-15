@@ -1,8 +1,6 @@
 <script setup>
 import GetPeople from '@/queries/GetPeople.gql'
 
-import useHygraph from '@/stores/useHygraph'
-
 const sampleOptions = {
   request () {
     // ...
@@ -95,3 +93,4 @@ useHygraph({
     <Dump :data="GetPeople" />
   </PiniaStorePage>
 </template>
+~/stores/hygraph

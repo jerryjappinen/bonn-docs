@@ -1,5 +1,5 @@
 <script setup>
-import isEmail from 'bonn/util/isEmail'
+import isEmail from 'bonn/utils/isEmail'
 
 const demo = ref('foo@bar.io')
 </script>

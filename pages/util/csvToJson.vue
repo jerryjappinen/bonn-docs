@@ -1,5 +1,5 @@
 <script setup>
-import csvToJson from 'bonn/util/csvToJson'
+import csvToJson from 'bonn/utils/csvToJson'
 
 const testCsv = `This,is,some,csv
 with,multiple,rows`

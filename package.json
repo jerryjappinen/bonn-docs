@@ -18,16 +18,10 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
-    "@graphcms/rich-text-html-renderer": "^0.3.0",
-    "bonn": "^0.7.0",
-    "date-fns": "^2.30.0",
-    "fuse.js": "^6.6.2",
-    "graphql-request": "^6.1.0",
-    "lodash-es": "^4.17.21",
-    "pinia": "^2.1.7"
+    "bonn": "^0.8.6"
   },
   "devDependencies": {
-    "nuxt": "^3.8.0",
-    "vercel": "^32.5.0"
+    "nuxt": "^3.8.2",
+    "vercel": "^32.7.2"
   }
 }

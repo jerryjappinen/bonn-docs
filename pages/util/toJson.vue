@@ -1,8 +1,8 @@
 <script setup>
-// import isDev from '../../../bonn/util/isDev'
-// import processExists from '../../../bonn/util/processExists'
-// import processEnvExists from '../../../bonn/util/processEnvExists'
-import toJson from 'bonn/util/toJson'
+// import isDev from '../../../bonn/utils/isDev'
+// import processExists from '../../../bonn/utils/processExists'
+// import processEnvExists from '../../../bonn/utils/processEnvExists'
+import toJson from 'bonn/utils/toJson'
 
 import { host, componentPages, utilPages } from '@/config'
 

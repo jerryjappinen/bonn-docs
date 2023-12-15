@@ -1,6 +1,4 @@
 <script setup>
-import useDevice from '@/stores/useDevice'
-
 const device = useDevice()
 </script>
 
@@ -26,3 +24,4 @@ const device = useDevice()
     />
   </PiniaStorePage>
 </template>
+~/stores/device

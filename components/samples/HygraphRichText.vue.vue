@@ -1,8 +1,6 @@
 <script setup>
 import GetPost from '@/queries/GetPost.gql'
 
-import useHygraph from '@/stores/useHygraph'
-
 const hygraph = useHygraph()
 
 const { pending } = await useLazyAsyncData(() => {
@@ -17,7 +15,10 @@ const posts = computed(() => {
 </script>
 
 <template>
-  <ComponentPage name="RichText" deps="@graphcms/rich-text-html-renderer">
+  <ComponentPage
+    name="RichText"
+    deps="@graphcms/rich-text-html-renderer"
+  >
     <h2>
       All loaded posts
       <Ellipsis v-if="pending" />
@@ -62,3 +63,4 @@ const posts = computed(() => {
 }
 
 </style>
+~/stores/hygraph

@@ -8,7 +8,7 @@ import {
   graphql,
   icon,
   manifest,
-  markdown,
+  // markdown,
   meta,
   noComponentPrefixing,
   pinia,
@@ -21,6 +21,8 @@ import {
   twitterUsername,
   viewport
 } from 'bonn/nuxt/config'
+
+import markdown from '../bonn/nuxt/config/markdown'
 
 import { host, meta as metaData } from './config'
 
@@ -58,8 +60,7 @@ const config = mergeConfigs(
 
   // Library support
   transpile(
-    'prism-es6',
-    'lodash-es'
+    'prism-es6'
   ),
 
   // File format support

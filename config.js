@@ -1,5 +1,5 @@
-import isDev from 'bonn/util/isDev'
-import processEnvExists from 'bonn/util/processEnvExists'
+import isDev from 'bonn/utils/isDev'
+import processEnvExists from 'bonn/utils/processEnvExists'
 
 export {
   componentPages,

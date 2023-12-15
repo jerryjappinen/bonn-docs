@@ -1,5 +1,5 @@
 <script setup>
-import wait from 'bonn/util/wait'
+import wait from 'bonn/utils/wait'
 
 const delay = 3000
 

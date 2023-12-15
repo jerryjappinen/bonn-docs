@@ -1,5 +1,5 @@
 <script setup>
-import getNameFromEmail from 'bonn/util/getNameFromEmail'
+import getNameFromEmail from 'bonn/utils/getNameFromEmail'
 
 const testStrings = [
   '',

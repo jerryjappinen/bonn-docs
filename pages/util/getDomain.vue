@@ -1,5 +1,5 @@
 <script setup>
-import getDomain from 'bonn/util/getDomain'
+import getDomain from 'bonn/utils/getDomain'
 
 const urls = [
   'https://foo.bar.com:8080/video/sadkhehsdaksd?thisnadthat=123&foo=bar',

@@ -1,5 +1,5 @@
 <script setup>
-import trimAllWhitespace from 'bonn/util/trimAllWhitespace'
+import trimAllWhitespace from 'bonn/utils/trimAllWhitespace'
 
 const string = `
 

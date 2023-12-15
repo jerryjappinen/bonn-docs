@@ -1,6 +1,4 @@
 <script setup>
-import useContentful from '@/stores/useContentful'
-
 const sampleOptions = {
   spaceId: 'abc123...',
   accessToken: 'foobar...',
@@ -87,3 +85,4 @@ useHygraph({ request })"
     <Dump :data="sampleQuery" />
   </PiniaStorePage>
 </template>
+~/stores/contentful

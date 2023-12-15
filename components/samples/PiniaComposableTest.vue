@@ -1,6 +1,4 @@
 <script setup>
-import useDevice from '@/stores/useDevice'
-
 const device = useDevice()
 </script>
 
@@ -21,3 +19,4 @@ const device = useDevice()
 }
 
 </style>
+~/stores/device

@@ -1,5 +1,5 @@
 <script setup>
-import formatMonth from 'bonn/util/formatMonth'
+import formatMonth from 'bonn/utils/formatMonth'
 </script>
 
 <template>

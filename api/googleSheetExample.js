@@ -1,7 +1,7 @@
 import endpoint from 'bonn/vercel/endpoint'
 
-import fetchPrivateGoogleSheet from 'bonn/util/fetchPrivateGoogleSheet'
-// import fetchPublicGoogleSheet from 'bonn/util/fetchPublicGoogleSheet'
+import fetchPrivateGoogleSheet from 'bonn/utils/fetchPrivateGoogleSheet'
+// import fetchPublicGoogleSheet from 'bonn/utils/fetchPublicGoogleSheet'
 
 // This is the public ID seen in URL bar
 // const googleSheetId = '1oLyoA5QO6JkrKse1SQpyDhHhn57t6IDwbbIPR7GUH2E'

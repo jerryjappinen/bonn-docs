@@ -1,5 +1,5 @@
 <script setup>
-import trimNewLines from 'bonn/util/trimNewLines'
+import trimNewLines from 'bonn/utils/trimNewLines'
 
 const string = `
 
