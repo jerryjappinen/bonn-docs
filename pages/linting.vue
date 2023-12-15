@@ -1,5 +1,4 @@
 <script setup>
-
 const packageJsonCode = `{
   "scripts": {
     "lint": "eslint --ignore-path .gitignore \\"**/*.{js,ts}\\""
@@ -11,7 +10,6 @@ const packageJsonCodeVue = `{
     "lint": "eslint --ignore-path .gitignore \\"**/*.{js,ts,vue}\\""
   }
 }`
-
 </script>
 
 <template>

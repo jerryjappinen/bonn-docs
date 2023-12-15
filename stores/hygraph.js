@@ -1,3 +1,5 @@
+import { defineStore } from 'pinia'
+
 import { request } from 'graphql-request'
 
 import hygraph from 'bonn/stores/setup/hygraph'

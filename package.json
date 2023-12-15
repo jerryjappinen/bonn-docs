@@ -18,7 +18,8 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
-    "bonn": "^0.8.7"
+    "bonn": "^0.8.7",
+    "pinia": "^2.1.7"
   },
   "devDependencies": {
     "nuxt": "^3.8.2",

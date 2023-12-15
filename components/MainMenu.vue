@@ -237,7 +237,7 @@ import {
         :key="utilPage"
       >
         <NuxtLink
-          :to="'/util/' + utilPage"
+          :to="'/utils/' + utilPage"
           class="c-main-menu-link"
         >
           <IconJavascriptColor class="c-main-menu-icon" />

@@ -1,8 +1,6 @@
 <script setup>
 import upperFirst from 'lodash-es/upperFirst'
 
-import arrayProp from '@/util/arrayProp'
-
 const props = defineProps({
 
   name: {

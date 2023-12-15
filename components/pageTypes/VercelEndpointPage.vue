@@ -1,8 +1,6 @@
 <script setup>
 import { host } from '@/config'
 
-import arrayProp from '@/util/arrayProp'
-
 const props = defineProps({
 
   name: {

@@ -1,6 +1,4 @@
 <script setup>
-import getSourceUrl from '@/util/getSourceUrl'
-
 defineProps({
   path: {
     type: String,

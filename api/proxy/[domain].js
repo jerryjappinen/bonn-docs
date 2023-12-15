@@ -1,3 +1,3 @@
-import endpoint from '../../util/proxyEndpoint.js'
+import endpoint from '../../utils/proxyEndpoint.js'
 
 export default endpoint()
