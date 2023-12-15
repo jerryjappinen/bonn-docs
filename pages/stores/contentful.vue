@@ -85,4 +85,3 @@ useHygraph({ request })"
     <Dump :data="sampleQuery" />
   </PiniaStorePage>
 </template>
-~/stores/contentful

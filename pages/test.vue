@@ -11,14 +11,6 @@ const toggle = () => {
     <h2>Composable tests</h2>
 
     <p>
-      <CursorComposableTest />
-      <CursorComposableTest />
-      <CursorComposableTest />
-      <CursorComposableTest />
-      <CursorComposableTest />
-    </p>
-
-    <p>
       <PiniaComposableTest />
       <PiniaComposableTest />
       <PiniaComposableTest />

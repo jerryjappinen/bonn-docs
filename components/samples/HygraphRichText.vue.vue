@@ -63,4 +63,3 @@ const posts = computed(() => {
 }
 
 </style>
-~/stores/hygraph

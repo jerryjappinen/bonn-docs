@@ -40,4 +40,3 @@ const photo = computed(() => {
 }
 
 </style>
-~/stores/hygraph

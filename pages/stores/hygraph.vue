@@ -93,4 +93,3 @@ useHygraph({
     <Dump :data="GetPeople" />
   </PiniaStorePage>
 </template>
-~/stores/hygraph

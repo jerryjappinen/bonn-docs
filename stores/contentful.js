@@ -1,5 +1,3 @@
-import { defineStore } from 'pinia'
-
 import contenful from 'bonn/stores/setup/contentful'
 
 import { contentfulSpaceId, contentfulAccessToken } from '@/config'

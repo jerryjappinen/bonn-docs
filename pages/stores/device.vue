@@ -24,4 +24,3 @@ const device = useDevice()
     />
   </PiniaStorePage>
 </template>
-~/stores/device
