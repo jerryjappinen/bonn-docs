@@ -8,7 +8,14 @@ const viewport = useViewport()
     :props="{
       breakpoints: viewport.breakpoints,
       hasObtrusiveScrollbars: viewport.hasObtrusiveScrollbars,
+
       darkMode: viewport.darkMode,
+      displayMode: viewport.displayMode,
+      isFullscreen: viewport.isFullscreen,
+      isPiP: viewport.isPiP,
+      isPrinting: viewport.isPrinting,
+      notPrinting: viewport.notPrinting,
+
       width: viewport.width,
       height: viewport.height,
       scroll: viewport.scroll,

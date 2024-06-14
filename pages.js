@@ -95,6 +95,7 @@ export const styledComponentPages = [
 ]
 
 export const utilPages = [
+  'cssDisplayModes',
   'csvToJson',
   'formatDate',
   'formatDateInterval',
@@ -104,6 +105,7 @@ export const utilPages = [
   'formatMachineReadableDateInterval',
   'formatMonth',
   'formatSlug',
+  'getDisplayMode',
   'getDomain',
   'getGravatarUrl',
   'getNameFromEmail',
@@ -123,7 +125,8 @@ export const utilPages = [
   'trimNewLines',
   'trimWhitespace',
   'tryPromises',
-  'wait'
+  'wait',
+  'windowIsPrinting'
 ]
 
 export const vercelPages = [
