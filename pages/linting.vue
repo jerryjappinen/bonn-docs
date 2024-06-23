@@ -14,7 +14,7 @@ const packageJsonCodeVue = `{
 
 <template>
   <Bodytext>
-    <h2>Preconfigured setup for <code>eslint</code> and <code>Prettier</code>.</h2>
+    <h2>Preconfigured setup for <code>eslint</code> and <code>Prettier</code></h2>
 
     <p>
       Bonn includes good defaults for JavaScript, Vue and Nuxt projects. You can simply import the default configuration. <code>bonn</code> includes all the dependencies.
