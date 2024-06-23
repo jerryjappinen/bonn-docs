@@ -1,6 +1,4 @@
 <script setup>
-import formatDate from 'bonn/utils/formatDate'
-
 const renderedDate = formatDate(new Date())
 </script>
 

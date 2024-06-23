@@ -1,6 +1,4 @@
 <script setup>
-import toPlainText from 'bonn/utils/toPlainText'
-
 const demo1 = '# Foo\n\nBar foo'
 const demo2 = '<h1>Foo</h1>\n<p>Bar <strong>foo</strong></p>'
 </script>

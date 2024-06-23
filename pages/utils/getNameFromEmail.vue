@@ -1,6 +1,4 @@
 <script setup>
-import getNameFromEmail from 'bonn/utils/getNameFromEmail'
-
 const testStrings = [
   '',
   '.com',

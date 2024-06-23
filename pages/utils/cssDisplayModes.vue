@@ -1,7 +1,3 @@
-<script setup>
-import cssDisplayModes from 'bonn/utils/cssDisplayModes'
-</script>
-
 <template>
   <UtilPage name="cssDisplayModes">
     <p>

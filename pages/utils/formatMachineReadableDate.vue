@@ -1,6 +1,4 @@
 <script setup>
-import formatMachineReadableDate from 'bonn/utils/formatMachineReadableDate'
-
 const renderedDate = formatMachineReadableDate(new Date())
 </script>
 

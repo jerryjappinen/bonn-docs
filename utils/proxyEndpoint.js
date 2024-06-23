@@ -5,8 +5,6 @@
 // Examples:
 // GET /api/hello → GET https://example.org/hello
 // POST /api/test?color=red → POST https://example.org/test?color=red
-import isAbsoluteUrl from 'bonn/utils/isAbsoluteUrl.js'
-
 import isFunction from 'lodash-es/isFunction.js'
 
 import { createProxyMiddleware } from 'http-proxy-middleware'

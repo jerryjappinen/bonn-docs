@@ -1,6 +1,4 @@
 <script setup>
-import wait from 'bonn/utils/wait'
-
 const delay = 3000
 
 const pings = ref([])

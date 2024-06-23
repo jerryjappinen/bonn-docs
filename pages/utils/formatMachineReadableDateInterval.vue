@@ -1,7 +1,3 @@
-<script setup>
-import formatMachineReadableDateTime from 'bonn/utils/formatMachineReadableDateTime'
-</script>
-
 <template>
   <UtilPage
     name="formatMachineReadableDateTime"

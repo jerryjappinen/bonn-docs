@@ -1,20 +1,20 @@
 <script setup>
-const string = ref('string///')
-const suffix = ref('/')
+const string = ref('string')
+const prefix = ref('/')
 
 const treated = computed(() => {
-  return removeSuffix(string.value, suffix.value)
+  return isPrefixed(string.value, prefix.value)
 })
 </script>
 
 <template>
   <UtilPage
-    name="removeSuffix"
-    args="string, suffix"
+    name="isPrefixed"
+    args="string, prefix"
   >
     <p>
       <StyledTextfield v-model="string" />
-      <StyledTextfield v-model="suffix" />
+      <StyledTextfield v-model="prefix" />
     </p>
 
     <p>

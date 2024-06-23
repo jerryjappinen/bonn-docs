@@ -1,7 +1,3 @@
-<script setup>
-import userPrefersDarkMode from 'bonn/utils/userPrefersDarkMode'
-</script>
-
 <template>
   <UtilPage name="userPrefersDarkMode">
     <p>

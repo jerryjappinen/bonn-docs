@@ -1,16 +1,7 @@
 <script setup>
-// import isDev from '../../../bonn/utils/isDev'
-// import processExists from '../../../bonn/utils/processExists'
-// import processEnvExists from '../../../bonn/utils/processEnvExists'
-import toJson from 'bonn/utils/toJson'
-
 import { host, componentPages, utilPages } from '@/config'
 
 const demoData = {
-  // isDev: isDev(),
-  // processExists: processExists(),
-  // processEnvExists: processEnvExists(),
-  // env: process.env,
   host,
   componentPages,
   utilPages

@@ -1,6 +1,4 @@
 <script setup>
-import trimWhitespace from 'bonn/utils/trimWhitespace'
-
 const string = `
 
 

@@ -1,7 +1,3 @@
-<script setup>
-import formatMonth from 'bonn/utils/formatMonth'
-</script>
-
 <template>
   <UtilPage
     name="formatMonth"

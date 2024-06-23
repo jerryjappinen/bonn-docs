@@ -1,7 +1,4 @@
 <script setup>
-import tryPromises from 'bonn/utils/tryPromises'
-import wait from 'bonn/utils/wait'
-
 const results = ref(null)
 
 const tryOne = async () => {

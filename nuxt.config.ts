@@ -64,9 +64,10 @@ const config = mergeConfigs(
   // File format support
   bonn({
     // dev: true,
-    icons: true,
     components: true,
-    composables: true
+    composables: true,
+    icons: true,
+    utils: true
   }),
   graphql(),
   markdown(),

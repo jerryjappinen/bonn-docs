@@ -1,6 +1,4 @@
 <script setup>
-import isSuffixed from 'bonn/utils/isSuffixed'
-
 const string = ref('string')
 const suffix = ref('/')
 

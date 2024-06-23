@@ -1,7 +1,3 @@
-<script setup>
-import getDisplayMode from 'bonn/utils/getDisplayMode'
-</script>
-
 <template>
   <UtilPage name="getDisplayMode">
     <p>

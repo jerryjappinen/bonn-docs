@@ -1,21 +1,21 @@
 <script setup>
 const string = ref('string')
-const suffix = ref('/')
+const prefix = ref('/')
 const keepDuplicates = ref(false)
 
 const treated = computed(() => {
-  return suffixWith(string.value, suffix.value, keepDuplicates.value)
+  return prefixWith(string.value, prefix.value, keepDuplicates.value)
 })
 </script>
 
 <template>
   <UtilPage
-    name="suffixWith"
-    args="string, suffix, keepDuplicates"
+    name="prefixWith"
+    args="string, prefix, keepDuplicates"
   >
     <p>
       <StyledTextfield v-model="string" />
-      <StyledTextfield v-model="suffix" />
+      <StyledTextfield v-model="prefix" />
       <Toggle v-model="keepDuplicates">
         <Switch v-model="keepDuplicates" /> keepDuplicates
       </Toggle>

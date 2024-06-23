@@ -1,6 +1,4 @@
 <script setup>
-import formatInitials from 'bonn/utils/formatInitials'
-
 const text = ref('Some Name Goes Here')
 
 const initials = computed(() => {

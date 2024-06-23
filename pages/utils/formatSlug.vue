@@ -1,6 +1,4 @@
 <script setup>
-import formatSlug from 'bonn/utils/formatSlug'
-
 const string = 'Foo bar foo bar foo bar'
 </script>
 

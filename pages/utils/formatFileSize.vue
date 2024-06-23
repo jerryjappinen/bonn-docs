@@ -1,6 +1,4 @@
 <script setup>
-import formatFileSize from 'bonn/utils/formatFileSize'
-
 const fileSizes = [
   1,
   12,
