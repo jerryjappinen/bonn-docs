@@ -5,7 +5,7 @@
     example-paths="googleSheetExample"
   >
     <Bodytext>
-      <p>Pass either the <code>sheetId</code> OR <code>shareId</code>, and other options to fetch the sheet:</p>
+      <p>Fetch data from Google Sheets. Pass either the <code>sheetId</code> OR <code>shareId</code>, and other options to fetch the sheet:</p>
     </Bodytext>
 
     <HighlightedPre
