@@ -1,5 +1,5 @@
 <script setup>
-const string = ref('string')
+const string = ref('string/')
 const suffix = ref('/')
 
 const treated = computed(() => {
