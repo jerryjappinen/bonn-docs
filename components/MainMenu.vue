@@ -5,6 +5,7 @@ import {
   componentPages,
   composablePages,
   githubActionPages,
+  nodePages,
   nuxtConfigPages,
   nuxtHeadPages,
   // nuxtPluginPages,
@@ -242,6 +243,26 @@ import {
         >
           <IconJavascriptColor class="c-main-menu-icon" />
           <code>{{ utilPage }}</code>
+        </NuxtLink>
+      </li>
+    </ul>
+
+    <!-- Node utilities -->
+    <h4 class="c-main-menu-subtitle">
+      Node
+    </h4>
+
+    <ul>
+      <li
+        v-for="nodePage in nodePages"
+        :key="nodePage"
+      >
+        <NuxtLink
+          :to="'/node/' + nodePage"
+          class="c-main-menu-link"
+        >
+          <IconJavascriptColor class="c-main-menu-icon" />
+          <code>{{ nodePage }}</code>
         </NuxtLink>
       </li>
     </ul>

@@ -5,6 +5,7 @@ export {
   componentPages,
   composablePages,
   githubActionPages,
+  nodePages,
   nuxtConfigPages,
   nuxtHeadPages,
   // nuxtPluginPages,

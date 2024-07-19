@@ -29,13 +29,13 @@ const deps = arrayProp(props.deps)
 
 <template>
   <div>
-    <Crumbs :source-path="`utils/${name}.js`">
-      <Icon><IconJavascriptColor /></Icon> Utilities
+    <Crumbs :source-path="`node/${name}.js`">
+      <Icon><IconJavascriptColor /></Icon> Node utilities
     </Crumbs>
 
     <h2><code>{{ async ? 'async ' : '' }}{{ name }}({{ args.join(', ') }})</code></h2>
 
-    <HighlightedPre :code="`import ${name} from 'bonn/utils/${name}'`" />
+    <HighlightedPre :code="`import ${name} from 'bonn/node/${name}'`" />
 
     <Bodytext>
       <slot />

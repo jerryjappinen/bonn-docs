@@ -39,6 +39,10 @@ export const githubActionPages = [
   'run'
 ]
 
+export const nodePages = [
+  'sendEmail'
+]
+
 export const nuxtConfigPages = [
   'bonn',
   'compression',
